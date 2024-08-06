@@ -1,83 +1,25 @@
 ---
 title: 'Reviews'
-description: 'Meta description for the page'
+description: 'Our Reviews'
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'reviews/'
 eleventyNavigation:
-    key: Reviews
-    order: 400
+    key: Services
+    order: 300
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/reviews.css">
+
 {% endblock %}
 
 {% block body %}
+<DIV style="margin-top:100px"></DIV>
+{% include 'components/3.html' %}
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Our Reviews</h1>
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/reviews.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/reviews.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/reviews.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
 
-    <!-- ============================================ -->
-    <!--                  Reviews                     -->
-    <!-- ============================================ -->
 
-    <section id="reviews">
-        <div class="container">
-            <div class="review">
-          
-                <p>
-                    Mia is so so amazing, she’s very personal and makes the experience so special. She really takes her time and explains everything to you proficiently. She exceeds to provide great customer service.                </p>
-                <div class="star-group">
-                    <span class="name">Hailey C<span class="desc">01.17.2024 </span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-          
-                <p>
-                    Amazing service so happy with how my brows turned out. Mia was so sweet and made me feel so comfortable the entire time!!                </p>
-                <div class="star-group">
-                    <span class="name">Lauren<span class="desc">02.02.2024</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-      
-                <p>
-                    Mia is absolutely amazing and so professional and the absolute sweetest! 
-                    Its been about 6 years since i’ve had my eyebrows professional done, and she made them look absolutely perfect! She was attentive to how I wanted them to look, and made you feel so comfortable!
-                    She officially my new eyebrow gal 🤪🩷 
-                    Def recommend!!!
-                                    </p>
-                <div class="star-group">
-                    <span class="name">Adriannah Lee <span class="desc">2.13.24</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-
-         
-            
-        </div>
-    </section>
-
-    {% include 'components/cta.html' %}
 
 {% endblock %}
