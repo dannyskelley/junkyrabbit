@@ -371,28 +371,31 @@ body { padding-top: 0; }
         </button>
 
     </div>
-
-    <!-- Mobile Panel -->
-    <aside class="jr-mobile-panel" id="jrPanel" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
-        <ul>
-            {% set navPages = collections.all | eleventyNavigation %}
-            {% for entry in navPages %}
-                <li>
-                    <a href="{{ entry.url }}" class="m-link {{ 'active' if entry.url == page.url }}">{{ entry.key }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-        <div class="jr-mobile-cta">
-            <a href="tel:{{client.phoneForTel}}" class="m-call">📞 Call {{client.phoneFormatted}}</a>
-            <a href="sms:{{client.phoneForTel}}" class="m-text">📱 Text for Quote</a>
-        </div>
-        <div class="jr-mobile-meta">
-            Detroit Metro · 7 Days a Week<br>
-            Cash · Venmo · Cashapp · Apple Pay
-        </div>
-    </aside>
-    <div class="jr-backdrop" id="jrBackdrop"></div>
 </header>
+
+{# Mobile Panel + Backdrop must be OUTSIDE the header.
+   The header uses backdrop-filter which creates a containing block for
+   position:fixed descendants, which would otherwise clip the panel
+   to the header's height and break the slide-in menu. #}
+<aside class="jr-mobile-panel" id="jrPanel" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
+    <ul>
+        {% set navPages = collections.all | eleventyNavigation %}
+        {% for entry in navPages %}
+            <li>
+                <a href="{{ entry.url }}" class="m-link {{ 'active' if entry.url == page.url }}">{{ entry.key }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="jr-mobile-cta">
+        <a href="tel:{{client.phoneForTel}}" class="m-call">📞 Call {{client.phoneFormatted}}</a>
+        <a href="sms:{{client.phoneForTel}}" class="m-text">📱 Text for Quote</a>
+    </div>
+    <div class="jr-mobile-meta">
+        Detroit Metro · 7 Days a Week<br>
+        Cash · Venmo · Cashapp · Apple Pay
+    </div>
+</aside>
+<div class="jr-backdrop" id="jrBackdrop"></div>
 
 <script>
 (function() {
