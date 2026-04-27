@@ -1,279 +1,207 @@
 ---
-title: 'Portfolio'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
+title: 'Photo Gallery | Real Jobs by Junky Rabbit Labor | Detroit Metro'
+description: 'See real before and after photos from Junky Rabbit Labor jobs across Metro Detroit — junk removal, property cleanouts, yard cleanup, landscaping and more. Call 248-818-1130.'
+preloadImg: '/assets/images/hero-movers.png'
 permalink: 'portfolio/'
 eleventyNavigation:
-    key: Portfolio
+    key: Photo Gallery
     order: 400
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-   
+<style>
+#gallery-jr {
+    padding: var(--sectionPadding);
+    background: #111;
+}
+#gallery-jr .gallery-container {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+#gallery-jr .gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#gallery-jr .gallery-header .cs-topper { color: var(--primary); }
+#gallery-jr .gallery-header h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+#gallery-jr .gallery-header p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.5);
+    max-width: 36rem;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+/* Before/After pairs */
+#gallery-jr .ba-section-title {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: 1.4rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(184,240,0,0.2);
+}
+#gallery-jr .ba-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(184,240,0,0.15);
+    margin-bottom: 2rem;
+}
+#gallery-jr .ba-side { position: relative; }
+#gallery-jr .ba-side img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+#gallery-jr .ba-tag {
+    position: absolute;
+    top: 0.65rem;
+    left: 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.22rem 0.6rem;
+    border-radius: 3px;
+}
+#gallery-jr .ba-tag.before { background: rgba(0,0,0,0.8); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+#gallery-jr .ba-tag.after { background: var(--primary); color: #0d1a08; }
+#gallery-jr .ba-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.35);
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    margin-top: -1.5rem;
+}
+
+/* Single photos grid */
+#gallery-jr .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+#gallery-jr .photo-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+#gallery-jr .photo-grid.three { grid-template-columns: repeat(3, 1fr); }
+
+/* CTA */
+#gallery-jr .gallery-cta {
+    text-align: center;
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+#gallery-jr .gallery-cta p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+}
+#gallery-jr .gallery-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 0.95rem 2.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s;
+}
+#gallery-jr .gallery-cta a:hover { background: #fff; }
+
+@media (min-width: 48rem) {
+    #gallery-jr .ba-side img { height: 380px; }
+    #gallery-jr .photo-grid img { height: 320px; }
+}
+</style>
 {% endblock %}
 
 {% block body %}
 
-   <!-- ============================================ -->
-<!--                   Gallery                    -->
-<!-- ============================================ -->
+<section style="background:#0d1a08;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:url('/assets/images/hero-movers.png') center top/cover no-repeat;opacity:0.08;z-index:0;"></div>
+    <div style="position:relative;z-index:1;max-width:50rem;margin:0 auto;padding:9rem 1.5rem 4rem;text-align:center;">
+        <span style="display:inline-block;background:var(--primary);color:#0d1a08;font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:0.14em;padding:0.3rem 0.85rem;border-radius:3px;margin-bottom:1rem;">Real Detroit Jobs</span>
+        <h1 style="font-family:'Darumadrop One',Arial,sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;text-transform:uppercase;line-height:1;margin:0 0 1rem;">Our Work</h1>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;max-width:36rem;margin:0 auto;">Real before and after photos from real jobs in the Detroit Metro area. No stock photos — just our actual work.</p>
+    </div>
+</section>
 
-<style>
-    /*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #gallery-1897 {
-    padding: var(--sectionPadding);
-    background-color: #f6eddf;
-    /* stops the cs-graphics from causing an overflow */
-    overflow: hidden;
-    position: relative;
-  }
-  #gallery-1897 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: 100px auto;
-    display: flex;
-    flex-direction: column;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-    position: relative;
-  }
-  #gallery-1897 .cs-content {
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-    z-index: 1;
-  }
-  #gallery-1897 .cs-title {
-    max-width: 25ch;
-    margin: 0px 0 0px;
-  }
- 
-  #gallery-1897 .cs-gallery {
-    width: 100%;
-    display: grid;
-    grid-auto-flow: row;
-    /* 16px - 20px */
-    gap: clamp(1rem, 2vw, 1.25rem);
-    z-index: 1;
-  }
-  #gallery-1897 .cs-item {
-    width: 100%;
-    /* 16px - 32px */
-    padding: clamp(1rem, 4vw, 2rem);
-    background-color: #faf6f2;
-    /* 16px - 32px */
-    border-radius: 1rem;
-    display: grid;
-    /* 8px - 16px */
-    column-gap: clamp(0.5rem, 2vw, 1rem);
-    row-gap: 1rem;
-  }
-  #gallery-1897 .cs-item-text {
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.2em;
-    margin: 0;
-    color: var(--headerColor);
-    grid-column: span 2;
-  }
-  #gallery-1897 .cs-picture-group {
-    /* 160px - 320px */
-    min-height: clamp(10rem, 23vw, 20rem);
-    overflow: hidden;
-    border-radius: 1rem;
-    grid-column: span 1;
-    position: relative;
-  }
-  #gallery-1897 .cs-picture {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  #gallery-1897 .cs-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #gallery-1897 .cs-tag {
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    padding: 0.25rem 0.75rem;
-    background: rgba(0, 0, 0, 0.24);
-    color: var(--bodyTextColorWhite);
-    border: 1px solid var(--bodyTextColorWhite);
-    border-radius: 1.875rem;
-    position: absolute;
-    /* 8px - 16px */
-    bottom: clamp(0.5rem, 2vw, 1rem);
-    left: clamp(0.5rem, 2vw, 1rem);
-    backdrop-filter: blur(8px);
-  }
-  #gallery-1897 .cs-graphic {
-    /* 500px - 835px */
-    width: clamp(31.25rem, 60vw, 52.1875rem);
-    /* 453px - 757px */
-    height: clamp(28.3125rem, 55vw, 47.3125rem);
-    object-fit: cover;
-    position: absolute;
-    z-index: 0;
-  }
-  #gallery-1897 .cs-graphic-top {
-    top: 0;
-    right: -8.875rem;
-  }
-  #gallery-1897 .cs-graphic-bottom {
-    bottom: 0;
-    left: 0;
-  }
-}
-/* Tablet - 600px */
-@media only screen and (min-width: 37.5rem) {
-  #gallery-1897 .cs-content {
-    text-align: left;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  #gallery-1897 .cs-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  #gallery-1897 .cs-graphic-top {
-    right: -8.375rem;
-    transform: initial;
-  }
-  #gallery-1897 .cs-graphic-bottom {
-    left: -7.5rem;
-    transform: initial;
-  }
-}
-/* Desktop - 1600px */
-@media only screen and (min-width: 100rem) {
-  #gallery-1897 .cs-graphic-top {
-    margin-left: 15rem;
-    left: 50%;
-  }
-  #gallery-1897 .cs-graphic-bottom {
-    margin-right: 16.25rem;
-    right: 50%;
-    left: initial;
-  }
-}
-                                
-</style>
-
-<section id="gallery-1897">
-    <div class="cs-container">
-        <div class="cs-content">
-            <div class="cs-flex">
-                <span class="cs-topper">Portfolio</span>
-                <h2 class="cs-title">Witness The Difference and Our Results</h2>
-            </div>
-            <a class="cs-button-solid" href="">Book an Appointment</a>
+<section id="gallery-jr">
+    <div class="gallery-container">
+        <div class="gallery-header">
+            <span class="cs-topper">Before &amp; After Gallery</span>
+            <h2>Real Results. Real Detroit.</h2>
+            <p>Every photo below is from an actual Junky Rabbit Labor job. We let our work speak for itself.</p>
         </div>
-        <!--Gallery-->
-        <div class="cs-gallery">
-            <div class="cs-item">
-                <p class="cs-item-text">Treatment of neck wrinkles using SkinPen microneedling</p>
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before.png">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before.png">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before.png" alt="gallery" width="305" height="400">
-                    </picture>
-                    <span class="cs-tag">Before</span>
-                </div>
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after.png">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after.png">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after.png" alt="gallery" width="305" height="400">
-                    </picture>
-                    <span class="cs-tag">After</span>
-                </div>
+
+        <h3 class="ba-section-title">🌿 Yard Cleanup &amp; Landscaping</h3>
+        <div class="ba-pair">
+            <div class="ba-side">
+                <img loading="lazy" decoding="async" src="/assets/images/before-landscaping.jpg" alt="Overgrown yard before bush trimming and cleanup Sterling Heights MI" width="700" height="600">
+                <span class="ba-tag before">Before</span>
             </div>
-            <div class="cs-item">
-                <p class="cs-item-text">Skin rejuvenation using the PicoSure Pro laser</p>
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-1.png">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-1.png">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-1.png" alt="gallery" width="305" height="400">
-                    </picture>
-                    <span class="cs-tag">Before</span>
-                </div>
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-1.png">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-1.png">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-1.png" alt="gallery" width="305" height="400">
-                    </picture>
-                    <span class="cs-tag">After</span>
-                </div>
+            <div class="ba-side">
+                <img loading="lazy" decoding="async" src="/assets/images/after-landscaping.jpg" alt="Clean trimmed yard after landscaping service Detroit Metro" width="700" height="600">
+                <span class="ba-tag after">After</span>
             </div>
-            <div class="cs-item">
-                <p class="cs-item-text">Treatment of brown spots using the PicoSure Pro laser</p>
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-2.png">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-2.png">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-2.png" alt="gallery" width="305" height="400">
-                    </picture>
-                    <span class="cs-tag">Before</span>
-                </div>
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-2.png">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-2.png">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-2.png" alt="gallery" width="305" height="400">
-                    </picture>
-                    <span class="cs-tag">After</span>
-                </div>
+        </div>
+        <p class="ba-caption">Overgrown bush trimming &amp; debris removal — Sterling Heights, MI · Same-day turnaround</p>
+
+        <h3 class="ba-section-title">🏠 Property Cleanout &amp; Junk Removal</h3>
+        <div class="ba-pair">
+            <div class="ba-side">
+                <img loading="lazy" decoding="async" src="/assets/images/before-cleanout.jpg" alt="Messy cluttered room before full junk removal cleanout Detroit" width="700" height="600">
+                <span class="ba-tag before">Before</span>
             </div>
-            <div class="cs-item">
-                <p class="cs-item-text">Treatment of acne scars using the PicoSure Pro laser</p>
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-3.png">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-3.png">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-before-3.png" alt="gallery" width="305" height="400">
-                    </picture>
-                    <span class="cs-tag">Before</span>
-                </div>
-                <div class="cs-picture-group">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-3.png">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-3.png">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/derma-gallery-after-3.png" alt="gallery" width="305" height="400">
-                    </picture>
-                    <span class="cs-tag">After</span>
-                </div>
+            <div class="ba-side">
+                <img loading="lazy" decoding="async" src="/assets/images/after-cleanout.jpg" alt="Empty clean room after junk removal service Detroit Metro" width="700" height="600">
+                <span class="ba-tag after">After</span>
             </div>
+        </div>
+        <p class="ba-caption">Full room cleanout &amp; junk haul-away — Detroit, MI · Everything removed in one trip</p>
+
+        <h3 class="ba-section-title">❄️ Snow Removal &amp; Moving</h3>
+        <div class="photo-grid">
+            <img loading="lazy" decoding="async" src="/assets/images/snow-removal.jpg" alt="Snow removal residential driveway Detroit Metro area" width="700" height="500">
+            <img loading="lazy" decoding="async" src="/assets/images/hero-movers.png" alt="Professional movers with 20ft truck Detroit Metro" width="700" height="500" style="object-position: top;">
+        </div>
+        <p class="ba-caption" style="margin-top: 0.5rem;">Left: Residential snow removal starting at $45 · Right: 2 Movers + 20ft Truck — $90/hr</p>
+
+        <div class="gallery-cta">
+            <p>Like what you see? Text or call us for a free, same-day quote on your project.</p>
+            <a href="sms:+12488181130">📱 Text for a Free Quote — 248-818-1130</a>
         </div>
     </div>
-    <img class="cs-graphic cs-graphic-top" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/derma-bg-1.svg" alt="graphic" width="517" height="469" loading="lazy" decoding="async" aria-hidden="true" >
-    <img class="cs-graphic cs-graphic-bottom" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/derma-bg-2.svg" alt="graphic" width="517" height="469" loading="lazy" decoding="async" aria-hidden="true" >
-
-
- 
-
 </section>
-   
 
-
-{% include 'components/testimonial.html' %}
+{% include 'components/cta-banner.html' %}
 
 {% endblock %}

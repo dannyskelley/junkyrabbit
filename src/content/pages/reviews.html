@@ -1,11 +1,11 @@
 ---
-title: 'Junky Rabbit Labor | Affordable General Labor Services in Detroit Metro Area | Starting at $35/Hour'
-description: 'Get reliable and affordable general labor services in the Detroit Metro area, starting at just $35/hour! We specialize in moving, junk removal, snow removal, painting, landscaping, and more. Free quotes and no hidden fees. Call or text (+248) 818 1130 today for fast, efficient service!'
-preloadImg: '/assets/images/cabinets2.jpg'
+title: 'Customer Reviews | Junky Rabbit Labor | Detroit Metro'
+description: 'Real customer reviews of Junky Rabbit Labor — Detroit Metro junk removal, moving help, snow removal, painting, and yard cleanup. 5 stars on Nextdoor. Call 248-818-1130.'
+preloadImg: '/assets/images/hero-movers.png'
 permalink: 'reviews/'
 eleventyNavigation:
-    key: Services
-    order: 300
+    key: Reviews
+    order: 350
 ---
 
 {% extends "layouts/base.html" %}
@@ -15,11 +15,17 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-<DIV style="margin-top:100px"></DIV>
+
+<section style="background:#0d1a08;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:url('/assets/images/hero-movers.png') center top/cover no-repeat;opacity:0.08;z-index:0;"></div>
+    <div style="position:relative;z-index:1;max-width:50rem;margin:0 auto;padding:9rem 1.5rem 4rem;text-align:center;">
+        <span style="display:inline-block;background:var(--primary);color:#0d1a08;font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:0.14em;padding:0.3rem 0.85rem;border-radius:3px;margin-bottom:1rem;">5★ on Nextdoor</span>
+        <h1 style="font-family:'Darumadrop One',Arial,sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;text-transform:uppercase;line-height:1;margin:0 0 1rem;">What Detroit Says</h1>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;max-width:36rem;margin:0 auto;">Real reviews from real Metro Detroit customers — moving help, junk removal, cleanouts, snow and more.</p>
+    </div>
+</section>
+
 {% include 'components/3.html' %}
-
-
-
-
+{% include 'components/cta-banner.html' %}
 
 {% endblock %}

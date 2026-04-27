@@ -1,7 +1,7 @@
 ---
-title: 'Contact'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
+title: 'Contact Junky Rabbit Labor | Free Quote | Detroit Metro'
+description: 'Contact Junky Rabbit Labor for a free same-day quote. Call or text 248-818-1130 for junk removal, moving, cleanouts, snow removal, painting and yard cleanup in Detroit Metro.'
+preloadImg: '/assets/images/hero-movers.png'
 permalink: 'contact/'
 eleventyNavigation:
     key: Contact Us
@@ -11,240 +11,268 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    
+<style>
+#contact-jr {
+    padding: var(--sectionPadding);
+    background: #f5f5f5;
+}
+#contact-jr .contact-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+#contact-jr .contact-info .cs-topper { color: var(--secondary); }
+#contact-jr .contact-info h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #111;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+#contact-jr .contact-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+#contact-jr .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+#contact-jr .method-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #0d1a08;
+    border-radius: 6px;
+    padding: 1.1rem 1.5rem;
+    text-decoration: none;
+    transition: background 0.2s;
+    border-left: 3px solid var(--primary);
+}
+#contact-jr .method-card:hover { background: #1a3d0e; }
+#contact-jr .method-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    width: 2.5rem;
+    text-align: center;
+}
+#contact-jr .method-text .label {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+}
+#contact-jr .method-text .value {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: #fff;
+}
+#contact-jr .availability-note {
+    background: rgba(184,240,0,0.1);
+    border: 1px solid rgba(184,240,0,0.25);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 1.6;
+}
+#contact-jr .availability-note strong { color: var(--secondary); }
+#contact-jr .contact-form-wrap {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--primary);
+}
+#contact-jr .contact-form-wrap h3 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: 1.6rem;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+#contact-jr .contact-form-wrap .form-sub {
+    font-size: 0.88rem;
+    color: #777;
+    margin-bottom: 1.75rem;
+    line-height: 1.5;
+}
+#contact-jr .form-group {
+    margin-bottom: 1.25rem;
+}
+#contact-jr .form-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #333;
+    margin-bottom: 0.4rem;
+}
+#contact-jr .form-group input,
+#contact-jr .form-group select,
+#contact-jr .form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #111;
+    background: #fafafa;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    outline: none;
+}
+#contact-jr .form-group input:focus,
+#contact-jr .form-group select:focus,
+#contact-jr .form-group textarea:focus {
+    border-color: var(--primary);
+    background: #fff;
+}
+#contact-jr .form-group textarea { min-height: 120px; resize: vertical; }
+#contact-jr .form-submit {
+    width: 100%;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+}
+#contact-jr .form-submit:hover { background: #0d1a08; color: var(--primary); transform: translateY(-1px); }
+#contact-jr .form-disclaimer {
+    font-size: 0.78rem;
+    color: #999;
+    text-align: center;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+@media (min-width: 60rem) {
+    #contact-jr .contact-container { grid-template-columns: 1fr 1.2fr; }
+}
+</style>
 {% endblock %}
 
 {% block body %}
 
-<!-- ============================================ -->
-<!--                Contact Form                  -->
-<!-- ============================================ -->
-
-
-<style>
-    /*-- -------------------------- -->
-<---          Contact           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #cs-contact-490 {
-    padding: var(--sectionPadding);
-  }
-  #cs-contact-490 .cs-container {
-    width: 100%;
-    /* changes to 1280px at desktop */
-    max-width: 34.375rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 3rem;
-  }
-  #cs-contact-490 .cs-content {
-    max-width: 32.625rem;
-    text-align: left;
-  }
-  #cs-contact-490 .cs-text {
-    /* 16px - 48px */
-    margin: 0 0 clamp(1rem, 4.4vw, 3rem) 0;
-  }
-  #cs-contact-490 .cs-header {
-    /* 13px - 16px */
-    font-size: clamp(0.8125rem, 1.5vw, 1rem);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    margin: 0 0 1rem 0;
-    color: #b4b2c7;
-    display: block;
-  }
-  #cs-contact-490 .cs-link {
-    /* 16px - 20px */
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    text-decoration: none;
-    line-height: 1.5em;
-    font-weight: 700;
-    /* 16px - 32px */
-    margin: 0 0 clamp(1rem, 2.5vw, 2rem);
-    color: var(--headerColor);
-    display: block;
-  }
-  #cs-contact-490 .cs-link:hover {
-    text-decoration: underline;
-  }
-  #cs-contact-490 .cs-link:last-of-type {
-    margin-bottom: 0;
-  }
-  #cs-contact-490 .cs-social {
-    /* 32px - 80px */
-    margin-top: clamp(2rem, 6vw, 5rem);
-    display: inline-flex;
-    justify-content: flex-start;
-    gap: 0.75em;
-  }
-  #cs-contact-490 .cs-social-link {
-    /* 32px - 52px */
-    width: clamp(2rem, 4vw, 3.25rem);
-    height: clamp(2rem, 4vw, 3.25rem);
-    background-color: #000;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  #cs-contact-490 .cs-social-link:hover {
-    background-color: #666;
-    transform: translateY(-0.1875rem);
-  }
-  #cs-contact-490 .cs-social-img {
-    /* 14px - 24px */
-    height: clamp(0.875rem, 2vw, 1.5rem);
-    width: auto;
-    display: block;
-  }
-  #cs-contact-490 #cs-form-490 {
-    width: 100%;
-    max-width: 40.625rem;
-    /* 32px - 40px */
-    margin-bottom: clamp(2rem, 5.3vw, 2.5rem);
-    /* 20px - 40px */
-    padding: clamp(1.25rem, 4.5vw, 2.5rem);
-    /* prevents padding from affecting width and height */
-    box-sizing: border-box;
-  
-  }
-  #cs-contact-490 .cs-label {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.3vw, 1rem);
-    line-height: 1.5em;
-    font-weight: 700;
-    /* 16px - 20px */
-    margin-bottom: clamp(1rem, 1em, 1.25rem);
-    color: var(--headerColor);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  #cs-contact-490 .cs-label-message {
-    /* 32px - 40px */
-    margin-bottom: clamp(2rem, 4.5vw, 2.5rem);
-  }
-  #cs-contact-490 .cs-input,
-  #cs-contact-490 textarea {
-    font-size: 1rem;
-    width: 100%;
-    height: 4rem;
-    margin-top: 0.25rem;
-    padding-left: 1.25rem;
-    /* set transparent border so on hover border doesn't make it glitch */
-    border: 1px solid transparent;
-    border-bottom: 1px solid #b4b2c7;
-    /* prevents border & padding from affecting height */
-    box-sizing: border-box;
-    transition: border 0.3s;
-  }
-  #cs-contact-490 .cs-input:hover,
-  #cs-contact-490 textarea:hover {
-    border: 1px solid var(--primary);
-  }
-  #cs-contact-490 .cs-input::placeholder,
-  #cs-contact-490 textarea::placeholder {
-    color: #7d799c;
-  }
-  #cs-contact-490 textarea {
-    font-family: inherit;
-    margin: 0;
-    padding-top: 1.25rem;
-    min-height: 7.5rem;
-  }
- 
-}
-/* Tablet - 700px */
-@media only screen and (min-width: 43.75rem) {
-  #cs-contact-490 .cs-container {
-    max-width: 80rem;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #cs-contact-490 .cs-content {
-    width: 40%;
-    /* pushes it to the right */
-  
-    flex: none;
-  }
-  #cs-contact-490 #cs-form-490 {
-    margin: 0;
-  }
-}
-                                
-</style>
-<section id="cs-contact-490">
-    <div class="cs-container">
-        <!-- Contact Info -->
-        <div class="cs-content">
-           
-            <h2 class="cs-title" style="margin-top:100px;">Get in touch</h2>
-            <span class="cs-topper" style="margin-top: 50px;">Let me know how I can assist you.</span>
-            <!--<p class="cs-text">
-                Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Eu volutpat odio facilisis mauris sit amet massa. Sit amet est placerat in egestas
-            </p>-->
-            
-            <!--Address
-            <span class="cs-header">Address</span>
-            <a href="" class="cs-link">
-                PO Box 15252 Mill Creek, <br>Washington, USA 98082
-            </a>-->
-            <!--Email-->
-            <span class="cs-header">Email</span>
-            <a href="mailtp:info@iabuyer.com" class="cs-link">Email Us</a>
-            <!--Phone-->
-            <span class="cs-header">Phone</span>
-            <a href="tel:{{client.phoneForTel}}" class="cs-link">{{client.phoneFormatted}}</a>
-
-            <!--Social Buttons-->
-            <div class="cs-social">
-                <a class="cs-social-link" aria-label="visit google profile" href="">
-                    <img style="filter: grayscale(1) brightness(1000%);" class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/zillow.svg" alt="google" width="11" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit facebook profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit instagram profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
-                </a>
-            </div>
-        </div>
-        <!-- Form -->
-        <form id="cs-form-490" name="Contact Form" method="post" style="margin-top:70px;">
-            <label class="cs-label" style="margin-bottom: 60px;">
-              Name
-                <input class="cs-input" required type="text" id="name-490" name="name" placeholder="">
-            </label>
-            <label class="cs-label" style="margin-bottom: 60px;">
-                Email
-                <input class="cs-input" required type="text" id="email-490" name="email" placeholder="">
-            </label>
-            <label class="cs-label" style="margin-bottom: 60px;">
-                Phone
-                <input class="cs-input" required type="text" id="phone-490" name="phone" placeholder="">
-            </label>
-            <label class="cs-label -label-message" style="margin-bottom: 60px;">
-                How can I help?
-                <textarea class="cs-input" required name="Message" id="message-490" placeholder=""></textarea>
-            </label>
-            <button class="cs-button-solid" type="submit">Send</button>
-        </form>
+<section style="background:#0d1a08;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:url('/assets/images/hero-movers.png') center top/cover no-repeat;opacity:0.08;z-index:0;"></div>
+    <div style="position:relative;z-index:1;max-width:50rem;margin:0 auto;padding:9rem 1.5rem 4rem;text-align:center;">
+        <span style="display:inline-block;background:var(--primary);color:#0d1a08;font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:0.14em;padding:0.3rem 0.85rem;border-radius:3px;margin-bottom:1rem;">Free Estimates · Same Day Available</span>
+        <h1 style="font-family:'Darumadrop One',Arial,sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;text-transform:uppercase;line-height:1;margin:0 0 1rem;">Get in Touch</h1>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;max-width:36rem;margin:0 auto;">Call, text, or send a message — we respond fast and always offer free, no-pressure quotes.</p>
     </div>
 </section>
-                                               
-                                
 
+<section id="contact-jr">
+    <div class="contact-container">
+        <div class="contact-info">
+            <span class="cs-topper">Reach Us Directly</span>
+            <h2>We Respond Fast</h2>
+            <p>The fastest way to reach us is a call or text. For a more detailed request, fill out the form and we'll get back to you within a few hours. We serve all of Metro Detroit, 7 days a week.</p>
+
+            <div class="contact-methods">
+                <a href="sms:+12488181130" class="method-card">
+                    <span class="method-icon">📱</span>
+                    <div class="method-text">
+                        <span class="label">Text Us (Fastest)</span>
+                        <span class="value">248-818-1130</span>
+                    </div>
+                </a>
+                <a href="tel:+12488181130" class="method-card">
+                    <span class="method-icon">📞</span>
+                    <div class="method-text">
+                        <span class="label">Call Us</span>
+                        <span class="value">248-818-1130</span>
+                    </div>
+                </a>
+                <a href="mailto:JunkyRabbit@gmail.com" class="method-card">
+                    <span class="method-icon">✉️</span>
+                    <div class="method-text">
+                        <span class="label">Email Us</span>
+                        <span class="value">JunkyRabbit@gmail.com</span>
+                    </div>
+                </a>
+                <a href="https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author" target="_blank" class="method-card">
+                    <span class="method-icon">🏘️</span>
+                    <div class="method-text">
+                        <span class="label">Find Us on Nextdoor</span>
+                        <span class="value">Junky Rabbit Labor</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="availability-note">
+                <strong>Available 7 days a week</strong> including weekends and most holidays.<br>
+                Same-day service often available — text us your request with a photo for the fastest quote.<br><br>
+                <strong>Accepts:</strong> Cash · Venmo · Cashapp · Apple Pay
+            </div>
+        </div>
+
+        <div class="contact-form-wrap">
+            <h3>Request a Free Quote</h3>
+            <p class="form-sub">We'll respond within a few hours — usually much sooner. No spam, no pressure.</p>
+            <form name="quote-request" method="POST" action="/contact/?success=true">
+                <input type="hidden" name="form-name" value="quote-request">
+                <div class="form-group">
+                    <label for="contact-name">Your Name *</label>
+                    <input type="text" id="contact-name" name="name" required placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Phone Number *</label>
+                    <input type="tel" id="contact-phone" name="phone" required placeholder="(248) 555-0000">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" name="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="contact-service">Service Needed *</label>
+                    <select id="contact-service" name="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option value="junk-removal">Junk Removal / Curb Pickup</option>
+                        <option value="moving">Moving Help (2 Movers + Truck)</option>
+                        <option value="cleanout">Property / Estate Cleanout</option>
+                        <option value="snow-removal">Snow Removal</option>
+                        <option value="painting">Painting (Touch-Up or Full Room)</option>
+                        <option value="yard-cleanup">Yard Cleanup / Landscaping</option>
+                        <option value="hauling">Hauling / Demolition</option>
+                        <option value="other">Other / Multiple Services</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contact-city">Your City / Neighborhood *</label>
+                    <input type="text" id="contact-city" name="city" required placeholder="e.g. Warren, Sterling Heights, Detroit...">
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Describe Your Job</label>
+                    <textarea id="contact-message" name="message" placeholder="Tell us what you need done. A photo via text helps us give you the most accurate quote!"></textarea>
+                </div>
+                <button type="submit" class="form-submit">📋 Submit Free Quote Request</button>
+                <p class="form-disclaimer">Fastest response: text 248-818-1130 with a photo of your job.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% include 'components/service-area.html' %}
+{% include 'components/cta-banner.html' %}
 
 {% endblock %}
