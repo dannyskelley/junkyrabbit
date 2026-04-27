@@ -13,20 +13,20 @@
     overflow: hidden;
 }
 
-/* Very dark overlay over the photo — nearly invisible bg so it reads as solid dark */
-#hero-jr .hero-bg {
+/* Very dark overlay over the photo. Nearly invisible bg so it reads as solid dark */
+#hero-jr.hero-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
 }
-#hero-jr .hero-bg img {
+#hero-jr.hero-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: right top;
     display: block;
 }
-#hero-jr .hero-bg::after {
+#hero-jr.hero-bg::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -38,7 +38,7 @@
     );
 }
 
-#hero-jr .hero-container {
+#hero-jr.hero-container {
     position: relative;
     z-index: 2;
     max-width: 68rem;
@@ -53,7 +53,7 @@
 }
 
 /* Top label */
-#hero-jr .hero-label {
+#hero-jr.hero-label {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -63,7 +63,7 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
 }
-#hero-jr .hero-label::before {
+#hero-jr.hero-label::before {
     content: '';
     display: block;
     width: 28px;
@@ -82,13 +82,13 @@
     margin: 0;
     max-width: 14ch;
 }
-#hero-jr h1 .accent {
+#hero-jr h1.accent {
     color: var(--primary);
     display: block;
 }
 
 /* Subtext */
-#hero-jr .hero-sub {
+#hero-jr.hero-sub {
     font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: rgba(255,255,255,0.65);
     max-width: 33rem;
@@ -96,14 +96,14 @@
     margin: 0;
 }
 
-/* Trust PILL badges — like the reference */
-#hero-jr .trust-pills {
+/* Trust PILL badges. Like the reference */
+#hero-jr.trust-pills {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem;
     margin-top: 0.25rem;
 }
-#hero-jr .trust-pill {
+#hero-jr.trust-pill {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
@@ -119,11 +119,11 @@
     white-space: nowrap;
     transition: border-color 0.2s, color 0.2s;
 }
-#hero-jr .trust-pill:hover {
+#hero-jr.trust-pill:hover {
     border-color: var(--primary);
     color: var(--primary);
 }
-#hero-jr .trust-pill svg {
+#hero-jr.trust-pill svg {
     width: 15px;
     height: 15px;
     flex-shrink: 0;
@@ -131,7 +131,7 @@
 }
 
 /* CTA group */
-#hero-jr .hero-cta-group {
+#hero-jr.hero-cta-group {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -139,7 +139,7 @@
     max-width: 22rem;
     margin-top: 0.5rem;
 }
-#hero-jr .hero-btn-primary {
+#hero-jr.hero-btn-primary {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,11 +157,11 @@
     width: 100%;
     box-sizing: border-box;
 }
-#hero-jr .hero-btn-primary:hover {
+#hero-jr.hero-btn-primary:hover {
     background: var(--ctaHover);
     transform: translateY(-2px);
 }
-#hero-jr .hero-btn-call {
+#hero-jr.hero-btn-call {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,18 +177,18 @@
     box-sizing: border-box;
     transition: border-color 0.2s, color 0.2s;
 }
-#hero-jr .hero-btn-call:hover {
+#hero-jr.hero-btn-call:hover {
     border-color: var(--primary);
     color: var(--primary);
 }
-#hero-jr .hero-btn-call svg {
+#hero-jr.hero-btn-call svg {
     width: 18px;
     height: 18px;
     flex-shrink: 0;
 }
 
 /* Photo strip at bottom */
-#hero-jr .hero-photo-strip {
+#hero-jr.hero-photo-strip {
     position: relative;
     z-index: 2;
     display: grid;
@@ -198,16 +198,16 @@
     max-height: 200px;
     overflow: hidden;
 }
-#hero-jr .hero-photo-strip img {
+#hero-jr.hero-photo-strip img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
 }
-#hero-jr .hero-photo-strip img:first-child {
+#hero-jr.hero-photo-strip img:first-child {
     object-position: center center;
 }
-#hero-jr .hero-photo-strip img:last-child {
+#hero-jr.hero-photo-strip img:last-child {
     object-position: right center;
 }
 
@@ -216,25 +216,25 @@
     #hero-jr {
         min-height: 100svh;
     }
-    #hero-jr .hero-container {
+    #hero-jr.hero-container {
         padding: 12rem 2.5rem 6rem;
         max-width: 50%;
         min-height: 80vh;
         justify-content: center;
     }
-    #hero-jr .hero-photo-strip {
+    #hero-jr.hero-photo-strip {
         display: none;
     }
-    #hero-jr .hero-cta-group {
+    #hero-jr.hero-cta-group {
         flex-direction: row;
         max-width: none;
         flex-wrap: wrap;
     }
-    #hero-jr .hero-btn-primary {
+    #hero-jr.hero-btn-primary {
         width: auto;
         min-width: 13rem;
     }
-    #hero-jr .hero-btn-call {
+    #hero-jr.hero-btn-call {
         width: auto;
         min-width: 11rem;
     }
@@ -279,7 +279,7 @@
             </a>
             <a href="tel:+12488181130" class="hero-btn-call">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                248-818-1130
+                248.818.1130
             </a>
         </div>
     </div>

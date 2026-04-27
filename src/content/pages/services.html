@@ -1,6 +1,6 @@
 ---
 title: 'Services & Pricing | Junky Rabbit Labor | Detroit Metro Area'
-description: 'Affordable general labor services in Detroit Metro — junk removal from $75, moving 2 movers + truck $90/hr, snow removal from $45, painting from $125, yard cleanup and property cleanouts. Free quotes, no hidden fees.'
+description: 'Affordable general labor services in Detroit Metro. Junk removal from $75, moving 2 movers + truck $90/hr, snow removal from $45, painting from $125, yard cleanup and property cleanouts. Free quotes, no hidden fees.'
 preloadImg: '/assets/images/hero-movers.png'
 permalink: 'services/'
 eleventyNavigation:
@@ -21,7 +21,7 @@ eleventyNavigation:
     {"@type": "ListItem","position": 2,"name": "Moving Help","description": "2 movers + 20ft truck for $90/hr. 2-hour minimum. Detroit Metro area.","url": "https://junkyrabbitlabor.com/services/"},
     {"@type": "ListItem","position": 3,"name": "Snow Removal","description": "Residential snow removal starting at $45. Driveways and sidewalks.","url": "https://junkyrabbitlabor.com/services/"},
     {"@type": "ListItem","position": 4,"name": "Painting","description": "Touch-ups from $125. Full rooms from $250. Interior residential painting.","url": "https://junkyrabbitlabor.com/services/"},
-    {"@type": "ListItem","position": 5,"name": "Yard Cleanup","description": "Bush trimming, leaf removal, debris haul-away. Free estimate.","url": "https://junkyrabbitlabor.com/services/"}
+    {"@type": "ListItem","position": 5,"name": "Yard Cleanup","description": "Bush trimming, leaf removal, debris haul away. Free estimate.","url": "https://junkyrabbitlabor.com/services/"}
   ]
 }
 </script>
@@ -30,7 +30,7 @@ eleventyNavigation:
     padding: var(--sectionPadding);
     background: #f5f5f5;
 }
-#services-detail .sd-container {
+#services-detail.sd-container {
     max-width: 72rem;
     margin: 0 auto;
 }
@@ -44,16 +44,16 @@ eleventyNavigation:
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     border-left: 4px solid var(--primary);
 }
-.service-block .sb-img {
+.service-block.sb-img {
     width: 100%;
     height: 260px;
     object-fit: cover;
     display: block;
 }
-.service-block .sb-body {
+.service-block.sb-body {
     padding: 2rem;
 }
-.service-block .sb-price {
+.service-block.sb-price {
     display: inline-block;
     background: var(--primary);
     color: #0d1a08;
@@ -78,7 +78,7 @@ eleventyNavigation:
     line-height: 1.75;
     margin-bottom: 1rem;
 }
-.service-block .sb-includes {
+.service-block.sb-includes {
     list-style: none;
     padding: 0;
     margin: 1rem 0 1.5rem;
@@ -86,7 +86,7 @@ eleventyNavigation:
     flex-direction: column;
     gap: 0.5rem;
 }
-.service-block .sb-includes li {
+.service-block.sb-includes li {
     display: flex;
     align-items: flex-start;
     gap: 0.6rem;
@@ -94,7 +94,7 @@ eleventyNavigation:
     color: #333;
     font-weight: 600;
 }
-.service-block .sb-includes li::before {
+.service-block.sb-includes li::before {
     content: '✓';
     background: var(--primary);
     color: #0d1a08;
@@ -104,7 +104,7 @@ eleventyNavigation:
     font-size: 0.65rem; font-weight: 900;
     flex-shrink: 0; margin-top: 0.15rem;
 }
-.service-block .sb-cta {
+.service-block.sb-cta {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -119,13 +119,13 @@ eleventyNavigation:
     letter-spacing: 0.06em;
     transition: background 0.2s;
 }
-.service-block .sb-cta:hover { background: var(--secondary); color: #fff; }
+.service-block.sb-cta:hover { background: var(--secondary); color: #fff; }
 @media (min-width: 56rem) {
-    .service-block { grid-template-columns: 340px 1fr; }
-    .service-block .sb-img { height: 100%; min-height: 280px; }
-    .service-block.reverse { direction: rtl; }
-    .service-block.reverse .sb-body { direction: ltr; }
-    .service-block.reverse .sb-img { direction: ltr; }
+.service-block { grid-template-columns: 340px 1fr; }
+.service-block.sb-img { height: 100%; min-height: 280px; }
+.service-block.reverse { direction: rtl; }
+.service-block.reverse.sb-body { direction: ltr; }
+.service-block.reverse.sb-img { direction: ltr; }
 }
 
 /* Pricing table */
@@ -133,22 +133,22 @@ eleventyNavigation:
     padding: var(--sectionPadding);
     background: #0d1a08;
 }
-#pricing-jr .pt-container {
+#pricing-jr.pt-container {
     max-width: 72rem;
     margin: 0 auto;
 }
-#pricing-jr .pt-header {
+#pricing-jr.pt-header {
     text-align: center;
     margin-bottom: 3rem;
 }
-#pricing-jr .pt-header .cs-topper { color: var(--primary); }
-#pricing-jr .pt-header h2 {
+#pricing-jr.pt-header.cs-topper { color: var(--primary); }
+#pricing-jr.pt-header h2 {
     font-family: "Darumadrop One", Arial, sans-serif;
     font-size: clamp(2rem, 5vw, 3rem);
     color: #fff;
     text-transform: uppercase;
 }
-#pricing-jr .pt-grid {
+#pricing-jr.pt-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -156,7 +156,7 @@ eleventyNavigation:
     padding: 0;
     margin: 0;
 }
-#pricing-jr .pt-row {
+#pricing-jr.pt-row {
     background: rgba(184,240,0,0.05);
     border: 1px solid rgba(184,240,0,0.1);
     border-radius: 6px;
@@ -167,18 +167,18 @@ eleventyNavigation:
     flex-wrap: wrap;
     gap: 0.75rem;
 }
-#pricing-jr .pt-service { font-weight: 800; color: #fff; font-size: 1rem; }
-#pricing-jr .pt-note { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-top: 0.1rem; }
-#pricing-jr .pt-price { font-family: "Darumadrop One", Arial, sans-serif; font-size: 1.8rem; color: var(--primary); line-height: 1; white-space: nowrap; }
-#pricing-jr .pt-footer {
+#pricing-jr.pt-service { font-weight: 800; color: #fff; font-size: 1rem; }
+#pricing-jr.pt-note { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-top: 0.1rem; }
+#pricing-jr.pt-price { font-family: "Darumadrop One", Arial, sans-serif; font-size: 1.8rem; color: var(--primary); line-height: 1; white-space: nowrap; }
+#pricing-jr.pt-footer {
     text-align: center;
     margin-top: 2.5rem;
     color: rgba(255,255,255,0.45);
     font-size: 0.88rem;
     line-height: 1.65;
 }
-#pricing-jr .pt-footer a { color: var(--primary); text-decoration: none; }
-@media (min-width: 48rem) { #pricing-jr .pt-grid { grid-template-columns: repeat(2, 1fr); } }
+#pricing-jr.pt-footer a { color: var(--primary); text-decoration: none; }
+@media (min-width: 48rem) { #pricing-jr.pt-grid { grid-template-columns: repeat(2, 1fr); } }
 </style>
 {% endblock %}
 
@@ -189,7 +189,7 @@ eleventyNavigation:
     <div style="position:relative;z-index:1;max-width:50rem;margin:0 auto;padding:9rem 1.5rem 4rem;text-align:center;">
         <span style="display:inline-block;background:var(--primary);color:#0d1a08;font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:0.14em;padding:0.3rem 0.85rem;border-radius:3px;margin-bottom:1rem;">Detroit Metro · No Hidden Fees</span>
         <h1 style="font-family:'Darumadrop One',Arial,sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;text-transform:uppercase;line-height:1;margin:0 0 1rem;">Services &amp; Pricing</h1>
-        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;max-width:36rem;margin:0 auto;">Everything we offer, with real prices. No surprises — text us for a free quote on your specific job.</p>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;max-width:36rem;margin:0 auto;">Everything we offer, with real prices. No surprises. Text us for a free quote on your specific job.</p>
     </div>
 </section>
 
@@ -199,15 +199,15 @@ eleventyNavigation:
         <div class="service-block">
             <img class="sb-img" loading="eager" decoding="async" src="/assets/images/hero-movers.png" alt="Professional moving help 2 movers and 20ft truck Detroit Metro" width="700" height="500" style="object-position: top;">
             <div class="sb-body">
-                <span class="sb-price">$90/hr — 2 Movers + 20ft Truck</span>
+                <span class="sb-price">$90/hr. 2 Movers + 20ft Truck</span>
                 <h2>Moving Help</h2>
-                <p>Need to move across town or just down the street? Our 2-mover + 20ft truck package is the best value in Metro Detroit. We load, transport, and unload — efficiently and carefully.</p>
+                <p>Need to move across town or just down the street? Our 2 mover + 20ft truck package is the best value in Metro Detroit. We load, transport, and unload. Efficiently and carefully.</p>
                 <ul class="sb-includes">
                     <li>2 professional movers + 20ft truck</li>
                     <li>$90/hr with a 2-hour minimum</li>
                     <li>Loading, transport &amp; unloading included</li>
                     <li>Furniture wrapping available on request</li>
-                    <li>Same-day and weekend availability</li>
+                    <li>Same day and weekend availability</li>
                     <li>All Metro Detroit area and beyond</li>
                 </ul>
                 <a href="sms:+12488181130" class="sb-cta">📱 Get a Moving Quote</a>
@@ -219,14 +219,14 @@ eleventyNavigation:
             <div class="sb-body">
                 <span class="sb-price">Curb Pickup from $75 · Cleanouts Quoted</span>
                 <h2>Junk Removal &amp; Cleanouts</h2>
-                <p>We make junk disappear — fast. From a single couch on the curb to a full house cleanout, Junky Rabbit Labor handles it all. Text us a photo and we'll quote you in minutes.</p>
+                <p>We make junk disappear. Fast. From a single couch on the curb to a full house cleanout, Junky Rabbit Labor handles it all. Text us a photo and we'll quote you in minutes.</p>
                 <ul class="sb-includes">
-                    <li>Curb pickup — up to 5 items from $75</li>
+                    <li>Curb pickup. Up to 5 items from $75</li>
                     <li>Full room, garage &amp; basement cleanouts</li>
                     <li>Estate and property cleanout specialists</li>
                     <li>Furniture, appliances, mattresses, debris</li>
-                    <li>We haul it all — nothing left behind</li>
-                    <li>Same-day available — text us a photo</li>
+                    <li>We haul it all. Nothing left behind</li>
+                    <li>Same day available. Text us a photo</li>
                 </ul>
                 <a href="sms:+12488181130" class="sb-cta">📱 Get a Junk Quote</a>
             </div>
@@ -237,12 +237,12 @@ eleventyNavigation:
             <div class="sb-body">
                 <span class="sb-price">Starting at $45</span>
                 <h2>Snow Removal</h2>
-                <p>Don't let snow slow you down. We shovel residential driveways and sidewalks starting at $45. Call or text and we'll be there fast — often same day even during snowstorms.</p>
+                <p>Don't let snow slow you down. We shovel residential driveways and sidewalks starting at $45. Call or text and we'll be there fast. Often same day even during snowstorms.</p>
                 <ul class="sb-includes">
                     <li>Residential driveways &amp; sidewalks from $45</li>
-                    <li>Commercial lots &amp; walkways — call for quote</li>
+                    <li>Commercial lots &amp; walkways. Call for quote</li>
                     <li>Salting &amp; ice treatment available</li>
-                    <li>Fast response — often within 1-2 hours</li>
+                    <li>Fast response. Often within 1 to 2 hours</li>
                     <li>Seasonal contract discounts available</li>
                     <li>7-day availability including during storms</li>
                 </ul>
@@ -255,14 +255,14 @@ eleventyNavigation:
             <div class="sb-body">
                 <span class="sb-price">Touch-Ups from $125 · Full Rooms from $250</span>
                 <h2>Painting</h2>
-                <p>Fresh paint makes a space feel new. We do interior touch-ups and full room paint jobs for homeowners and landlords. Perfect for rental turnovers, move-ins, and refreshes.</p>
+                <p>Fresh paint makes a space feel new. We do interior touchups and full room paint jobs for homeowners and landlords. Perfect for rental turnovers, move ins, and refreshes.</p>
                 <ul class="sb-includes">
                     <li>Touch-up painting from $125</li>
                     <li>Full room paint from $250</li>
                     <li>Wall prep, patching &amp; priming included</li>
                     <li>Fast turnaround for rental properties</li>
                     <li>Clean, professional finish every time</li>
-                    <li>Free estimate — text us photos</li>
+                    <li>Free estimate. Text us photos</li>
                 </ul>
                 <a href="sms:+12488181130" class="sb-cta">📱 Get a Paint Quote</a>
             </div>
@@ -273,14 +273,14 @@ eleventyNavigation:
             <div class="sb-body">
                 <span class="sb-price">Free Estimate</span>
                 <h2>Yard Cleanup &amp; Landscaping</h2>
-                <p>Overgrown bushes, leaves, brush, and yard debris — we clean it up and haul it away. Whether it's a quick seasonal cleanup or heavy-duty trimming, we've got you covered.</p>
+                <p>Overgrown bushes, leaves, brush, and yard debris. We clean it up and haul it away. Whether it's a quick seasonal cleanup or heavy duty trimming, we've got you covered.</p>
                 <ul class="sb-includes">
                     <li>Bush trimming &amp; shrub removal</li>
-                    <li>Leaf &amp; debris removal and haul-away</li>
+                    <li>Leaf &amp; debris removal and haul away</li>
                     <li>Overgrown lot and yard cleanup</li>
                     <li>Light landscaping and grading</li>
                     <li>Before/after photos provided</li>
-                    <li>Same-day and weekend available</li>
+                    <li>Same day and weekend available</li>
                 </ul>
                 <a href="sms:+12488181130" class="sb-cta">📱 Get a Yard Quote</a>
             </div>
@@ -295,8 +295,8 @@ eleventyNavigation:
                 <ul class="sb-includes">
                     <li>Shed &amp; fence removal</li>
                     <li>Deck &amp; structure demo</li>
-                    <li>Dirt, gravel &amp; debris haul-away</li>
-                    <li>Dumpster alternative — we bring the truck</li>
+                    <li>Dirt, gravel &amp; debris haul away</li>
+                    <li>Dumpster alternative. We bring the truck</li>
                     <li>Fast cleanup with no mess left behind</li>
                     <li>Landlord &amp; property investor specialists</li>
                 </ul>
@@ -319,7 +319,7 @@ eleventyNavigation:
                 <div class="pt-price">$90<small style="font-size:1rem">/hr</small></div>
             </li>
             <li class="pt-row">
-                <div><div class="pt-service">Curb Junk Pickup</div><div class="pt-note">Up to 5 items · same-day available</div></div>
+                <div><div class="pt-service">Curb Junk Pickup</div><div class="pt-note">Up to 5 items · same day available</div></div>
                 <div class="pt-price">$75+</div>
             </li>
             <li class="pt-row">
@@ -348,8 +348,8 @@ eleventyNavigation:
             </li>
         </ul>
         <p class="pt-footer">
-            All prices are starting points — text or call for your exact quote.<br>
-            <a href="sms:+12488181130">📱 Text 248-818-1130</a> · <a href="tel:+12488181130">📞 Call 248-818-1130</a><br>
+            All prices are starting points. Text or call for your exact quote.<br>
+            <a href="sms:+12488181130">📱 Text 248.818.1130</a> · <a href="tel:+12488181130">📞 Call 248.818.1130</a><br>
             Accepts: Cash · Venmo · Cashapp · Apple Pay
         </p>
     </div>

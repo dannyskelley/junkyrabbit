@@ -1,6 +1,6 @@
 ---
 title: 'About Junky Rabbit Labor | Detroit Metro Labor Crew'
-description: 'Meet the team behind Junky Rabbit Labor — Detroit Metro''s trusted junk removal, moving, and general labor crew. Licensed, insured, same-day available. Call 248-818-1130.'
+description: 'Meet the team behind Junky Rabbit Labor. Detroit Metro''s trusted junk removal, moving, and general labor crew. Licensed, insured, same day available. Call 248.818.1130.'
 preloadImg: '/assets/images/hero-movers.png'
 permalink: 'about/'
 eleventyNavigation:
@@ -13,45 +13,45 @@ eleventyNavigation:
 {% block head %}
 <style>
 #about-story { padding: var(--sectionPadding); background: #fff; }
-#about-story .as-container { max-width: 72rem; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 3.5rem; align-items: center; }
-#about-story .as-image-stack { position: relative; }
-#about-story .as-img-main { width: 100%; border-radius: 6px; object-fit: cover; object-position: top; display: block; height: 480px; }
-#about-story .as-badge { position: absolute; bottom: -1.5rem; right: 0.5rem; background: var(--primary); color: #0d1a08; font-weight: 900; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1rem 1.25rem; border-radius: 4px; line-height: 1.4; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
-#about-story .as-badge strong { display: block; font-size: 2.2rem; line-height: 1; }
-#about-story .as-content .cs-topper { color: var(--secondary); }
-#about-story .as-content h2 { font-family: "Darumadrop One", Arial, sans-serif; font-size: clamp(2rem, 5vw, 3rem); color: #111; text-transform: uppercase; line-height: 1.1; margin-bottom: 1.25rem; }
-#about-story .as-content p { font-size: 0.95rem; color: #555; line-height: 1.75; margin-bottom: 1rem; }
-#about-story .as-values { list-style: none; padding: 0; margin: 1.5rem 0 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
-#about-story .as-values li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem; color: #333; font-weight: 600; }
-#about-story .as-values li::before { content: '✓'; background: var(--primary); color: #0d1a08; width: 1.4rem; height: 1.4rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 900; flex-shrink: 0; margin-top: 0.1rem; }
-#about-story .as-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: #0d1a08; color: var(--primary); font-size: 0.95rem; font-weight: 900; padding: 0.9rem 1.9rem; border-radius: 4px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.06em; transition: background 0.2s; }
-#about-story .as-cta:hover { background: var(--secondary); color: #fff; }
-@media (min-width: 56rem) { #about-story .as-container { grid-template-columns: 1fr 1fr; } #about-story .as-image-stack { padding-bottom: 1.5rem; } }
+#about-story.as-container { max-width: 72rem; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 3.5rem; align-items: center; }
+#about-story.as-image-stack { position: relative; }
+#about-story.as-img-main { width: 100%; border-radius: 6px; object-fit: cover; object-position: top; display: block; height: 480px; }
+#about-story.as-badge { position: absolute; bottom: -1.5rem; right: 0.5rem; background: var(--primary); color: #0d1a08; font-weight: 900; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1rem 1.25rem; border-radius: 4px; line-height: 1.4; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+#about-story.as-badge strong { display: block; font-size: 2.2rem; line-height: 1; }
+#about-story.as-content.cs-topper { color: var(--secondary); }
+#about-story.as-content h2 { font-family: "Darumadrop One", Arial, sans-serif; font-size: clamp(2rem, 5vw, 3rem); color: #111; text-transform: uppercase; line-height: 1.1; margin-bottom: 1.25rem; }
+#about-story.as-content p { font-size: 0.95rem; color: #555; line-height: 1.75; margin-bottom: 1rem; }
+#about-story.as-values { list-style: none; padding: 0; margin: 1.5rem 0 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+#about-story.as-values li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem; color: #333; font-weight: 600; }
+#about-story.as-values li::before { content: '✓'; background: var(--primary); color: #0d1a08; width: 1.4rem; height: 1.4rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 900; flex-shrink: 0; margin-top: 0.1rem; }
+#about-story.as-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: #0d1a08; color: var(--primary); font-size: 0.95rem; font-weight: 900; padding: 0.9rem 1.9rem; border-radius: 4px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.06em; transition: background 0.2s; }
+#about-story.as-cta:hover { background: var(--secondary); color: #fff; }
+@media (min-width: 56rem) { #about-story.as-container { grid-template-columns: 1fr 1fr; } #about-story.as-image-stack { padding-bottom: 1.5rem; } }
 
 #why-jr { padding: var(--sectionPadding); background: #0d1a08; }
-#why-jr .why-container { max-width: 72rem; margin: 0 auto; }
-#why-jr .why-header { text-align: center; margin-bottom: 3rem; }
-#why-jr .why-header .cs-topper { color: var(--primary); }
-#why-jr .why-header h2 { font-family: "Darumadrop One", Arial, sans-serif; font-size: clamp(2rem, 5vw, 3rem); color: #fff; text-transform: uppercase; }
-#why-jr .why-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; list-style: none; padding: 0; margin: 0; }
-#why-jr .why-card { background: rgba(184,240,0,0.05); border: 1px solid rgba(184,240,0,0.12); border-radius: 6px; padding: 1.75rem; }
-#why-jr .why-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
-#why-jr .why-card h3 { font-size: 1.05rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
-#why-jr .why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
-@media (min-width: 48rem) { #why-jr .why-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 72rem) { #why-jr .why-grid { grid-template-columns: repeat(3, 1fr); } }
+#why-jr.why-container { max-width: 72rem; margin: 0 auto; }
+#why-jr.why-header { text-align: center; margin-bottom: 3rem; }
+#why-jr.why-header.cs-topper { color: var(--primary); }
+#why-jr.why-header h2 { font-family: "Darumadrop One", Arial, sans-serif; font-size: clamp(2rem, 5vw, 3rem); color: #fff; text-transform: uppercase; }
+#why-jr.why-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; list-style: none; padding: 0; margin: 0; }
+#why-jr.why-card { background: rgba(184,240,0,0.05); border: 1px solid rgba(184,240,0,0.12); border-radius: 6px; padding: 1.75rem; }
+#why-jr.why-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+#why-jr.why-card h3 { font-size: 1.05rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+#why-jr.why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
+@media (min-width: 48rem) { #why-jr.why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 72rem) { #why-jr.why-grid { grid-template-columns: repeat(3, 1fr); } }
 
 #team-jr { padding: var(--sectionPadding); background: #f5f5f5; }
-#team-jr .team-container { max-width: 72rem; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
-#team-jr .team-img { width: 100%; max-width: 28rem; margin: 0 auto; border-radius: 6px; object-fit: cover; object-position: top; display: block; height: 420px; border-top: 4px solid var(--primary); }
-#team-jr .team-content .cs-topper { color: var(--secondary); }
-#team-jr .team-content h2 { font-family: "Darumadrop One", Arial, sans-serif; font-size: clamp(1.8rem, 4vw, 2.5rem); color: #111; text-transform: uppercase; line-height: 1.1; margin-bottom: 1rem; }
-#team-jr .team-content p { font-size: 0.95rem; color: #555; line-height: 1.75; margin-bottom: 1rem; }
-#team-jr .team-stats { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.75rem; }
-#team-jr .stat-box { background: #0d1a08; color: #fff; border-radius: 6px; padding: 1rem 1.25rem; min-width: 7rem; flex: 1; }
-#team-jr .stat-box .num { font-family: "Darumadrop One", Arial, sans-serif; font-size: 2.5rem; color: var(--primary); line-height: 1; display: block; }
-#team-jr .stat-box .lbl { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.25rem; display: block; }
-@media (min-width: 56rem) { #team-jr .team-container { grid-template-columns: 1fr 1.4fr; } #team-jr .team-img { max-width: none; margin: 0; } }
+#team-jr.team-container { max-width: 72rem; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+#team-jr.team-img { width: 100%; max-width: 28rem; margin: 0 auto; border-radius: 6px; object-fit: cover; object-position: top; display: block; height: 420px; border-top: 4px solid var(--primary); }
+#team-jr.team-content.cs-topper { color: var(--secondary); }
+#team-jr.team-content h2 { font-family: "Darumadrop One", Arial, sans-serif; font-size: clamp(1.8rem, 4vw, 2.5rem); color: #111; text-transform: uppercase; line-height: 1.1; margin-bottom: 1rem; }
+#team-jr.team-content p { font-size: 0.95rem; color: #555; line-height: 1.75; margin-bottom: 1rem; }
+#team-jr.team-stats { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.75rem; }
+#team-jr.stat-box { background: #0d1a08; color: #fff; border-radius: 6px; padding: 1rem 1.25rem; min-width: 7rem; flex: 1; }
+#team-jr.stat-box.num { font-family: "Darumadrop One", Arial, sans-serif; font-size: 2.5rem; color: var(--primary); line-height: 1; display: block; }
+#team-jr.stat-box.lbl { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.25rem; display: block; }
+@media (min-width: 56rem) { #team-jr.team-container { grid-template-columns: 1fr 1.4fr; } #team-jr.team-img { max-width: none; margin: 0; } }
 </style>
 {% endblock %}
 
@@ -62,7 +62,7 @@ eleventyNavigation:
     <div style="position:relative;z-index:1;max-width:50rem;margin:0 auto;padding:9rem 1.5rem 4rem;text-align:center;">
         <span style="display:inline-block;background:var(--primary);color:#0d1a08;font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:0.14em;padding:0.3rem 0.85rem;border-radius:3px;margin-bottom:1rem;">Detroit Metro Labor Crew</span>
         <h1 style="font-family:'Darumadrop One',Arial,sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;text-transform:uppercase;line-height:1;margin:0 0 1rem;">About Us</h1>
-        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;max-width:36rem;margin:0 auto;">Real people. Hard work. Results you can see — here's the story behind Junky Rabbit Labor.</p>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;max-width:36rem;margin:0 auto;">Real people. Hard work. Results you can see. Here's the story behind Junky Rabbit Labor.</p>
     </div>
 </section>
 
@@ -75,14 +75,14 @@ eleventyNavigation:
         <div class="as-content">
             <span class="cs-topper">Our Story</span>
             <h2>Hard Work Is What We Do</h2>
-            <p>Junky Rabbit Labor was built on a simple idea: Detroit Metro residents deserve fast, reliable, affordable labor help — without the runaround. No bait-and-switch pricing. No no-shows. Just a crew that shows up, works hard, and leaves every job site better than they found it.</p>
-            <p>We started by helping neighbors move furniture and haul junk on Nextdoor. Word spread fast. Today we handle everything from same-day junk removal and full property cleanouts to moving, snow removal, yard cleanup, painting, and more — across the entire Metro Detroit area.</p>
+            <p>Junky Rabbit Labor was built on a simple idea: Detroit Metro residents deserve fast, reliable, affordable labor help. Without the runaround. No bait and switch pricing. No no shows. Just a crew that shows up, works hard, and leaves every job site better than they found it.</p>
+            <p>We started by helping neighbors move furniture and haul junk on Nextdoor. Word spread fast. Today we handle everything from same day junk removal and full property cleanouts to moving, snow removal, yard cleanup, painting, and more. Across the entire Metro Detroit area.</p>
             <ul class="as-values">
                 <li>Licensed and insured in the state of Michigan</li>
-                <li>Same-day and weekend service available 7 days a week</li>
-                <li>Transparent, upfront pricing — no hidden fees ever</li>
+                <li>Same day and weekend service available 7 days a week</li>
+                <li>Transparent, upfront pricing. No hidden fees ever</li>
                 <li>Cash, Venmo, Cashapp &amp; Apple Pay accepted</li>
-                <li>Free estimates — text us a photo for the fastest response</li>
+                <li>Free estimates. Text us a photo for the fastest response</li>
                 <li>Hundreds of satisfied customers across Metro Detroit</li>
             </ul>
             <a href="sms:+12488181130" class="as-cta">📱 Text for a Free Quote</a>
@@ -98,10 +98,10 @@ eleventyNavigation:
         </div>
         <ul class="why-grid">
             <li class="why-card"><span class="why-icon">⚡</span><h3>Same-Day Response</h3><p>Text us in the morning and we can often be there that afternoon. We know your schedule matters and we won't leave you waiting around.</p></li>
-            <li class="why-card"><span class="why-icon">💰</span><h3>Honest Pricing</h3><p>We give you a real price before we start — no surprise fees at the end. What we quote is what you pay. Every time, no exceptions.</p></li>
+            <li class="why-card"><span class="why-icon">💰</span><h3>Honest Pricing</h3><p>We give you a real price before we start. No surprise fees at the end. What we quote is what you pay. Every time, no exceptions.</p></li>
             <li class="why-card"><span class="why-icon">🛡️</span><h3>Licensed &amp; Insured</h3><p>Fully licensed and insured so you can feel comfortable letting us work in and around your home, rental property, or business.</p></li>
-            <li class="why-card"><span class="why-icon">🏙️</span><h3>Local Detroit Crew</h3><p>We live and work in Metro Detroit. We're not a national chain — we're your neighbors, and we treat your property like our own.</p></li>
-            <li class="why-card"><span class="why-icon">📅</span><h3>7 Days a Week</h3><p>Available Monday through Sunday, including holidays. Life doesn't follow a 9-to-5 schedule — and neither do we.</p></li>
+            <li class="why-card"><span class="why-icon">🏙️</span><h3>Local Detroit Crew</h3><p>We live and work in Metro Detroit. We're not a national chain. We're your neighbors, and we treat your property like our own.</p></li>
+            <li class="why-card"><span class="why-icon">📅</span><h3>7 Days a Week</h3><p>Available Monday through Sunday, including holidays. Life doesn't follow a 9 to 5 schedule. And neither do we.</p></li>
             <li class="why-card"><span class="why-icon">✅</span><h3>Job Done Right</h3><p>We don't leave until the job is done and you're happy. Our reputation on Nextdoor and word-of-mouth is everything to us.</p></li>
         </ul>
     </div>
@@ -112,9 +112,9 @@ eleventyNavigation:
         <img class="team-img" loading="lazy" decoding="async" src="/assets/images/lunden.jpeg" alt="Lunden - Owner of Junky Rabbit Labor Detroit Metro" width="500" height="420">
         <div class="team-content">
             <span class="cs-topper">Meet the Owner</span>
-            <h2>Lunden — Founder &amp; Lead</h2>
+            <h2>Lunden. Founder &amp; Lead</h2>
             <p>Lunden started Junky Rabbit Labor after seeing how hard it was to find reliable, affordable help in Detroit. Too many services were overpriced, unreliable, or both. He set out to change that.</p>
-            <p>"I built this business on the idea that people deserve a fair shake. Show up on time, do the work right, and charge what's fair. That's it." — Lunden, Owner</p>
+            <p>"I built this business on the idea that people deserve a fair shake. Show up on time, do the work right, and charge what's fair. That's it.". Lunden, Owner</p>
             <p>Lunden leads every job personally or with a handpicked crew he trusts. Every job reflects on the Junky Rabbit name, so every job gets full attention from start to finish.</p>
             <div class="team-stats">
                 <div class="stat-box"><span class="num">5★</span><span class="lbl">Nextdoor Rating</span></div>

@@ -1,5 +1,5 @@
 {# ============================================== #}
-{#   FRESH NAV — Junky Rabbit Labor (rebuild)     #}
+{#   FRESH NAV. Junky Rabbit Labor (rebuild)     #}
 {# ============================================== #}
 
 <style>
@@ -34,15 +34,15 @@
     flex-direction: column;
     line-height: 1;
 }
-.jr-logo-text .lt-1 {
+.jr-logo-text.lt-1 {
     font-family: "Darumadrop One", Arial, sans-serif;
     font-size: 1.35rem;
     color: #fff;
     letter-spacing: 0.02em;
     line-height: 1;
 }
-.jr-logo-text .lt-1 .lt-accent { color: var(--primary); }
-.jr-logo-text .lt-2 {
+.jr-logo-text.lt-1.lt-accent { color: var(--primary); }
+.jr-logo-text.lt-2 {
     font-family: "Darumadrop One", Arial, sans-serif;
     font-size: 0.72rem;
     color: var(--primary);
@@ -52,7 +52,7 @@
     margin-top: 4px;
 }
 @media (min-width: 64rem) {
-    .jr-logo-phone { display: none; }
+.jr-logo-phone { display: none; }
 }
 
 /* ---- HEADER SHELL ---- */
@@ -249,11 +249,11 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
-.jr-mobile-cta .m-call {
+.jr-mobile-cta.m-call {
     background: var(--cta);
     color: #fff;
 }
-.jr-mobile-cta .m-text {
+.jr-mobile-cta.m-text {
     background: transparent;
     color: #fff;
     border: 2px solid var(--primary);
@@ -286,13 +286,13 @@
 
 /* ---- DESKTOP BREAKPOINT ---- */
 @media (min-width: 64rem) {
-    .jr-burger { display: none; }
-    .jr-nav-list { display: flex; }
-    .jr-header-cta { display: flex; }
-    .jr-header-phone { display: inline-flex; }
-    .jr-mobile-panel, .jr-backdrop { display: none; }
-    .jr-logo-text .lt-1 { font-size: 1.5rem; }
-    .jr-logo-mark { width: 46px; height: 46px; }
+.jr-burger { display: none; }
+.jr-nav-list { display: flex; }
+.jr-header-cta { display: flex; }
+.jr-header-phone { display: inline-flex; }
+.jr-mobile-panel,.jr-backdrop { display: none; }
+.jr-logo-text.lt-1 { font-size: 1.5rem; }
+.jr-logo-mark { width: 46px; height: 46px; }
 }
 
 /* Push body down by header height */
@@ -303,7 +303,7 @@ body { padding-top: 0; }
     <div class="jr-header-inner">
 
         <!-- Logo -->
-        <a href="/" class="jr-logo" aria-label="Junky Rabbit Labor — Detroit Metro general labor">
+        <a href="/" class="jr-logo" aria-label="Junky Rabbit Labor. Detroit Metro general labor">
             <svg class="jr-logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <!-- Lime circle background -->
                 <circle cx="32" cy="32" r="30" fill="#B8F000"/>
