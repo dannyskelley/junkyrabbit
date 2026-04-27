@@ -4,14 +4,16 @@
 
 <style>
 #hero-jr {
-    background-color: #0d1a08;
+    background-color: #111;
     position: relative;
     z-index: 1;
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     overflow: hidden;
 }
+
+/* Very dark overlay over the photo — nearly invisible bg so it reads as solid dark */
 #hero-jr .hero-bg {
     position: absolute;
     inset: 0;
@@ -21,212 +23,270 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: right top;
     display: block;
 }
 #hero-jr .hero-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(100deg, rgba(13,26,8,0.93) 0%, rgba(13,26,8,0.75) 55%, rgba(13,26,8,0.3) 100%);
+    background: linear-gradient(
+        100deg,
+        rgba(13,26,8,0.97) 0%,
+        rgba(13,26,8,0.92) 50%,
+        rgba(13,26,8,0.7) 100%
+    );
 }
+
 #hero-jr .hero-container {
     position: relative;
     z-index: 2;
-    max-width: 72rem;
+    max-width: 68rem;
     margin: 0 auto;
     width: 100%;
-    padding: 10rem 1.5rem 5rem;
+    padding: 7rem 1.4rem 3.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1.4rem;
+    flex: 1;
 }
-#hero-jr .hero-topper {
-    display: inline-block;
-    background: var(--primary);
-    color: #0d1a08;
-    font-size: 0.82rem;
-    font-weight: 900;
+
+/* Top label */
+#hero-jr .hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.7);
     text-transform: uppercase;
-    letter-spacing: 0.14em;
-    padding: 0.35rem 1rem;
-    border-radius: 3px;
+    letter-spacing: 0.15em;
 }
+#hero-jr .hero-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--primary);
+    flex-shrink: 0;
+}
+
+/* Headline */
 #hero-jr h1 {
     font-family: "Darumadrop One", Arial, sans-serif;
-    font-size: clamp(3rem, 8.5vw, 6.5rem);
-    line-height: 0.93;
+    font-size: clamp(2.8rem, 9.5vw, 6.5rem);
+    line-height: 0.95;
     color: #ffffff;
     text-transform: uppercase;
     margin: 0;
-    max-width: 13ch;
+    max-width: 14ch;
 }
 #hero-jr h1 .accent {
     color: var(--primary);
     display: block;
 }
+
+/* Subtext */
 #hero-jr .hero-sub {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    color: rgba(255,255,255,0.75);
-    max-width: 34rem;
-    line-height: 1.65;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: rgba(255,255,255,0.65);
+    max-width: 33rem;
+    line-height: 1.7;
     margin: 0;
 }
-#hero-jr .hero-price-strip {
+
+/* Trust PILL badges — like the reference */
+#hero-jr .trust-pills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.65rem;
+    margin-top: 0.25rem;
 }
-#hero-jr .hero-price-item {
-    background: rgba(184,240,0,0.1);
-    border: 1px solid rgba(184,240,0,0.35);
-    border-radius: 6px;
-    padding: 0.6rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 5.5rem;
-}
-#hero-jr .hero-price-item .price {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--primary);
-    line-height: 1;
-}
-#hero-jr .hero-price-item .label {
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-top: 0.2rem;
-    text-align: center;
-}
-#hero-jr .hero-cta-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-}
-#hero-jr .hero-btn-primary {
+#hero-jr .trust-pill {
     display: inline-flex;
     align-items: center;
+    gap: 0.55rem;
+    padding: 0.6rem 1rem;
+    border: 1.5px solid rgba(255,255,255,0.28);
+    border-radius: 100px;
+    background: transparent;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+}
+#hero-jr .trust-pill:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+#hero-jr .trust-pill svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+/* CTA group */
+#hero-jr .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 22rem;
+    margin-top: 0.5rem;
+}
+#hero-jr .hero-btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: var(--primary);
     color: #0d1a08;
     font-weight: 900;
     font-size: 1rem;
-    padding: 0.95rem 2rem;
+    padding: 1.1rem 1.75rem;
     border-radius: 4px;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     transition: background 0.2s, transform 0.2s;
+    width: 100%;
+    box-sizing: border-box;
 }
 #hero-jr .hero-btn-primary:hover {
     background: #fff;
     transform: translateY(-2px);
 }
 #hero-jr .hero-btn-call {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #ffffff;
-    font-size: 1.3rem;
-    font-weight: 900;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-#hero-jr .hero-btn-call:hover {
-    color: var(--primary);
-}
-#hero-jr .hero-btn-call .call-icon {
-    background: var(--primary);
-    border-radius: 50%;
-    width: 2.2rem;
-    height: 2.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
-    flex-shrink: 0;
-}
-#hero-jr .hero-trust-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    gap: 0.6rem;
+    color: rgba(255,255,255,0.88);
+    font-size: 1.15rem;
+    font-weight: 900;
+    text-decoration: none;
     width: 100%;
+    padding: 0.85rem;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, color 0.2s;
 }
-#hero-jr .trust-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: rgba(255,255,255,0.65);
-    font-size: 0.85rem;
-    font-weight: 600;
+#hero-jr .hero-btn-call:hover {
+    border-color: var(--primary);
+    color: var(--primary);
 }
-#hero-jr .trust-badge .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--primary);
+#hero-jr .hero-btn-call svg {
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
 }
-@media (min-width: 48rem) {
+
+/* Photo strip at bottom */
+#hero-jr .hero-photo-strip {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4px;
+    margin-top: auto;
+    max-height: 200px;
+    overflow: hidden;
+}
+#hero-jr .hero-photo-strip img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+#hero-jr .hero-photo-strip img:first-child {
+    object-position: center center;
+}
+#hero-jr .hero-photo-strip img:last-child {
+    object-position: right center;
+}
+
+/* Desktop: side-by-side layout */
+@media (min-width: 50rem) {
+    #hero-jr {
+        min-height: 100svh;
+    }
     #hero-jr .hero-container {
-        padding: 12rem 2rem 7rem;
+        padding: 12rem 2.5rem 6rem;
+        max-width: 50%;
+        min-height: 80vh;
+        justify-content: center;
+    }
+    #hero-jr .hero-photo-strip {
+        display: none;
+    }
+    #hero-jr .hero-cta-group {
+        flex-direction: row;
+        max-width: none;
+        flex-wrap: wrap;
+    }
+    #hero-jr .hero-btn-primary {
+        width: auto;
+        min-width: 13rem;
+    }
+    #hero-jr .hero-btn-call {
+        width: auto;
+        min-width: 11rem;
     }
 }
 </style>
 
 <section id="hero-jr">
     <div class="hero-bg">
-        <img src="/assets/images/hero-movers.png" alt="Junky Rabbit Labor crew ready to work in Detroit Metro area" width="1200" height="900" decoding="async">
+        <img src="/assets/images/hero-movers.png" alt="Junky Rabbit Labor crew Detroit Metro" width="1200" height="900" decoding="async" loading="eager">
     </div>
     <div class="hero-container">
-        <span class="hero-topper">Detroit Metro Area &bull; Same Day Service Available</span>
-        <h1>We Haul.<span class="accent">You Relax.</span></h1>
+        <span class="hero-label">Detroit Metro Area &bull; Same Day Service</span>
+
+        <h1>Detroit's #1<span class="accent">Labor Crew.</span></h1>
+
         <p class="hero-sub">
-            Detroit's most reliable labor crew — junk removal, moving, cleanouts, yard work, snow removal, and painting. Fast. Affordable. Same day.
+            Junk removal, moving, cleanouts, yard work, snow removal, and painting. Licensed, insured, and locally owned. Fast. Affordable. Same day.
         </p>
 
-        <div class="hero-price-strip">
-            <div class="hero-price-item">
-                <span class="price">$90<small style="font-size:0.75rem">/hr</small></span>
-                <span class="label">2 Movers + Truck</span>
-            </div>
-            <div class="hero-price-item">
-                <span class="price">$75</span>
-                <span class="label">Curb Pickup</span>
-            </div>
-            <div class="hero-price-item">
-                <span class="price">$45+</span>
-                <span class="label">Snow Removal</span>
-            </div>
-            <div class="hero-price-item">
-                <span class="price">$125+</span>
-                <span class="label">Paint Touch-Ups</span>
-            </div>
+        <div class="trust-pills">
+            <span class="trust-pill">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                Insured
+            </span>
+            <span class="trust-pill">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Locally Owned
+            </span>
+            <span class="trust-pill">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Same Day
+            </span>
+            <span class="trust-pill">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Free Estimates
+            </span>
         </div>
 
         <div class="hero-cta-group">
             <a href="sms:+12488181130" class="hero-btn-primary">
-                📱 Text for a Free Quote
+                Get a Free Quote
             </a>
             <a href="tel:+12488181130" class="hero-btn-call">
-                <span class="call-icon">📞</span>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 248-818-1130
             </a>
         </div>
+    </div>
 
-        <div class="hero-trust-row">
-            <span class="trust-badge"><span class="dot"></span>Licensed &amp; Insured</span>
-            <span class="trust-badge"><span class="dot"></span>No Hidden Fees</span>
-            <span class="trust-badge"><span class="dot"></span>Weekend Availability</span>
-            <span class="trust-badge"><span class="dot"></span>Cash · Venmo · Cashapp</span>
-            <span class="trust-badge"><span class="dot"></span>Free Estimates</span>
-        </div>
+    <!-- Photo strip visible on mobile only -->
+    <div class="hero-photo-strip">
+        <img src="/assets/images/before-cleanout.jpg" alt="Before junk removal cleanout Detroit" width="600" height="400" loading="lazy" decoding="async">
+        <img src="/assets/images/snow-removal.jpg" alt="Snow removal Detroit Metro" width="400" height="400" loading="lazy" decoding="async">
     </div>
 </section>
