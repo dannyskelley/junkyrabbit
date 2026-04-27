@@ -7,31 +7,31 @@
     padding: var(--sectionPadding);
     background: #111111;
 }
-#before-after-jr.ba-container {
+#before-after-jr .ba-container {
     max-width: 72rem;
     margin: 0 auto;
     width: 100%;
 }
-#before-after-jr.ba-header {
+#before-after-jr .ba-header {
     text-align: center;
     margin-bottom: 3rem;
 }
-#before-after-jr.ba-header.cs-topper {
+#before-after-jr .ba-header .cs-topper {
     color: var(--primary);
 }
-#before-after-jr.ba-header h2 {
+#before-after-jr .ba-header h2 {
     font-family: "Darumadrop One", Arial, sans-serif;
     font-size: clamp(2rem, 5vw, 3.2rem);
     color: #ffffff;
     text-transform: uppercase;
     line-height: 1.1;
 }
-#before-after-jr.ba-grid {
+#before-after-jr .ba-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.5rem;
 }
-#before-after-jr.ba-pair {
+#before-after-jr .ba-pair {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4px;
@@ -39,16 +39,16 @@
     overflow: hidden;
     border: 1px solid rgba(184,240,0,0.15);
 }
-#before-after-jr.ba-side {
+#before-after-jr .ba-side {
     position: relative;
 }
-#before-after-jr.ba-side img {
+#before-after-jr .ba-side img {
     width: 100%;
     height: 280px;
     object-fit: cover;
     display: block;
 }
-#before-after-jr.ba-label {
+#before-after-jr .ba-label {
     position: absolute;
     top: 0.75rem;
     left: 0.75rem;
@@ -59,16 +59,16 @@
     padding: 0.25rem 0.65rem;
     border-radius: 3px;
 }
-#before-after-jr.ba-label.before {
+#before-after-jr .ba-label.before {
     background: rgba(0,0,0,0.75);
     color: #fff;
     border: 1px solid rgba(255,255,255,0.2);
 }
-#before-after-jr.ba-label.after {
+#before-after-jr .ba-label.after {
     background: var(--primary);
     color: #0d1a08;
 }
-#before-after-jr.ba-desc {
+#before-after-jr .ba-desc {
     grid-column: 1 / -1;
     text-align: center;
     color: rgba(255,255,255,0.4);
@@ -76,11 +76,11 @@
     margin-top: 0.5rem;
     font-style: italic;
 }
-#before-after-jr.ba-cta {
+#before-after-jr .ba-cta {
     text-align: center;
     margin-top: 3rem;
 }
-#before-after-jr.ba-cta a {
+#before-after-jr .ba-cta a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -95,15 +95,15 @@
     letter-spacing: 0.06em;
     transition: background 0.2s, transform 0.2s;
 }
-#before-after-jr.ba-cta a:hover {
+#before-after-jr .ba-cta a:hover {
     background: #fff;
     transform: translateY(-2px);
 }
 @media (min-width: 48rem) {
-    #before-after-jr.ba-grid {
+    #before-after-jr .ba-grid {
         grid-template-columns: 1fr 1fr;
     }
-    #before-after-jr.ba-side img {
+    #before-after-jr .ba-side img {
         height: 300px;
     }
 }
