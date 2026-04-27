@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
 /*-- -------------------------- -->
 <---        Core Styles         -->
@@ -13,19 +14,22 @@
     --primaryLight: #D4F74E;
     --secondary: #2D7A1A;
     --secondaryLight: #1a3d0e;
-    --headerColor: #111111;
-    --bodyTextColor: #444444;
+    --headerColor: #0d1a08;
+    --bodyTextColor: #1f2a25;
+    --bodyTextColorMuted: #4a5a52;
     --bodyTextColorWhite: #fafbfc;
+    --bodyTextColorWhiteMuted: rgba(255,255,255,0.92);
     --dark: #0d1a08;
     --darkSection: #111111;
     --cta: #FF4500;
     --ctaHover: #e63e00;
     --nav: #0d1a08;
-    /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    --bodyFontSize: 1.2rem;
+    /* 14px - 17px */
+    --topperFontSize: clamp(0.875rem, 1.6vw, 1.0625rem);
+    /* 33px - 52px */
+    --headerFontSize: clamp(2.0625rem, 4.1vw, 3.25rem);
+    /* 18px - 20px responsive body — tuned for older readers */
+    --bodyFontSize: clamp(1.125rem, 1.5vw, 1.25rem);
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 2rem;
   }
@@ -146,12 +150,26 @@
   li,
   a {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.5em;
+    font-size: var(--bodyFontSize);
+    line-height: 1.65;
   }
   p,
   li {
-    color: #353535;
+    color: var(--bodyTextColor);
+  }
+  /* Default text-link styling — only affects in-content anchors that
+     don't carry a class (buttons/nav use their own classes and override). */
+  p a:not([class]),
+  li a:not([class]),
+  .cs-text a:not([class]) {
+    color: var(--secondary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  p a:not([class]):hover,
+  li a:not([class]):hover,
+  .cs-text a:not([class]):hover {
+    color: var(--cta);
   }
   a:hover,
   button:hover {
