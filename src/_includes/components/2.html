@@ -3,337 +3,214 @@
 <!-- ============================================ -->
 
 <style>
-    /*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #services-1627 {
+#services-jr {
     padding: var(--sectionPadding);
-    background-color: #f7f7f7;
-  }
-  #services-1627 .cs-container {
+    background: #f5f5f5;
+}
+#services-jr .svc-container {
+    max-width: 72rem;
+    margin: 0 auto;
     width: 100%;
-    /* changes to 1280px at tablet */
-    max-width: 34.375em;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-  }
-  #services-1627 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: left;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
-  }
-  #services-1627 .cs-title {
-    max-width: 20ch;
-  }
-  #services-1627 .cs-text {
-    max-width: 40rem;
-    position: relative;
-    z-index: 1;
-  }
-  #services-1627 .cs-text:after {
-    /* divider line */
-    content: "";
-    width: 100%;
-    height: 1px;
-    margin-top: 1.5rem;
-    background: var(--primary);
-    opacity: 1;
-    display: block;
-    position: relative;
-  }
-  #services-1627 .cs-chevron {
-    --chevronColor: var(--primary);
-    width: 3rem;
-    height: auto;
-  }
-  #services-1627 .cs-card-group {
-    width: 100%;
+}
+#services-jr .svc-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#services-jr .svc-header .cs-topper {
+    color: var(--secondary);
+    font-weight: 900;
+}
+#services-jr .svc-header h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #111;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+#services-jr .svc-header p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 38rem;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+#services-jr .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* 16px - 20px */
-    column-gap: clamp(1rem, 2.5vw, 1.25rem);
-    /* 28px - 40px */
-    row-gap: clamp(1.75rem, 2.5vw, 2.5rem);
-  }
-  #services-1627 .cs-item {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    grid-column: span 12;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #services-1627 .cs-item:hover .cs-picture img {
-    opacity: .5;
-    transform: scale(1.2);
-  }
-  #services-1627 .cs-link {
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #services-1627 .cs-picture {
-    width: 100%;
-    height: 15rem;
-    margin-bottom: 1.5rem;
-    background-color: #000;
+}
+#services-jr .svc-card {
+    background: #fff;
+    border-radius: 6px;
     overflow: hidden;
-    display: block;
-    position: relative;
-  }
-  #services-1627 .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+    border-top: 3px solid var(--primary);
+}
+#services-jr .svc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+#services-jr .svc-img-wrap {
     width: 100%;
-    object-fit: cover;
-    transition: transform .6s, opacity .3s;
-  }
-  #services-1627 .cs-h3 {
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    font-weight: 700;
-    text-align: left;
-    margin: 0 0 0.75rem 0;
-    color: var(--headerColor);
-  }
-  #services-1627 .cs-item-text {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-align: left;
-    margin: 0 0 1.5rem 0;
-    color: var(--bodyTextColor);
-  }
-  #services-1627 .cs-fake-link {
-    font-size: 1rem;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 0;
-    margin-top: auto;
-    color: var(--primary);
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  #services-1627 .cs-fake-link:hover .cs-icon {
-    transform: translateX(0.5rem);
-  }
-  #services-1627 .cs-icon {
-    width: 1.25rem;
-    height: auto;
-    display: block;
-    transition: transform .3s;
-  }
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+    background: #1a1a1a;
 }
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #services-1627 .cs-container {
-    max-width: 80rem;
-  }
-  #services-1627 .cs-content {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  #services-1627 .cs-flex {
-    text-align: left;
-    width: 40vw;
-    max-width: 40rem;
-    flex: none;
-  }
-  #services-1627 .cs-title {
-    margin: 0;
-  }
-  #services-1627 .cs-text {
-    padding: 0.75rem 0 0.75rem 1.5rem;
-  }
-  #services-1627 .cs-text:after {
-    width: 1px;
+#services-jr .svc-img-wrap img {
+    width: 100%;
     height: 100%;
-    margin: 0 1.5rem 0 0;
-    order: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  #services-1627 .cs-item {
-    grid-column: span 4;
-  }
-  #services-1627 .cs-picture {
-    /* 240px - 420px */
-    height: clamp(15rem, 33vw, 26.25rem);
-  }
+    object-fit: cover;
+    transition: transform 0.5s;
 }
-                                
+#services-jr .svc-card:hover .svc-img-wrap img {
+    transform: scale(1.06);
+}
+#services-jr .svc-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#services-jr .svc-price-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: #0d1a08;
+    font-weight: 900;
+    font-size: 0.82rem;
+    padding: 0.22rem 0.7rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.75rem;
+    align-self: flex-start;
+}
+#services-jr .svc-body h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 0.45rem;
+    line-height: 1.25;
+}
+#services-jr .svc-body p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+#services-jr .svc-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--secondary);
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 800;
+    padding: 0.65rem 1.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+#services-jr .svc-cta:hover {
+    background: var(--primary);
+    color: #0d1a08;
+}
 </style>
+
 <div id="services"></div>
-<section id="services-1627">
-    <div class="cs-container">
-        <div class="cs-content">
-            <div class="cs-flex">
-                <span class="cs-topper">Our Services</span>
-                <h2 class="cs-title">Starts at $35 per hour, no hidden fees</h2>
-            </div>
-            <p class="cs-text">
-              For all your household needs, including moving, painting, junk removal, general labor and lawn service, give us a call at 248-818-1130. We provide free quotes for all services.             </p>
-        </div>                  
-        <ul class="cs-card-group">
+<section id="services-jr">
+    <div class="svc-container">
+        <div class="svc-header">
+            <span class="cs-topper">What We Do</span>
+            <h2>Our Services &amp; Pricing</h2>
+            <p>Fast, affordable, and reliable across the Detroit Metro area. Call or text for a free same-day quote — 248-818-1130.</p>
+        </div>
 
-            
-            <li class="cs-item">
-              <a href="tel:{{client.phoneForTel}}" class="cs-link">
-                  <picture class="cs-picture">
-                      <!--Mobile Image-->
-                      <source media="(max-width: 600px)" srcset="/assets/images/snow.jpg">
-                      <!--Tablet and above Image-->
-                      <source media="(min-width: 601px)" srcset="/assets/images/snow.jpg">
-                      <img loading="lazy" decoding="async" src="/assets/images/snow.jpg" alt="room" width="413" height="420">
-                  </picture>
-                  <h3 class="cs-title">Snow Removal</h3>
-                  <p class="cs-item-text">
-                    Clear your driveway and sidewalks this winter with our professional snow removal service! For an unbeatable price, we ensure your outdoor space is safe and accessible. Don’t let snow slow you down—call or text 248-818-1130 for a free quote today!
-                  </p>
-                  <span class="cs-fake-link">
-                      Get Started
-                      <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                  </span>
-              </a>
-          </li>
+        <ul class="svc-grid">
 
-          <li class="cs-item">
-            <a href="tel:{{client.phoneForTel}}" class="cs-link">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="/assets/images/cleaning.jpg">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="/assets/images/cleaning.jpg">
-                    <img loading="lazy" decoding="async" src="/assets/images/cleaning.jpg" alt="room" width="413" height="420">
-                </picture>
-                <h3 class="cs-title">Property Cleaning</h3>
-                <p class="cs-item-text">
-                  Revitalize your property with our thorough cleaning services! Whether it’s residential or commercial, we tackle dirt and clutter to give your space a fresh, inviting look. For an unbeatable price, let us handle the hard work. Call or text 248-818-1130 for a free quote today!
-                </p>
-                <span class="cs-fake-link">
-                    Get Started
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                </span>
-            </a>
-        </li>
+            <li class="svc-card">
+                <div class="svc-img-wrap">
+                    <img loading="lazy" decoding="async" src="/assets/images/hero-movers.png" alt="Moving help and junk removal crew Detroit Metro" width="600" height="420" style="object-position: top;">
+                </div>
+                <div class="svc-body">
+                    <span class="svc-price-badge">2 Movers + Truck — $90/hr</span>
+                    <h3>Moving Help</h3>
+                    <p>Two professional movers plus a 20ft truck for $90/hr. We load, unload, and haul — fast and careful. Weekend availability, 2hr minimum.</p>
+                    <a href="sms:+12488181130" class="svc-cta">Get a Quote →</a>
+                </div>
+            </li>
 
-      
+            <li class="svc-card">
+                <div class="svc-img-wrap">
+                    <img loading="lazy" decoding="async" src="/assets/images/before-cleanout.jpg" alt="Junk removal and cleanout service Detroit" width="600" height="420">
+                </div>
+                <div class="svc-body">
+                    <span class="svc-price-badge">Curb Pickup from $75</span>
+                    <h3>Junk Removal &amp; Cleanouts</h3>
+                    <p>Curb pickup up to 5 items for $75. Full property cleanouts, estate haul-aways, garage and basement cleanouts — same day available.</p>
+                    <a href="sms:+12488181130" class="svc-cta">Get a Quote →</a>
+                </div>
+            </li>
 
-      <li class="cs-item">
-        <a href="tel:{{client.phoneForTel}}" class="cs-link">
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/moving.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/moving.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/moving.jpg" alt="room" width="413" height="420">
-            </picture>
-            <h3 class="cs-title">Moving</h3>
-            <p class="cs-item-text">
-              Looking for help with moving? Give us a call or send a text to 248-818-1130
- for affordable and reliable services. We're here to make your life easier!
-            </p>
-            <span class="cs-fake-link">
-                Get Started
-                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-            </span>
-        </a>
-    </li>
+            <li class="svc-card">
+                <div class="svc-img-wrap">
+                    <img loading="lazy" decoding="async" src="/assets/images/snow-removal.jpg" alt="Snow removal residential Detroit Metro" width="600" height="420">
+                </div>
+                <div class="svc-body">
+                    <span class="svc-price-badge">Starting at $45</span>
+                    <h3>Snow Removal</h3>
+                    <p>We shovel residential driveways and sidewalks starting at $45. Don't let snow slow you down — call or text and we'll be there fast.</p>
+                    <a href="sms:+12488181130" class="svc-cta">Get a Quote →</a>
+                </div>
+            </li>
 
-      
-      <li class="cs-item">
-        <a href="tel:{{client.phoneForTel}}" class="cs-link">
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/junk.jpeg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/junk.jpeg">
-                <img loading="lazy" decoding="async" src="/assets/images/junk.jpeg" alt="room" width="413" height="420">
-            </picture>
-            <h3 class="cs-title">Junk Removal</h3>
-            <p class="cs-item-text">
-              Looking for help with getting rid of some junk? Give us a call or send a text to 248-818-1130
- for affordable and reliable services. We're here to make your life easier!
-            </p>
-            <span class="cs-fake-link">
-                Get Started
-                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-            </span>
-        </a>
-    </li>
+            <li class="svc-card">
+                <div class="svc-img-wrap">
+                    <img loading="lazy" decoding="async" src="/assets/images/after-cleanout.jpg" alt="Clean room after junk removal Detroit" width="600" height="420">
+                </div>
+                <div class="svc-body">
+                    <span class="svc-price-badge">Touch-Ups from $125</span>
+                    <h3>Painting</h3>
+                    <p>Paint touch-ups from $125. Full rooms from $250. We make spaces look fresh and clean — perfect for rentals, move-ins, and refreshes.</p>
+                    <a href="sms:+12488181130" class="svc-cta">Get a Quote →</a>
+                </div>
+            </li>
 
+            <li class="svc-card">
+                <div class="svc-img-wrap">
+                    <img loading="lazy" decoding="async" src="/assets/images/before-landscaping.jpg" alt="Yard cleanup bush trimming Detroit Metro" width="600" height="420">
+                </div>
+                <div class="svc-body">
+                    <span class="svc-price-badge">Free Estimate</span>
+                    <h3>Yard Cleanup &amp; Landscaping</h3>
+                    <p>Overgrown bushes, leaf &amp; brush removal, light landscaping and debris hauling. We leave your yard looking sharp.</p>
+                    <a href="sms:+12488181130" class="svc-cta">Get a Quote →</a>
+                </div>
+            </li>
 
-    
-    <li class="cs-item">
-      <a href="tel:{{client.phoneForTel}}" class="cs-link">
-          <picture class="cs-picture">
-              <!--Mobile Image-->
-              <source media="(max-width: 600px)" srcset="/assets/images/service6.jpeg">
-              <!--Tablet and above Image-->
-              <source media="(min-width: 601px)" srcset="/assets/images/service6.jpeg">
-              <img loading="lazy" decoding="async" src="/assets/images/service6.jpeg" alt="room" width="413" height="420">
-          </picture>
-          <h3 class="cs-title">Painting</h3>
-          <p class="cs-item-text">
-            Looking to add some color to your living space? We've got a great deal on paint specials for the rest of the month - just $180 per bedroom! 
-          </p>
-          <span class="cs-fake-link">
-              Get Started
-              <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-          </span>
-      </a>
-  </li>
-
-
-  <li class="cs-item">
-    <a href="tel:{{client.phoneForTel}}" class="cs-link">
-        <picture class="cs-picture">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="/assets/images/service1.jpeg">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="/assets/images/service1.jpeg">
-            <img loading="lazy" decoding="async" src="/assets/images/service1.jpeg" alt="room" width="413" height="420">
-        </picture>
-        <h3 class="cs-title">Landscaping Services</h3>
-        <p class="cs-item-text">
-          Our team of hardworking rabbits will take care of it for you. Sit back, relax, and enjoy your beautiful Outdoor area! 🌿🐇
-        </p>
-        <span class="cs-fake-link">
-            Get Started
-            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-        </span>
-    </a>
-</li>
-
- 
-
-
-
-
-      
-
+            <li class="svc-card">
+                <div class="svc-img-wrap">
+                    <img loading="lazy" decoding="async" src="/assets/images/after-landscaping.jpg" alt="Clean yard after landscaping Detroit" width="600" height="420">
+                </div>
+                <div class="svc-body">
+                    <span class="svc-price-badge">Free Estimate</span>
+                    <h3>Demolition &amp; Hauling</h3>
+                    <p>Shed &amp; fence removal, dirt &amp; debris haul-away, furniture disposal, and light demolition. We handle the heavy stuff so you don't have to.</p>
+                    <a href="sms:+12488181130" class="svc-cta">Get a Quote →</a>
+                </div>
+            </li>
 
         </ul>
     </div>
 </section>
-                                

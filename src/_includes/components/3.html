@@ -5,168 +5,198 @@
 <span id="reviews"></span>
 
 <style>
-    /*-- -------------------------- -->
-<---          Reviews           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #reviews-1670 {
+#reviews-jr {
     padding: var(--sectionPadding);
-  }
-  #reviews-1670 .cs-container {
+    background: #f5f5f5;
+}
+#reviews-jr .rv-container {
+    max-width: 72rem;
+    margin: 0 auto;
     width: 100%;
-    max-width: 80rem;
-    margin: auto;
+}
+#reviews-jr .rv-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#reviews-jr .rv-header .cs-topper {
+    color: var(--secondary);
+    font-weight: 900;
+}
+#reviews-jr .rv-header h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+#reviews-jr .rv-stars-row {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    /* 40px - 64px */
-    gap: clamp(2.5rem, 4.5vw, 4rem);
-  }
-  #reviews-1670 .cs-content {
-    text-align: left;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #reviews-1670 .cs-title {
-    margin: 0rem;
-  }
-  #reviews-1670 .cs-card-group {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* 16px - 20px */
-    gap: clamp(1rem, 2.5vw, 1.25rem);
-  }
-  #reviews-1670 .cs-item {
-    list-style: none;
-    width: 100%;
-    /* 20px - 40px top & bottom */
-    /* 20px - 40px left & right */
-    padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
-    background-color: #f7f7f7;
-    /* prevents padding from adding to height and width */
-    box-sizing: border-box;
-    display: flex;
-    grid-column: span 12;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    position: relative;
-    /* 24px - 48px */
-    gap: clamp(1.5rem, 4vw, 3rem);
-  }
-  #reviews-1670 .cs-flex-group {
-    /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
-    margin-top: auto;
-    display: flex;
-    align-items: flex-start;
     gap: 0.75rem;
-  }
-  #reviews-1670 .cs-profile {
-    width: 3.25rem;
-    height: auto;
-    border-radius: 50%;
-    position: relative;
-    display: block;
-  }
-  #reviews-1670 .cs-profile img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /* makes the image behave like a background image */
-    object-fit: cover;
-  }
-  #reviews-1670 .cs-name {
-    /* 20px - 25px */
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 0;
-    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
-    margin-top: auto;
-    color: var(--headerColor);
-    display: block;
-  }
-  #reviews-1670 .cs-job {
-    /* 14px - 16px */
+    margin-bottom: 3rem;
+}
+#reviews-jr .rv-stars span {
+    font-size: 1.5rem;
+    color: var(--primary);
+    -webkit-text-stroke: 1px #2D7A1A;
+}
+#reviews-jr .rv-rating-text {
     font-size: 1rem;
-    line-height: 1.5em;
-    font-weight: 400;
-    margin: 0;
-    color: var(--bodyTextColor);
-    display: block;
-  }
-  #reviews-1670 .wrapper {
+    font-weight: 800;
+    color: #333;
+}
+#reviews-jr .rv-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem;
+}
+#reviews-jr .rv-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-  #reviews-1670 .cs-item-stars {
-    width: 6.75rem;
-    height: auto;
-  }
-  #reviews-1670 .cs-review {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.6vw, 1.25rem);
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--bodyTextColor);
-    z-index: 1;
-  }
-  #reviews-1670 .cs-quote {
-    width: 5.375rem;
-    height: auto;
+    border-left: 4px solid var(--primary);
+}
+#reviews-jr .rv-card-stars {
+    display: flex;
+    gap: 0.2rem;
+}
+#reviews-jr .rv-card-stars span {
+    font-size: 1.05rem;
+    color: var(--primary);
+    -webkit-text-stroke: 1px #2D7A1A;
+}
+#reviews-jr .rv-text {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.7;
+    flex: 1;
+    font-style: italic;
+}
+#reviews-jr .rv-author {
+    font-weight: 900;
+    color: #111;
+    font-size: 0.95rem;
+    font-style: normal;
+}
+#reviews-jr .rv-location {
+    font-size: 0.82rem;
+    color: #888;
+    font-weight: 400;
+}
+#reviews-jr .rv-quote-icon {
     position: absolute;
-    right: 0rem;
-    bottom: 0rem;
-    z-index: 0;
-  }
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 4rem;
+    color: var(--primary);
+    opacity: 0.2;
+    line-height: 1;
+    pointer-events: none;
 }
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #reviews-1670 .cs-item {
-    grid-column: span 12;
-  }
+#reviews-jr .rv-cta {
+    text-align: center;
 }
-                                
+#reviews-jr .rv-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--secondary);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 0.95rem 2.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s;
+}
+#reviews-jr .rv-cta a:hover {
+    background: #0d1a08;
+}
+@media (min-width: 48rem) {
+    #reviews-jr .rv-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 72rem) {
+    #reviews-jr .rv-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 </style>
 
-<section id="reviews-1670">
-    <div class="cs-container">
-        <div class="cs-content">
+<section id="reviews-jr">
+    <div class="rv-container">
+        <div class="rv-header">
             <span class="cs-topper">Customer Reviews</span>
-            <h2 class="cs-title">We love helping our customers!</h2>
+            <h2>5-Star Detroit Service</h2>
         </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
 
-                <div class="wrapper">
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
-                    <p class="cs-review">
-                        “Junky Rabbit responded to me right away on next door with a great price to mow my over grown lawn. Lunden was prompt, courteous and professional. He let me know I didn't need to be home for him to mow and he accepted
-                        Cashapp, Apple Pay, and Venmo. It was really rainy so I was worried he would not be able to mow. Lunden showed up on time and got the job done. Thank you for your hard work to help me keep up with my home”
-                            </p>
-                </div>
-                <div class="cs-flex-group">
+        <div class="rv-stars-row">
+            <div class="rv-stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="rv-rating-text">5.0 · Dozens of Happy Customers</span>
+        </div>
 
-                    <span class="cs-name">
-                       Danny
-                        <span class="cs-job">Highland Park, MI</span>
-                    </span>
-                </div>
-                <!--Quote Icon-->
-                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+        <ul class="rv-grid">
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"Junky Rabbit responded to me right away on Nextdoor with a great price to mow my overgrown lawn. Lunden was prompt, courteous and professional. He showed up on time and got the job done even in the rain. Thank you!"</p>
+                <div><span class="rv-author">Danny</span><span class="rv-location"> · Highland Park, MI</span></div>
             </li>
-           
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"Very professional crew! They cleared out our entire garage and hauled everything away in just a few hours. Fair pricing, showed up on time, and left the place spotless. Would 100% call them again."</p>
+                <div><span class="rv-author">Marcus T.</span><span class="rv-location"> · Warren, MI</span></div>
+            </li>
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"Lunden and his team helped us move on short notice and they were AMAZING. Quick, careful with all our furniture, and super affordable. I've already recommended them to three neighbors!"</p>
+                <div><span class="rv-author">Keisha R.</span><span class="rv-location"> · Detroit, MI</span></div>
+            </li>
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"Called about snow removal and they came the same day! Driveway and sidewalks completely cleared in under 30 minutes. Perfect price and great attitude. Will definitely call every snowfall."</p>
+                <div><span class="rv-author">Patricia W.</span><span class="rv-location"> · Sterling Heights, MI</span></div>
+            </li>
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"Had them do touch-up painting and yard cleanup at my rental property before move-in. They turned it around in ONE DAY. Unbelievable work ethic. Hard work, clean spaces, happy faces — that's the truth!"</p>
+                <div><span class="rv-author">Brian S.</span><span class="rv-location"> · Eastpointe, MI</span></div>
+            </li>
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"Needed an old shed removed and the area cleaned up. Junky Rabbit gave a fair quote, showed up on schedule, had it completely gone same day. The yard looked amazing. Great communication from start to finish."</p>
+                <div><span class="rv-author">Donna M.</span><span class="rv-location"> · Southfield, MI</span></div>
+            </li>
+
         </ul>
+
+        <div class="rv-cta">
+            <a href="/reviews">Read More Reviews</a>
+        </div>
     </div>
 </section>
-                                

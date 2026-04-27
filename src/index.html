@@ -1,7 +1,7 @@
 ---
-title: 'Junky Rabbit Labor | Affordable General Labor Services in Detroit Metro Area | Starting at $35/Hour'
-description: 'Get reliable and affordable general labor services in the Detroit Metro area, starting at just $35/hour! We specialize in moving, junk removal, snow removal, painting, landscaping, and more. Free quotes and no hidden fees. Call or text (+248) 818 1130 today for fast, efficient service!'
-preloadImg: '/assets/images/landing.jpg'
+title: 'Junk Removal, Moving &amp; General Labor Services'
+description: 'Junky Rabbit Labor — Detroit Metro area junk removal, moving help, snow removal, painting, and yard cleanup. Starting at $35/hr. Same day service. Call or text 248-818-1130 for a free quote!'
+preloadImg: '/assets/images/brand-flyer.png'
 permalink: '/'
 eleventyNavigation:
   key: Home
@@ -14,36 +14,75 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/local.css" />
     <link rel="stylesheet" href="/assets/css/critical.css" />
 
-  
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
         if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
+            window.netlifyIdentity.on('init', (user) => {
+                if (!user) {
+                    window.netlifyIdentity.on('login', () => {
+                        document.location.href = '/admin/';
+                    });
+                }
+            });
         }
     </script>
 
+    <!-- LocalBusiness Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Junky Rabbit Labor",
+      "image": "https://junkyrabbitlabor.com/assets/images/logo.svg",
+      "url": "https://junkyrabbitlabor.com",
+      "telephone": "+12488181130",
+      "email": "JunkyRabbit@gmail.com",
+      "description": "Detroit Metro area general labor services including junk removal, moving help, snow removal, painting, yard cleanup and property cleanouts.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Detroit",
+        "addressRegion": "MI",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.3314,
+        "longitude": -83.0458
+      },
+      "areaServed": [
+        "Detroit", "Warren", "Sterling Heights", "Southfield", "Eastpointe",
+        "Highland Park", "Livonia", "Dearborn", "Troy", "Royal Oak"
+      ],
+      "priceRange": "$$",
+      "openingHours": "Mo-Su 07:00-20:00",
+      "sameAs": [
+        "https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "General Labor Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Junk Removal"}, "price": "75", "priceCurrency": "USD"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Moving Help"}, "price": "65", "priceCurrency": "USD"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Snow Removal"}, "price": "45", "priceCurrency": "USD"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Painting"}, "price": "125", "priceCurrency": "USD"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Yard Cleanup & Landscaping"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Property Cleanouts"}}
+        ]
+      }
+    }
+    </script>
 {% endblock %}
 
 {% block body %}
 
-    
 {% include 'components/hero.html' %}
+{% include 'components/trust-bar.html' %}
 {% include 'components/2.html' %}
+{% include 'components/before-after.html' %}
+{% include 'components/quote-steps.html' %}
 {% include 'components/3.html' %}
+{% include 'components/cta-banner.html' %}
 
-
-
-
-
-    {% endblock %}
+{% endblock %}

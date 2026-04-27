@@ -3,367 +3,230 @@
 <!-- ============================================ -->
 
 <style>
-    /*-- -------------------------- -->
-<---           Hero             -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #hero-358 {
-        /* Centers button */
-        text-align: center;
-        /* 150px - 350px */
-        padding: clamp(9rem, 25.95vw, 11.875rem) 1rem;
-        padding-bottom: 0;
-        position: relative;
-        z-index: 1;
-        /* prevents overflow from the lines extending past the screen width */
-        overflow: hidden;
-    }
-    @keyframes floatAnimation {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-1em);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-    @keyframes floatAnimation2 {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-1em);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-    #hero-358 .cs-background {
-        /* Background Image */
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -2;
-    }
-    #hero-358 .cs-background:before {
-        /* White Color Overlay */
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: #fff;
-        opacity: 0.85;
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        /* prevents the cursor from interacting with it */
-        pointer-events: none;
-    }
-    #hero-358 .cs-background img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        /* Makes image act like a background-image */
-        object-fit: cover;
-        /* places the top of the image at the top of the parent */
-        object-position: top;
-    }
-    #hero-358 .cs-container {
-        width: 100%;
-        max-width: 80rem;
-        margin: auto;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        /* 48px - 64px */
-        gap: clamp(3rem, 7vw, 4rem);
-    }
-    #hero-358 .cs-flex-group {
-        max-width: 39.125rem;
-        margin: auto;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-    }
-    #hero-358 .cs-topper {
-        font-size: var(--topperFontSize);
-        line-height: 1.2em;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 0.1em;
-        font-weight: 700;
-        color: var(--secondary);
-        margin-bottom: 0.25rem;
-        display: block;
-    }
-    #hero-358 .cs-title {
-        /* 39px - 61px */
-        font-size: clamp(4.1375rem, 6.4vw, 4.8125rem);
-        font-weight: 900;
-        line-height: .8em;
-        text-align: center;
-        width: 100%;
-        margin: 0 auto 2rem;
-        color: var(--headerColor);
-        position: relative;
-    }
-    #hero-358 .cs-accent {
-        color: var(--primaryLight);
-    }
-    #hero-358 .cs-text {
-        font-size: 1.25rem;
-        line-height: 1.5em;
-        text-align: center;
-        width: 100%;
-        /* changes to 442px at desktop */
-        max-width: 43.75rem;
-        /* 32px - 40px */
-        margin: 0 auto clamp(2rem, 4vw, 2.5rem);
-        /* 24px - 40px */
-        margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
-        color: var(--bodyTextColor);
-    }
-    #hero-358 .cs-button-group {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-  
-    #hero-358 .cs-button-transparent {
-        text-decoration: none;
-        width: auto;
-        /* 46px - 56px */
-        height: clamp(2.875rem, 5.5vw, 3.5rem);
-        margin: 0;
-        padding: 0;
-        color: var(--primaryLight);
-        background-color: transparent;
-        box-sizing: border-box;
-        display: inline-flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
-    #hero-358 .cs-button-transparent:before {
-        /* white hover box */
-        content: "";
-        /* 46px - 56px */
-        width: clamp(2.875em, 5.5vw, 3.5em);
-        background: #fff;
-        border-radius: 2.5rem;
-        opacity: 1;
-        position: absolute;
-        display: block;
-        top: -6px;
-        bottom: -6px;
-        left: 6px;
-        z-index: -1;
-        transition:
-            width 0.3s,
-            box-shadow 0.3s;
-    }
-    #hero-358 .cs-button-transparent:hover:before {
-        width: 107%;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    }
-    #hero-358 .cs-content {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-    #hero-358 .cs-tag {
-        font-size: 0.875rem;
-        line-height: 1.5em;
-        margin: 0;
-        margin-bottom: 0.25rem;
-        color: #767676;
-    }
-    #hero-358 .cs-number {
-        /* 16px - 20px */
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        line-height: 1.2em;
-        font-weight: 700;
-        margin: 0;
-        margin-bottom: 0.25rem;
-        color: var(--headerColor);
-    }
-    #hero-358 .cs-picture {
-        /* 46px - 56px */
-        width: clamp(2.875rem, 5.5vw, 3.5rem);
-        height: clamp(2.875rem, 5.5vw, 3.5rem);
-        margin-right: 0.5rem;
-        background-color: var(--primary);
-        border-radius: 50%;
-        border: 6px solid #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #hero-358 .cs-img {
-        width: 1.5rem;
-        height: auto;
-    }
-    #hero-358 .cs-image-group {
-        font-size: min(1.6vw, 0.7em);
-        /* using ems so we can scale this container with a font size */
-        width: 51.9375em;
-    
-        position: relative;
-    }
-    #hero-358 .cs-splash {
-        position: absolute;
-        width: 49.4375em;
-        height: 38.5em;
-        top: 1.25em;
-        right: -2.5em;
-    }
-    #hero-358 .cs-person {
-        width: auto;
-        height: 100%;
-        position: relative;
-        
-    }
-    #hero-358 .cs-person img {
-        width: 100%;
-        height: auto;
-         border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0 clamp(6.25rem, 17vw, 12.5rem);
-    }
-    #hero-358 .cs-icon-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 7.5em;
-        height: 7.5em;
-        border-radius: 50%;
-        position: absolute;
-       right:0px;
-       left:0px;
-        top:700px;
-        z-index: 999;
-        animation-name: floatAnimation2;
-        animation-duration: 4s;
-        animation-delay: 0.2s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
-    #hero-358 .cs-icon {
-        width: 20.25em;
-        height: auto;
+#hero-jr {
+    background-color: #0d1a08;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+#hero-jr .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+#hero-jr .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+#hero-jr .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(13,26,8,0.93) 0%, rgba(13,26,8,0.75) 55%, rgba(13,26,8,0.3) 100%);
+}
+#hero-jr .hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+#hero-jr .hero-topper {
+    display: inline-block;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 0.35rem 1rem;
+    border-radius: 3px;
+}
+#hero-jr h1 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(3rem, 8.5vw, 6.5rem);
+    line-height: 0.93;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+    max-width: 13ch;
+}
+#hero-jr h1 .accent {
+    color: var(--primary);
+    display: block;
+}
+#hero-jr .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: rgba(255,255,255,0.75);
+    max-width: 34rem;
+    line-height: 1.65;
+    margin: 0;
+}
+#hero-jr .hero-price-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+#hero-jr .hero-price-item {
+    background: rgba(184,240,0,0.1);
+    border: 1px solid rgba(184,240,0,0.35);
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 5.5rem;
+}
+#hero-jr .hero-price-item .price {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+}
+#hero-jr .hero-price-item .label {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 0.2rem;
+    text-align: center;
+}
+#hero-jr .hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+#hero-jr .hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: #0d1a08;
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 0.95rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s, transform 0.2s;
+}
+#hero-jr .hero-btn-primary:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+#hero-jr .hero-btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+#hero-jr .hero-btn-call:hover {
+    color: var(--primary);
+}
+#hero-jr .hero-btn-call .call-icon {
+    background: var(--primary);
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+#hero-jr .hero-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+}
+#hero-jr .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.65);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+#hero-jr .trust-badge .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+    flex-shrink: 0;
+}
+@media (min-width: 48rem) {
+    #hero-jr .hero-container {
+        padding: 12rem 2rem 7rem;
     }
 }
-/* Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #hero-358 .cs-icon-wrapper {z-index: 999;
-    right: 50%;
-    left: auto;
-    top:600px;
-}
-    #hero-358 {
-        padding-bottom: 10rem;
-    }
-    #hero-358 .cs-container {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    #hero-358 .cs-flex-group {
-        justify-content: flex-start;
-        margin: 0;
-    }
-    #hero-358 .cs-topper,
-    #hero-358 .cs-title,
-    #hero-358 .cs-text {
-        text-align: left;
-        margin-left: 0;
-    }
-    #hero-358 .cs-text {
-        max-width: 27.625rem;
-    }
-    #hero-358 .cs-button-group {
-        justify-content: flex-start;
-    }
-    #hero-358 .cs-image-group {
-        font-size: min(1.4vw, 1em);
-        height: 40rem;
-        position: absolute;
-        bottom: -9.375em;
-        right: -13.5625em;
-    }
-}
-
-                                
 </style>
 
-<section id="hero-358">
-          <!--Icon Cirlce Group-->
-          <picture class="cs-icon-wrapper">
-            <img class="cs-icon" decoding="async" src="/assets/images/rabbit.svg" alt="icon" width="52" height="52" aria-hidden="true">
-        </picture>
-    <div class="cs-container">
-        <div class="cs-flex-group">
-            <span class="cs-topper">Detroit Metro Area - Starts at $35/Hour</span>
-            <h1 class="cs-title"> Reliable General Labor</h1>
-            <p class="cs-text">
-               We specialize in getting the job done efficiently & affordably. With years of experience in the Detroit metro area, we've earned a reputation for our hard work.
-            </p>
-            <div class="cs-button-group">
-               
-     
-   
-                
-    
-                <a href="tel:(+248) 818 1130" class="cs-button-transparent">
-                    <picture class="cs-picture">
-                        <img class="cs-img" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/phone-white.svg" alt="icon" width="24" height="24" aria-hidden="true">
-                    </picture>
-                    <div class="cs-content">
-                        <span class="cs-tag">Call or Text Anytime</span>
-                        <span class="cs-number">(+248) 818 1130</span>
-                    </div>
-                </a>
+<section id="hero-jr">
+    <div class="hero-bg">
+        <img src="/assets/images/hero-movers.png" alt="Junky Rabbit Labor crew ready to work in Detroit Metro area" width="1200" height="900" decoding="async">
+    </div>
+    <div class="hero-container">
+        <span class="hero-topper">Detroit Metro Area &bull; Same Day Service Available</span>
+        <h1>We Haul.<span class="accent">You Relax.</span></h1>
+        <p class="hero-sub">
+            Detroit's most reliable labor crew — junk removal, moving, cleanouts, yard work, snow removal, and painting. Fast. Affordable. Same day.
+        </p>
 
-
-                <a style="text-decoration: none;" target="_blank" href="https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author">
-                    <div class="cs-content">
-                        <span class="cs-tag" >Message us on</span>
-                        <span class="cs-number"><img style="height:20px; width: 100px;" loading="lazy" decoding="async" src="/assets/images/nextdoor.svg" alt="logo"></span>
-                    </div>
-                </a>
-
-           
+        <div class="hero-price-strip">
+            <div class="hero-price-item">
+                <span class="price">$90<small style="font-size:0.75rem">/hr</small></span>
+                <span class="label">2 Movers + Truck</span>
+            </div>
+            <div class="hero-price-item">
+                <span class="price">$75</span>
+                <span class="label">Curb Pickup</span>
+            </div>
+            <div class="hero-price-item">
+                <span class="price">$45+</span>
+                <span class="label">Snow Removal</span>
+            </div>
+            <div class="hero-price-item">
+                <span class="price">$125+</span>
+                <span class="label">Paint Touch-Ups</span>
             </div>
         </div>
-        <div class="cs-image-group">
-      
 
+        <div class="hero-cta-group">
+            <a href="sms:+12488181130" class="hero-btn-primary">
+                📱 Text for a Free Quote
+            </a>
+            <a href="tel:+12488181130" class="hero-btn-call">
+                <span class="call-icon">📞</span>
+                248-818-1130
+            </a>
+        </div>
 
-            <!-- Maid Picture -->
-            <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
-            <picture class="cs-person">
-                <source media="(max-width: 600px)" srcset="/assets/images/home1.jpeg">
-                <source media="(min-width: 601px)" srcset="/assets/images/home1.jpeg">
-                <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/home1.jpeg" alt="maid" width="831" height="674">
-            </picture>
+        <div class="hero-trust-row">
+            <span class="trust-badge"><span class="dot"></span>Licensed &amp; Insured</span>
+            <span class="trust-badge"><span class="dot"></span>No Hidden Fees</span>
+            <span class="trust-badge"><span class="dot"></span>Weekend Availability</span>
+            <span class="trust-badge"><span class="dot"></span>Cash · Venmo · Cashapp</span>
+            <span class="trust-badge"><span class="dot"></span>Free Estimates</span>
         </div>
     </div>
 </section>
-                                

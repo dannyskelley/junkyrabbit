@@ -2,60 +2,183 @@
 <!--                   Footer                     -->
 <!-- ============================================ -->
 
+<style>
+#footer-jr {
+    background: #0d1a08;
+    color: rgba(255,255,255,0.55);
+    padding: 3.5rem 1.5rem 1.5rem;
+}
+#footer-jr .ft-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+#footer-jr .ft-brand img {
+    height: 52px;
+    margin-bottom: 1rem;
+    display: block;
+}
+#footer-jr .ft-tagline {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    max-width: 22rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.25rem;
+}
+#footer-jr .ft-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+#footer-jr .ft-social a:hover {
+    color: var(--primary);
+}
+#footer-jr .ft-col h4 {
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+#footer-jr .ft-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+#footer-jr .ft-col ul li a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+#footer-jr .ft-col ul li a:hover {
+    color: var(--primary);
+}
+#footer-jr .ft-contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-bottom: 0.75rem;
+}
+#footer-jr .ft-contact-item .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.3);
+}
+#footer-jr .ft-contact-item a,
+#footer-jr .ft-contact-item span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+#footer-jr .ft-contact-item a:hover {
+    color: var(--primary);
+}
+#footer-jr .ft-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+}
+#footer-jr .ft-bottom a {
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+#footer-jr .ft-bottom a:hover {
+    color: var(--primary);
+}
+.gandalfpill {
+    transition: all ease .2s;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: white;
+    padding: 0 8px;
+    border-radius: 999px;
+}
+.gandalfpill:hover img {
+    filter: grayscale(1) brightness(1000%);
+}
+.gandalfpill:hover {
+    background-color: black;
+    transform: translateY(-3px);
+}
+@media (min-width: 48rem) {
+    #footer-jr .ft-container {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+</style>
 
-<footer id="footer">
-    <div class="container">
-        <div class="left-section">
-            
-                
-            <a class="logo" href="/"><img style="filter: invert(100%); margin: auto; display: block;" loading="lazy" decoding="async" src="/assets/images/logo.svg" alt="logo" width="264" height="78"></a>
-            <Div class="cs-topper" style="color:#999">Detroit General Labor</Div>
-            <Div class="cs-topper" style="color:#999; margin-bottom: 50px;">"We're here to make your life easier"</Div>
-            <div class="cs-social" style="margin: 20px 0px 50px;">
-<Div class="cs-topper">Message us on:</Div>
-                <a class="cs-social-link" aria-label="visit google profile" href="https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author">
-                    <img style="margin-right: 20px;width: 200px; height: 50px; filter: grayscale(1) brightness(1000%);" class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/nextdoor.svg" alt="google">
+<footer id="footer-jr">
+    <div class="ft-container">
+        <div class="ft-brand">
+            <img loading="lazy" decoding="async" src="/assets/images/logo.svg" alt="Junky Rabbit Labor logo" width="210" height="52" style="filter: invert(1);">
+            <p class="ft-tagline">Detroit Metro's reliable general labor crew. Hard work. Clean spaces. Happy faces.</p>
+            <div class="ft-social">
+                <a target="_blank" href="https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author">
+                    <img style="height:18px; filter: invert(1) brightness(0.6);" loading="lazy" decoding="async" src="/assets/images/nextdoor.svg" alt="Nextdoor"> Find us on Nextdoor
                 </a>
-
-
-       
             </div>
         </div>
-        
-        <div class="right-section">
-            <div class="lists">
-                
-                <ul>
-                    <li>
-                        <h2>Contact Us</h2>
-                    </li>
-<div class="cs-topper"> Call or Text:</div>
-                    <li style="padding-bottom: 30px;">
-                        <a href="tel:{{client.phoneForTel}}">
-                           
-                            {{client.phoneFormatted}}
-                        </a>
-                    </li>
 
-                    <li>
-                        <a href="/#top">Navigate to Top of page</a>
-                    </li>
-                </ul>
+        <div class="ft-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="tel:+12488181130">Moving Help</a></li>
+                <li><a href="tel:+12488181130">Junk Removal</a></li>
+                <li><a href="tel:+12488181130">Cleanouts</a></li>
+                <li><a href="tel:+12488181130">Snow Removal</a></li>
+                <li><a href="tel:+12488181130">Painting</a></li>
+                <li><a href="tel:+12488181130">Yard Cleanup</a></li>
+                <li><a href="tel:+12488181130">Hauling &amp; Demolition</a></li>
+            </ul>
+        </div>
 
-                
+        <div class="ft-col">
+            <h4>Contact Us</h4>
+            <div class="ft-contact-item">
+                <span class="label">Call or Text</span>
+                <a href="tel:+12488181130">248-818-1130</a>
+            </div>
+            <div class="ft-contact-item">
+                <span class="label">Email</span>
+                <a href="mailto:JunkyRabbit@gmail.com">JunkyRabbit@gmail.com</a>
+            </div>
+            <div class="ft-contact-item">
+                <span class="label">Service Area</span>
+                <span>Detroit Metro, MI</span>
+            </div>
+            <div class="ft-contact-item">
+                <span class="label">Hours</span>
+                <span>7 Days · Same Day Available</span>
             </div>
         </div>
     </div>
-    <STYLE>
-        .credit {color:white; text-align: left;}
-        .gandalfpill {transition: all ease .2s;margin-left:5px;vertical-align:middle;  display: inline-block; background-color: white; padding:0 8px; border-radius: 999px;}
-    .gandalfpill:hover img {filter: grayscale(1) brightness(1000%);transition: all ease .8s;}
-    .gandalfpill:hover {border:1px  solid white; background-color: black;  transform: translateY(-5px); transition: all ease .2s;}
-    .back2top {font-size:2px}
-    </STYLE>
-    <div class="credit">
-        <span>Website by</span>
-       
-        <a target="_blank" class="gandalfpill" href="https://designgandalf.com/"><img style="vertical-align:middle; " loading="lazy" decoding="async" src="/assets/svgs/gandalflogo.svg" alt="logo" height="12"></a>
+
+    <div class="ft-bottom">
+        <span>© {% year %} Junky Rabbit Labor · Detroit Metro, MI · junkyrabbitlabor.com</span>
+        <span>Website by<a target="_blank" class="gandalfpill" href="https://designgandalf.com/"><img style="vertical-align:middle;" loading="lazy" decoding="async" src="/assets/svgs/gandalflogo.svg" alt="Gandalf Design" height="12"></a></span>
     </div>
 </footer>

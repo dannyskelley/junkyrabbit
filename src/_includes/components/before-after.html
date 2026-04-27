@@ -1,0 +1,155 @@
+<!-- ============================================ -->
+<!--             Before & After Gallery           -->
+<!-- ============================================ -->
+
+<style>
+#before-after-jr {
+    padding: var(--sectionPadding);
+    background: #111111;
+}
+#before-after-jr .ba-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+}
+#before-after-jr .ba-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#before-after-jr .ba-header .cs-topper {
+    color: var(--primary);
+}
+#before-after-jr .ba-header h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+#before-after-jr .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+#before-after-jr .ba-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(184,240,0,0.15);
+}
+#before-after-jr .ba-side {
+    position: relative;
+}
+#before-after-jr .ba-side img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+#before-after-jr .ba-label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 3px;
+}
+#before-after-jr .ba-label.before {
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+#before-after-jr .ba-label.after {
+    background: var(--primary);
+    color: #0d1a08;
+}
+#before-after-jr .ba-desc {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+#before-after-jr .ba-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+#before-after-jr .ba-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 0.95rem 2.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s, transform 0.2s;
+}
+#before-after-jr .ba-cta a:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+@media (min-width: 48rem) {
+    #before-after-jr .ba-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    #before-after-jr .ba-side img {
+        height: 300px;
+    }
+}
+</style>
+
+<section id="before-after-jr">
+    <div class="ba-container">
+        <div class="ba-header">
+            <span class="cs-topper">Our Work</span>
+            <h2>Real Results. Real Detroit Jobs.</h2>
+        </div>
+
+        <div class="ba-grid">
+
+            <div>
+                <div class="ba-pair">
+                    <div class="ba-side">
+                        <img loading="lazy" decoding="async" src="/assets/images/before-landscaping.jpg" alt="Overgrown bushes before yard cleanup Detroit" width="700" height="600">
+                        <span class="ba-label before">Before</span>
+                    </div>
+                    <div class="ba-side">
+                        <img loading="lazy" decoding="async" src="/assets/images/after-landscaping.jpg" alt="Clean yard after bush trimming and landscaping Detroit" width="700" height="600">
+                        <span class="ba-label after">After</span>
+                    </div>
+                </div>
+                <p class="ba-desc">Overgrown bush trimming &amp; yard cleanup — Sterling Heights, MI</p>
+            </div>
+
+            <div>
+                <div class="ba-pair">
+                    <div class="ba-side">
+                        <img loading="lazy" decoding="async" src="/assets/images/before-cleanout.jpg" alt="Messy room before junk removal cleanout Detroit" width="700" height="600">
+                        <span class="ba-label before">Before</span>
+                    </div>
+                    <div class="ba-side">
+                        <img loading="lazy" decoding="async" src="/assets/images/after-cleanout.jpg" alt="Clean empty room after junk removal service Detroit" width="700" height="600">
+                        <span class="ba-label after">After</span>
+                    </div>
+                </div>
+                <p class="ba-desc">Full room cleanout &amp; junk haul-away — Detroit, MI</p>
+            </div>
+
+        </div>
+
+        <div class="ba-cta">
+            <a href="sms:+12488181130">📱 Text Us for a Free Quote</a>
+        </div>
+    </div>
+</section>

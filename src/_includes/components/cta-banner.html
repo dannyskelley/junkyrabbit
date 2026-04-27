@@ -1,0 +1,99 @@
+<!-- ============================================ -->
+<!--                 CTA Banner                   -->
+<!-- ============================================ -->
+
+<style>
+#cta-banner-jr {
+    background: var(--primary);
+    padding: 4rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+#cta-banner-jr::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/images/hero-movers.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.07;
+}
+#cta-banner-jr .cta-inner {
+    max-width: 50rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+#cta-banner-jr h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #0d1a08;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+#cta-banner-jr p {
+    font-size: 1rem;
+    color: #1a3d0e;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-weight: 600;
+}
+#cta-banner-jr .cta-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+#cta-banner-jr .cta-btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0d1a08;
+    color: var(--primary);
+    font-size: 1.05rem;
+    font-weight: 900;
+    padding: 0.95rem 2.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s, transform 0.2s;
+}
+#cta-banner-jr .cta-btn-dark:hover {
+    background: #1a3d0e;
+    transform: translateY(-2px);
+}
+#cta-banner-jr .cta-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #0d1a08;
+    font-size: 1.05rem;
+    font-weight: 900;
+    padding: 0.95rem 2.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 2.5px solid #0d1a08;
+    transition: background 0.2s;
+}
+#cta-banner-jr .cta-btn-outline:hover {
+    background: #0d1a08;
+    color: var(--primary);
+}
+</style>
+
+<section id="cta-banner-jr">
+    <div class="cta-inner">
+        <h2>Available Today. Book Now.</h2>
+        <p>Get a free, no-obligation quote today. We serve the entire Detroit Metro area — fast response, fair prices, results guaranteed.</p>
+        <div class="cta-btns">
+            <a href="sms:+12488181130" class="cta-btn-dark">📱 Text for a Free Quote</a>
+            <a href="tel:+12488181130" class="cta-btn-outline">📞 Call 248-818-1130</a>
+        </div>
+    </div>
+</section>

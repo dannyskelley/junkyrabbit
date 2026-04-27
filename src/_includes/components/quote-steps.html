@@ -1,0 +1,155 @@
+<!-- ============================================ -->
+<!--              How to Get a Quote              -->
+<!-- ============================================ -->
+
+<style>
+#quote-steps-jr {
+    padding: var(--sectionPadding);
+    background: #0d1a08;
+}
+#quote-steps-jr .qs-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+}
+#quote-steps-jr .qs-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#quote-steps-jr .qs-header .cs-topper {
+    color: var(--primary);
+}
+#quote-steps-jr .qs-header h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+#quote-steps-jr .qs-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+}
+#quote-steps-jr .qs-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    background: rgba(184,240,0,0.05);
+    border: 1px solid rgba(184,240,0,0.15);
+    border-radius: 6px;
+    padding: 1.5rem;
+}
+#quote-steps-jr .qs-num {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 2.5rem;
+}
+#quote-steps-jr .qs-info h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+#quote-steps-jr .qs-info p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+}
+#quote-steps-jr .qs-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+#quote-steps-jr .qs-btn-sms {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 0.95rem 2.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s, transform 0.2s;
+}
+#quote-steps-jr .qs-btn-sms:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+#quote-steps-jr .qs-btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0.95rem 2.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 2px solid rgba(184,240,0,0.35);
+    transition: border-color 0.2s, color 0.2s;
+}
+#quote-steps-jr .qs-btn-call:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+@media (min-width: 48rem) {
+    #quote-steps-jr .qs-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+</style>
+
+<section id="quote-steps-jr">
+    <div class="qs-container">
+        <div class="qs-header">
+            <span class="cs-topper">Fast &amp; Free</span>
+            <h2>Get a Quote in 3 Easy Steps</h2>
+        </div>
+
+        <ol class="qs-steps">
+            <li class="qs-step">
+                <span class="qs-num">1</span>
+                <div class="qs-info">
+                    <h3>Send Us a Text</h3>
+                    <p>Text 248-818-1130 with a quick description of what you need. A photo helps us get you an accurate quote even faster.</p>
+                </div>
+            </li>
+            <li class="qs-step">
+                <span class="qs-num">2</span>
+                <div class="qs-info">
+                    <h3>Chat on the Phone</h3>
+                    <p>We'll call you to confirm details, answer questions, and lock in a time — often same day or next day.</p>
+                </div>
+            </li>
+            <li class="qs-step">
+                <span class="qs-num">3</span>
+                <div class="qs-info">
+                    <h3>We Show Up &amp; Get It Done</h3>
+                    <p>Your crew arrives on time, works hard, and leaves the space clean. We accept cash, Venmo, Cashapp, and Apple Pay.</p>
+                </div>
+            </li>
+        </ol>
+
+        <div class="qs-cta-row">
+            <a href="sms:+12488181130" class="qs-btn-sms">📱 Text for a Free Quote</a>
+            <a href="tel:+12488181130" class="qs-btn-call">📞 Call 248-818-1130</a>
+        </div>
+    </div>
+</section>

@@ -1,16 +1,15 @@
 {
-    "name": "Junky Rabbit",
+    "name": "Junky Rabbit Labor",
     "email": "JunkyRabbit@gmail.com",
-    "phoneForTel": "(+248) 818 1130",
-    "phoneFormatted": "(+248) 818 1130",
+    "phoneForTel": "+12488181130",
+    "phoneFormatted": "248-818-1130",
     "address": {
         "lineOne": "",
         "lineTwo": "",
-        "city": "",
+        "city": "Detroit",
         "state": "MI",
         "zip": "",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
     "domain": "https://junkyrabbitlabor.com"
 }
-
