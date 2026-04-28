@@ -272,8 +272,11 @@
     .jr-mobile-panel, .jr-backdrop { display: none; }
 }
 
-/* Push body down by header height */
-body { padding-top: 0; }
+/* Push content below logo overhang; dark bg fills the padding zone */
+body { padding-top: 110px; background-color: #0d1a08; }
+@media (min-width: 48rem) {
+    body { padding-top: 210px; }
+}
 </style>
 
 <header class="jr-header" id="jrHeader">
