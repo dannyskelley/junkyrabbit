@@ -57,8 +57,12 @@ eleventyNavigation:
 
 {% block body %}
 
+<style>
+.page-hero-bg { position:absolute;inset:0;background:url('/assets/images/hero-movers.webp') center top/cover no-repeat;opacity:0.08;z-index:0; }
+@media (max-width:640px) { .page-hero-bg { background-image:url('/assets/images/hero-movers-640.webp'); } }
+</style>
 <section style="background:#0d1a08;position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;background:url('/assets/images/hero-movers.webp') center top/cover no-repeat;opacity:0.08;z-index:0;"></div>
+    <div class="page-hero-bg"></div>
     <div style="position:relative;z-index:1;max-width:50rem;margin:0 auto;padding:9rem 1.5rem 4rem;text-align:center;">
         <span style="display:inline-block;background:var(--primary);color:#0d1a08;font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:0.14em;padding:0.3rem 0.85rem;border-radius:3px;margin-bottom:1rem;">Detroit Metro Labor Crew</span>
         <h1 style="font-family:'Darumadrop One',Arial,sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;text-transform:uppercase;line-height:1;margin:0 0 1rem;">About Us</h1>

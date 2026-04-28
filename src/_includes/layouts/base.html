@@ -108,13 +108,18 @@
         }
         </script>
 
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2K3DYR0ZRX"></script>
+        <!-- Google Analytics (deferred — loads after page is interactive) -->
         <script>
+        window.addEventListener('load', function() {
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2K3DYR0ZRX';
+            s.async = true;
+            document.head.appendChild(s);
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-2K3DYR0ZRX');
+        });
         </script>
 
     </head>
