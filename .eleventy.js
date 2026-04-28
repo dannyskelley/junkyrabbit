@@ -48,7 +48,6 @@ module.exports = function (eleventyConfig) {
     // Other required folders are passed through
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/_redirects");
-    eleventyConfig.addPassthroughCopy({ "./src/robots.txt": "/robots.txt" });
     eleventyConfig.addPassthroughCopy({ "./src/_headers": "/_headers" });
     // END PASSTHROUGHS
 
