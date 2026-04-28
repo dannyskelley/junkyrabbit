@@ -17,6 +17,7 @@
     display: block;
     object-fit: contain;
     transition: height 0.35s ease;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.55));
 }
 @media (min-width: 48rem) {
     .jr-logo-img { height: 200px; }
@@ -36,25 +37,30 @@
     right: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(13, 26, 8, 0.85);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(184, 240, 0, 0.08);
-    transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+    overflow: visible;
 }
 .jr-header.scrolled {
     background: rgba(13, 26, 8, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-bottom-color: rgba(184, 240, 0, 0.18);
 }
 .jr-header-inner {
     max-width: 80rem;
     margin: 0 auto;
-    padding: 0.85rem 1.25rem;
+    padding: 0.6rem 1.25rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 1.25rem;
 }
+.jr-nav-list,
+.jr-header-cta,
+.jr-header-phone,
+.jr-burger { align-self: center; }
 
 /* ---- DESKTOP NAV ---- */
 .jr-nav-list {
