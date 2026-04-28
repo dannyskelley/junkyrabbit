@@ -7,55 +7,25 @@
 .jr-logo {
     display: flex;
     align-items: center;
-    gap: 0.35rem;
     text-decoration: none;
-    color: #fff;
     flex-shrink: 0;
     z-index: 1001;
-    line-height: 1;
 }
-.jr-logo-phone {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 0 0.25rem;
-    font-size: 0.78rem;
-    color: var(--primary);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-}
-.jr-logo-mark {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
+.jr-logo-img {
+    height: 100px;
+    width: auto;
     display: block;
+    object-fit: contain;
+    transition: height 0.35s ease;
 }
-.jr-logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
+@media (min-width: 48rem) {
+    .jr-logo-img { height: 200px; }
 }
-.jr-logo-text .lt-1 {
-    font-family: "Darumadrop One", Arial, sans-serif;
-    font-size: 0.62rem;
-    color: rgba(255,255,255,0.75);
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    line-height: 1;
+.jr-header.scrolled .jr-logo-img {
+    height: 50px;
 }
-.jr-logo-text .lt-1 .lt-accent { color: var(--primary); }
-.jr-logo-text .lt-2 {
-    font-family: "Darumadrop One", Arial, sans-serif;
-    font-size: 1.4rem;
-    color: var(--primary);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-top: 2px;
-}
-@media (min-width: 64rem) {
-    .jr-logo-phone { display: none; }
+@media (min-width: 48rem) {
+    .jr-header.scrolled .jr-logo-img { height: 70px; }
 }
 
 /* ---- HEADER SHELL ---- */
@@ -294,9 +264,6 @@
     .jr-header-cta { display: flex; }
     .jr-header-phone { display: inline-flex; }
     .jr-mobile-panel, .jr-backdrop { display: none; }
-    .jr-logo-text .lt-1 { font-size: 0.65rem; }
-    .jr-logo-text .lt-2 { font-size: 1.55rem; }
-    .jr-logo-mark { width: 46px; height: 46px; }
 }
 
 /* Push body down by header height */
@@ -308,40 +275,7 @@ body { padding-top: 0; }
 
         <!-- Logo -->
         <a href="/" class="jr-logo" aria-label="Junky Rabbit Labor. Detroit Metro general labor">
-            <svg class="jr-logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- Lime circle background -->
-                <circle cx="32" cy="32" r="30" fill="#B8F000"/>
-                <!-- Inner dark circle -->
-                <circle cx="32" cy="32" r="26" fill="#0d1a08"/>
-                <!-- Rabbit silhouette -->
-                <g fill="#B8F000">
-                    <!-- Left ear -->
-                    <ellipse cx="24" cy="20" rx="3.2" ry="9" transform="rotate(-12 24 20)"/>
-                    <!-- Right ear -->
-                    <ellipse cx="38" cy="19" rx="3.2" ry="9" transform="rotate(10 38 19)"/>
-                    <!-- Inner left ear -->
-                    <ellipse cx="24.2" cy="22" rx="1.2" ry="5" transform="rotate(-12 24.2 22)" fill="#2D7A1A"/>
-                    <!-- Inner right ear -->
-                    <ellipse cx="37.8" cy="21" rx="1.2" ry="5" transform="rotate(10 37.8 21)" fill="#2D7A1A"/>
-                    <!-- Head -->
-                    <circle cx="32" cy="36" r="11"/>
-                    <!-- Eyes -->
-                    <circle cx="28" cy="34" r="1.4" fill="#0d1a08"/>
-                    <circle cx="36" cy="34" r="1.4" fill="#0d1a08"/>
-                    <!-- Nose -->
-                    <ellipse cx="32" cy="39" rx="1.4" ry="1" fill="#0d1a08"/>
-                    <!-- Whiskers (subtle) -->
-                    <line x1="22" y1="38" x2="27" y2="38.5" stroke="#0d1a08" stroke-width="0.6" stroke-linecap="round"/>
-                    <line x1="22" y1="40" x2="27" y2="40" stroke="#0d1a08" stroke-width="0.6" stroke-linecap="round"/>
-                    <line x1="37" y1="38.5" x2="42" y2="38" stroke="#0d1a08" stroke-width="0.6" stroke-linecap="round"/>
-                    <line x1="37" y1="40" x2="42" y2="40" stroke="#0d1a08" stroke-width="0.6" stroke-linecap="round"/>
-                </g>
-            </svg>
-            <div class="jr-logo-text">
-                <span class="lt-1">Junky<span class="lt-accent">Rabbit</span></span>
-                <span class="lt-2">Labor</span>
-                <a href="tel:{{client.phoneForTel}}" class="jr-logo-phone">{{client.phoneFormatted}}</a>
-            </div>
+            <img src="/assets/images/jr-logo.png" class="jr-logo-img" alt="Junky Rabbit Labor" width="400" height="350" loading="eager" fetchpriority="high">
         </a>
 
         <!-- Desktop Nav -->
