@@ -4,8 +4,6 @@
 <---        Core Styles         -->
 <--- -------------------------- -*/
 
-* {transition: all ease .3s;}
-
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
     // Website colors
@@ -233,7 +231,7 @@
         font-style: normal;
         font-family: "Roboto";
         font-weight: 400;
-        font-display: swap;
+        font-display: optional;
         src: local(""),
             url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
             /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -1292,11 +1290,9 @@
                             text-decoration: none;
                             line-height: calc(21 / 18 * 1em);
                             color: #fff;
-                            transition: color 0.3s;
-                            transition:all ease .5s;
+                            transition: color 0.3s, text-decoration 0.3s;
                             &:hover {
                                 text-decoration: underline;
-                                transition:all ease .5s;
                             }
                         }
                     }
@@ -1476,4 +1472,35 @@
             background: #061623;
         }
     }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus Visible — keyboard navigation styles */
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Defer rendering of below-the-fold sections to reduce initial Style & Layout cost */
+#services-jr,
+#before-after-jr,
+#quote-steps-jr,
+#reviews-jr,
+#faq-jr,
+#service-area-jr,
+#cta-banner-jr {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 600px;
 }

@@ -1,0 +1,21 @@
+{
+  "name": "Junky Rabbit Labor",
+  "short_name": "JunkyRabbit",
+  "description": "Detroit Metro general labor – junk removal, moving help, cleanouts, and more.",
+  "icons": [
+    {
+      "src": "/assets/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#B8F000",
+  "background_color": "#0d1a08",
+  "display": "standalone",
+  "start_url": "/"
+}

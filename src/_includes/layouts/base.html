@@ -45,11 +45,20 @@
         <link rel="manifest" href="/assets/favicons/site.webmanifest">
 
         <!-- Preload fonts -->
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/darumadrop-one-v10-latin-regular.woff2" crossorigin>
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-900.woff2" crossorigin>
 
         {% if preloadImg != '' %}
-            <link rel="preload" as="image" href="{{ preloadImg }}" {% if '.webp' in preloadImg %}type="image/webp"{% endif %} fetchpriority="high">
+            {% if preloadImg640 %}
+                <link rel="preload" as="image"
+                      imagesrcset="{{ preloadImg640 }} 640w, {{ preloadImg }} 1200w"
+                      imagesizes="(max-width: 640px) 100vw, 100vw"
+                      fetchpriority="high">
+            {% else %}
+                <link rel="preload" as="image" href="{{ preloadImg }}" {% if '.webp' in preloadImg %}type="image/webp"{% endif %} fetchpriority="high">
+            {% endif %}
         {% endif %}
 
         <!-- Preconnect third-parties -->
@@ -108,17 +117,21 @@
         }
         </script>
 
-        <!-- Google Analytics (deferred — loads after page is interactive) -->
+        <!-- Google Analytics (idle-deferred — runs after TTI to avoid TBT impact) -->
         <script>
-        window.addEventListener('load', function() {
+        function _loadGtag(){
             var s = document.createElement('script');
             s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2K3DYR0ZRX';
             s.async = true;
             document.head.appendChild(s);
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', 'G-2K3DYR0ZRX');
+        }
+        window.addEventListener('load', function() {
+            setTimeout(_loadGtag, 4500);
         });
         </script>
 
