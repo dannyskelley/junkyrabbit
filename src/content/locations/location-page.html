@@ -16,16 +16,32 @@ eleventyComputed:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Junky Rabbit Labor",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "{{ client.domain }}/locations/{{ location.slug }}/#business",
+  "name": "{{ client.name }}",
   "description": "Same-day labor services in {{ location.name }}, MI — junk removal, moving help, snow removal, painting, and yard cleanup.",
-  "telephone": "+12488181130",
-  "url": "https://junkyrabbitlabor.com/locations/{{ location.slug }}/",
+  "telephone": "{{ client.phoneForTel }}",
+  "email": "{{ client.email }}",
+  "url": "{{ client.domain }}/locations/{{ location.slug }}/",
+  "parentOrganization": { "@id": "{{ client.domain }}/#business" },
+  "priceRange": "$$",
+  "image": "{{ client.domain }}/assets/images/home1.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ location.name }}",
+    "addressRegion": "{{ location.state }}",
+    "addressCountry": "US"
+  },
   "areaServed": {
     "@type": "City",
     "name": "{{ location.name }}",
-    "addressRegion": "MI"
-  }
+    "addressRegion": "{{ location.state }}"
+  },
+  "openingHours": "Mo-Su 07:00-20:00",
+  "paymentAccepted": "Cash, Venmo, CashApp, Apple Pay",
+  "sameAs": [
+    "https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author"
+  ]
 }
 </script>
 <style>
