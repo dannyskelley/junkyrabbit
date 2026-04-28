@@ -79,13 +79,15 @@
 #before-after-jr .ba-cta {
     text-align: center;
     margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 #before-after-jr .ba-cta a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--primary);
-    color: #0d1a08;
     font-size: 1rem;
     font-weight: 900;
     padding: 0.95rem 2.25rem;
@@ -95,8 +97,22 @@
     letter-spacing: 0.06em;
     transition: background 0.2s, transform 0.2s;
 }
-#before-after-jr .ba-cta a:hover {
+#before-after-jr .ba-cta a.ba-btn-primary {
+    background: var(--primary);
+    color: #0d1a08;
+}
+#before-after-jr .ba-cta a.ba-btn-primary:hover {
     background: #fff;
+    transform: translateY(-2px);
+}
+#before-after-jr .ba-cta a.ba-btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.35);
+}
+#before-after-jr .ba-cta a.ba-btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
     transform: translateY(-2px);
 }
 @media (min-width: 48rem) {
@@ -146,10 +162,39 @@
                 <p class="ba-desc">Full room cleanout &amp; junk haul away. Detroit, MI</p>
             </div>
 
+            <div>
+                <div class="ba-pair">
+                    <div class="ba-side">
+                        <img loading="lazy" decoding="async" src="/assets/images/lawn-before.webp" alt="Overgrown lawn before mowing service Detroit Metro" width="700" height="600">
+                        <span class="ba-label before">Before</span>
+                    </div>
+                    <div class="ba-side">
+                        <img loading="lazy" decoding="async" src="/assets/images/lawn-after.webp" alt="Freshly mowed lawn after yard cleanup Detroit" width="700" height="600">
+                        <span class="ba-label after">After</span>
+                    </div>
+                </div>
+                <p class="ba-desc">Lawn mowing &amp; yard cleanup. Metro Detroit, MI</p>
+            </div>
+
+            <div>
+                <div class="ba-pair">
+                    <div class="ba-side">
+                        <img loading="lazy" decoding="async" src="/assets/images/gutter-before.webp" alt="Clogged gutters before gutter cleaning service Detroit" width="700" height="600">
+                        <span class="ba-label before">Before</span>
+                    </div>
+                    <div class="ba-side">
+                        <img loading="lazy" decoding="async" src="/assets/images/gutter-after.webp" alt="Clean gutters after gutter cleaning service Detroit" width="700" height="600">
+                        <span class="ba-label after">After</span>
+                    </div>
+                </div>
+                <p class="ba-desc">Gutter cleaning &amp; debris removal. Oakland County, MI</p>
+            </div>
+
         </div>
 
         <div class="ba-cta">
-            <a href="/contact/">Get a Free Quote →</a>
+            <a href="/portfolio/" class="ba-btn-outline">See All Photos →</a>
+            <a href="/contact/" class="ba-btn-primary">Get a Free Quote →</a>
         </div>
     </div>
 </section>
