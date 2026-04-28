@@ -52,6 +52,21 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./src/_headers": "/_headers" });
     // END PASSTHROUGHS
 
+    // COLLECTIONS - Custom filtered collections
+    // Pages-only collection for sitemap: excludes CSS files, admin, and any eleventyExcludeFromCollections pages
+    eleventyConfig.addCollection("sitemapPages", function(collectionApi) {
+        return collectionApi.getAll().filter(function(item) {
+            return (
+                item.outputPath &&
+                item.outputPath.endsWith(".html") &&
+                !item.outputPath.includes("/admin/") &&
+                item.data.eleventyExcludeFromCollections !== true &&
+                item.url !== false
+            );
+        });
+    });
+    // END COLLECTIONS
+
     // FILTERS - Modify data in template files at build time
     // Converts dates from JSDate format (Fri Dec 02 18:00:00 GMT-0600) to a locale format. More info in docs - https://moment.github.io/luxon/api-docs/index.html#datetime
     eleventyConfig.addFilter("postDate", filterPostDate);
