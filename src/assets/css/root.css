@@ -1230,4 +1230,23 @@
   }
 }
 
+/* Native scroll animation (replaces AOS library) */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease-in-out, transform 0.65s ease-in-out;
+  will-change: opacity, transform;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /*# sourceMappingURL=root.css.map */

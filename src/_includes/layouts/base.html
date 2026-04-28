@@ -27,7 +27,7 @@
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
         <meta property="og:title" content="{{ pageTitle }}" />
         <meta property="og:description" content="{{ description }}" />
-        <meta property="og:image" content="{{ client.domain }}/assets/images/home1.jpeg" />
+        <meta property="og:image" content="{{ client.domain }}/assets/images/home1.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Junky Rabbit Labor crew ready to work in Metro Detroit" />
@@ -36,7 +36,7 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="{{ pageTitle }}" />
         <meta name="twitter:description" content="{{ description }}" />
-        <meta name="twitter:image" content="{{ client.domain }}/assets/images/home1.jpeg" />
+        <meta name="twitter:image" content="{{ client.domain }}/assets/images/home1.webp" />
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
@@ -52,10 +52,12 @@
             <link rel="preload" as="image" href="{{ preloadImg }}" {% if '.webp' in preloadImg %}type="image/webp"{% endif %} fetchpriority="high">
         {% endif %}
 
+        <!-- Preconnect third-parties -->
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+
         <!-- Stylesheets -->
         <link rel="stylesheet" href="/assets/css/root.css">
-        <link rel="stylesheet" href="/assets/aos/aos.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="/assets/aos/aos.css"></noscript>
 
         {% block head %}{% endblock %}
 
@@ -70,7 +72,7 @@
             "telephone": "{{ client.phoneForTel }}",
             "email": "{{ client.email }}",
             "priceRange": "$$",
-            "image": "{{ client.domain }}/assets/images/home1.jpeg",
+            "image": "{{ client.domain }}/assets/images/home1.webp",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "{{ client.address.city }}",
@@ -125,9 +127,15 @@
         </main>
         {% include "components/footer.html" %}
 
-        <script src="/assets/js/aos.js"></script>
         <script>
-            AOS.init({ easing: 'ease-in-out-sine' });
+        (function(){
+            var io = new IntersectionObserver(function(entries){
+                entries.forEach(function(e){
+                    if(e.isIntersecting){ e.target.classList.add('aos-animate'); io.unobserve(e.target); }
+                });
+            }, {threshold:0.08});
+            document.querySelectorAll('[data-aos]').forEach(function(el){ io.observe(el); });
+        })();
         </script>
     </body>
 </html>
