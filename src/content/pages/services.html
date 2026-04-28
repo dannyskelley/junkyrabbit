@@ -120,6 +120,32 @@ eleventyNavigation:
     transition: background 0.2s;
 }
 .service-block .sb-cta:hover { background: var(--secondary); color: #fff; }
+.service-block .sb-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+}
+.service-block .sb-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: 2px solid #0d1a08;
+    color: #0d1a08;
+    font-size: 0.88rem;
+    font-weight: 800;
+    padding: 0.76rem 1.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.service-block .sb-details:hover { background: #0d1a08; color: var(--primary); }
+.service-block .sb-details .arr { display: inline-block; transition: transform 0.2s; }
+.service-block .sb-details:hover .arr { transform: translateX(4px); }
 @media (min-width: 56rem) {
     .service-block { grid-template-columns: 340px 1fr; }
     .service-block .sb-img { height: 100%; min-height: 280px; }
@@ -210,8 +236,10 @@ eleventyNavigation:
                     <li>Same day and weekend availability</li>
                     <li>All Metro Detroit area and beyond</li>
                 </ul>
-                <a href="sms:+12488181130" class="sb-cta">📱 Get a Moving Quote</a>
-                <a href="/services/moving-help/" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:800;color:var(--secondary);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;margin-top:0.75rem;transition:color 0.2s;">Full Details →</a>
+                <div class="sb-actions">
+                    <a href="sms:+12488181130" class="sb-cta">📱 Get a Moving Quote</a>
+                    <a href="/services/moving-help/" class="sb-details">Full Details <span class="arr">→</span></a>
+                </div>
             </div>
         </div>
 
@@ -229,8 +257,10 @@ eleventyNavigation:
                     <li>We haul it all. Nothing left behind</li>
                     <li>Same day available. Text us a photo</li>
                 </ul>
-                <a href="sms:+12488181130" class="sb-cta">📱 Get a Junk Quote</a>
-                <a href="/services/junk-removal/" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:800;color:var(--secondary);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;margin-top:0.75rem;transition:color 0.2s;">Full Details →</a>
+                <div class="sb-actions">
+                    <a href="sms:+12488181130" class="sb-cta">📱 Get a Junk Quote</a>
+                    <a href="/services/junk-removal/" class="sb-details">Full Details <span class="arr">→</span></a>
+                </div>
             </div>
         </div>
 
@@ -248,8 +278,10 @@ eleventyNavigation:
                     <li>Seasonal contract discounts available</li>
                     <li>7-day availability including during storms</li>
                 </ul>
-                <a href="tel:+12488181130" class="sb-cta">📞 Call for Snow Removal</a>
-                <a href="/services/snow-removal/" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:800;color:var(--secondary);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;margin-top:0.75rem;transition:color 0.2s;">Full Details →</a>
+                <div class="sb-actions">
+                    <a href="tel:+12488181130" class="sb-cta">📞 Call for Snow Removal</a>
+                    <a href="/services/snow-removal/" class="sb-details">Full Details <span class="arr">→</span></a>
+                </div>
             </div>
         </div>
 
@@ -267,8 +299,10 @@ eleventyNavigation:
                     <li>Clean, professional finish every time</li>
                     <li>Free estimate. Text us photos</li>
                 </ul>
-                <a href="sms:+12488181130" class="sb-cta">📱 Get a Paint Quote</a>
-                <a href="/services/painting/" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:800;color:var(--secondary);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;margin-top:0.75rem;transition:color 0.2s;">Full Details →</a>
+                <div class="sb-actions">
+                    <a href="sms:+12488181130" class="sb-cta">📱 Get a Paint Quote</a>
+                    <a href="/services/painting/" class="sb-details">Full Details <span class="arr">→</span></a>
+                </div>
             </div>
         </div>
 
@@ -286,8 +320,10 @@ eleventyNavigation:
                     <li>Before/after photos provided</li>
                     <li>Same day and weekend available</li>
                 </ul>
-                <a href="sms:+12488181130" class="sb-cta">📱 Get a Yard Quote</a>
-                <a href="/services/yard-cleanup/" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:800;color:var(--secondary);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;margin-top:0.75rem;transition:color 0.2s;">Full Details →</a>
+                <div class="sb-actions">
+                    <a href="sms:+12488181130" class="sb-cta">📱 Get a Yard Quote</a>
+                    <a href="/services/yard-cleanup/" class="sb-details">Full Details <span class="arr">→</span></a>
+                </div>
             </div>
         </div>
 
@@ -305,8 +341,10 @@ eleventyNavigation:
                     <li>Fast cleanup with no mess left behind</li>
                     <li>Landlord &amp; property investor specialists</li>
                 </ul>
-                <a href="sms:+12488181130" class="sb-cta">📱 Get a Demo Quote</a>
-                <a href="/services/demolition-hauling/" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:800;color:var(--secondary);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;margin-top:0.75rem;transition:color 0.2s;">Full Details →</a>
+                <div class="sb-actions">
+                    <a href="sms:+12488181130" class="sb-cta">📱 Get a Demo Quote</a>
+                    <a href="/services/demolition-hauling/" class="sb-details">Full Details <span class="arr">→</span></a>
+                </div>
             </div>
         </div>
 
