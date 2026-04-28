@@ -1,0 +1,397 @@
+PageSpeed Insights logo
+PageSpeed Insights
+Report from Apr 27, 2026, 8:49:24 PM
+
+Enter a valid URL
+Discover what your real users are experiencing
+No Data
+Diagnose performance issues
+69
+Performance
+94
+Accessibility
+96
+Best Practices
+69
+SEO
+69 FCP+6LCP+1TBT+30CLS+25SI+7 Performance
+Values are estimated and may vary. The performance score is calculated directly from these metrics.See calculator.
+0–49 50–89 90–100
+Final Screenshot
+Metrics
+Expand view
+First Contentful Paint
+2.7 s
+Largest Contentful Paint
+8.4 s
+Total Blocking Time
+50 ms
+Cumulative Layout Shift
+0
+Speed Index
+4.4 s
+
+    Captured at Apr 27, 2026, 8:49 PM EDT
+    Emulated Moto G Power with Lighthouse 13.0.1
+    Single page session
+    Initial page load
+    Slow 4G throttling
+    Using HeadlessChromium 146.0.7680.177 with lr
+
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Show audits relevant to:
+All
+FCP
+LCP
+TBT
+CLS
+Insights
+Render blocking requests Est savings of 1,550 ms
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Use efficient cache lifetimes Est savings of 15,142 KiB
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Forced reflow
+	
+	
+	
+	
+	
+Network dependency tree
+Document request latency Est savings of 50 KiB
+
+Improve image delivery Est savings of 14,353 KiB
+	
+	
+	
+		
+	
+	
+	
+	
+	
+		
+	
+		
+	
+	
+	
+	
+		
+	
+		
+	
+	
+	
+	
+		
+	
+		
+	
+	
+	
+	
+		
+	
+		
+	
+	
+	
+	
+		
+	
+		
+	
+	
+	
+	
+		
+Optimize DOM size
+	
+	
+		
+	
+	
+	
+	
+LCP breakdown
+	
+	
+	
+3rd parties
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+These insights are also available in the Chrome DevTools Performance Panel - record a trace to view more detailed information.
+Diagnostics
+Minify CSS Est savings of 30 KiB
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+Reduce unused CSS Est savings of 85 KiB
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+Reduce unused JavaScript Est savings of 64 KiB
+	
+	
+	
+	
+	
+	
+Image elements do not have explicit width and height
+	
+	
+	
+Minify JavaScript Est savings of 4 KiB
+	
+	
+	
+	
+	
+	
+Avoid enormous network payloads Total size was 15,424 KiB
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Avoid long main-thread tasks 3 long tasks found
+	
+	
+		
+	
+	
+	
+	
+		
+	
+	
+User Timing marks and measures 5 user timings
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+More information about the performance of your application. These numbers don't directly affect the Performance score.
+Passed audits (10)
+Show
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+94
+Accessibility
+These checks highlight opportunities to improve the accessibility of your web app. Automatic detection can only detect a subset of issues and does not guarantee the accessibility of your web app, so manual testing is also encouraged.
+Contrast
+Background and foreground colors do not have a sufficient contrast ratio.
+These are opportunities to improve the legibility of your content.
+Navigation
+Heading elements are not in a sequentially-descending order
+These are opportunities to improve keyboard navigation in your application.
+Best practices
+Uses ARIA roles only on compatible elements
+These items highlight common accessibility best practices.
+Additional items to manually check (10)
+Show
+These items address areas which an automated testing tool cannot cover. Learn more in our guide on conducting an accessibility review.
+Passed audits (19)
+Show
+Not applicable (38)
+Show
+96
+Best Practices
+General
+Browser errors were logged to the console
+	
+	
+	
+
+Trust and Safety
+Ensure CSP is effective against XSS attacks
+	
+	
+		
+Use a strong HSTS policy
+	
+	
+		
+Ensure proper origin isolation with COOP
+	
+	
+		
+Mitigate clickjacking with XFO or CSP
+	
+	
+Mitigate DOM-based XSS with Trusted Types
+	
+	
+Passed audits (12)
+Show
+	
+	
+	
+Not applicable (2)
+Show
+69
+SEO
+These checks ensure that your page is following basic search engine optimization advice. There are many additional factors Lighthouse does not score here that may affect your search ranking, including performance on Core Web Vitals. Learn more about Google Search Essentials.
+Crawling and Indexing
+Page is blocked from indexing
+
+To appear in search results, crawlers need access to your app.
+Additional items to manually check (1)
+Show
+Run these additional validators on your site to check additional SEO best practices.
+Passed audits (9)
+Show
+More on PageSpeed InsightsWhat's newDocumentationLearn about Web PerformanceAsk questions on Stack OverflowMailing list
+Related ContentUpdatesWeb FundamentalsCase StudiesPodcasts
+ConnectTwitterYoutube
+Google Developers Logo
+Chrome
+Firebase
+All products
+Terms and Privacy Policy
+For details, see the Google Developers Site Policies.

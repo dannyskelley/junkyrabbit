@@ -49,6 +49,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/_redirects");
     eleventyConfig.addPassthroughCopy({ "./src/robots.txt": "/robots.txt" });
+    eleventyConfig.addPassthroughCopy({ "./src/_headers": "/_headers" });
     // END PASSTHROUGHS
 
     // FILTERS - Modify data in template files at build time

@@ -49,12 +49,13 @@
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
 
         {% if preloadImg != '' %}
-            <link rel="preload" as="image" href="{{ preloadImg }}" />
+            <link rel="preload" as="image" href="{{ preloadImg }}" {% if '.webp' in preloadImg %}type="image/webp"{% endif %} fetchpriority="high">
         {% endif %}
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="/assets/css/root.css">
-        <link rel="stylesheet" href="/assets/aos/aos.css" />
+        <link rel="stylesheet" href="/assets/aos/aos.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="/assets/aos/aos.css"></noscript>
 
         {% block head %}{% endblock %}
 

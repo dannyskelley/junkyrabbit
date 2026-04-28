@@ -4,6 +4,9 @@
 
 A professional service website for Junky Rabbit Labor, a general labor business in the Detroit Metro area. Services include moving, junk removal, snow removal, painting, and landscaping.
 
+Brand: lime #B8F000, dark green #2D7A1A, near-black #0d1a08, CTA orange #FF4500.
+Phone: 248.818.1130 (display) / +12488181130 (tel:). NO dashes in visible copy.
+
 ## Tech Stack
 
 - **Static Site Generator:** Eleventy (11ty) v2.0.1
@@ -35,3 +38,31 @@ A professional service website for Junky Rabbit Labor, a general labor business 
 - Configured as a **static site** deployment
 - Build command: `npm run build`
 - Public directory: `public`
+
+## PageSpeed / Performance Optimizations (completed)
+
+- All large images converted to WebP (hero-movers.png 2.5MB→233KB, all portfolio/service/about images)
+- Hero uses `<picture>` tag with WebP source + fetchpriority="high" + LCP preload hint
+- All CSS backgrounds and inline `<img>` src attributes updated to `.webp`
+- AOS CSS deferred (media="print" onload trick)
+- `src/_headers` with full security headers (HSTS, CSP, X-Frame-Options, COOP, etc.) — wired into `.eleventy.js` passthrough
+
+## SEO Optimizations (completed)
+
+- Unique, keyword-rich page titles — brand name appended by layout template only
+- Meta descriptions on all pages
+- LocalBusiness JSON-LD schema with geo + hasOfferCatalog in base.html
+- robots meta (index,follow) + canonical tags + OG/Twitter card tags
+- og:image = home1.webp, og:site_name, og:locale on all pages
+- robots.txt and sitemap.xml included
+
+## Accessibility Fixes (completed)
+
+- ARIA: changed `<aside role="dialog">` to `<div role="dialog">` (aside's allowed roles don't include dialog)
+- Heading hierarchy: footer columns changed from `h4` → `h3` (fixed h2→h4 skip on every page)
+- Contrast: bumped low-opacity text elements (0.35–0.55) to 0.78–0.82 on dark backgrounds:
+  - FAQ header sub-description
+  - Before/after section caption
+  - Pricing table footnote
+  - Portfolio gallery caption
+  - Mobile nav meta bar
