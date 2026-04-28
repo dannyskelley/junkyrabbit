@@ -1,84 +1,121 @@
-<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+<!-- Junky Rabbit Labor – base layout with full SEO head -->
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Standard meta tags -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+        {# Build the full page title once so we can reuse it in og:title #}
+        {% if page.url == '/' %}
+            {% set pageTitle = title + ' | ' + client.name + ' | ' + client.address.city + ', ' + client.address.state %}
+        {% else %}
+            {% set pageTitle = title + ' | ' + client.name %}
+        {% endif %}
+
+        <title>{{ pageTitle }}</title>
+
         <meta name="description" content="{{ description }}">
-        <meta name="keywords" content="">
         <link rel="canonical" href="{{ client.domain }}{{ page.url }}">
 
-        <!--Social Media Display-->
-        <meta property="og:title" content="{{ title }}" />
-        <meta property="og:description" content="{{ description }}" />
+        <!-- Open Graph -->
+        <meta property="og:site_name" content="{{ client.name }}" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-        <meta property="og:image" content="/assets/images/logo-small.png" />
-        <meta property="og:image:secure_url" content="/assets/images/logo-small.png" />
+        <meta property="og:title" content="{{ pageTitle }}" />
+        <meta property="og:description" content="{{ description }}" />
+        <meta property="og:image" content="{{ client.domain }}/assets/images/home1.jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Junky Rabbit Labor crew ready to work in Metro Detroit" />
 
-        <!--Favicons-->
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons//apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons//favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons//favicon-16x16.png">
-        <link rel="manifest" href="/assets/favicons//site.webmanifest">
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="{{ pageTitle }}" />
+        <meta name="twitter:description" content="{{ description }}" />
+        <meta name="twitter:image" content="{{ client.domain }}/assets/images/home1.jpeg" />
 
-        <!-- Preloads -->
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicons/site.webmanifest">
+
+        <!-- Preload fonts -->
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
 
-        <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
         {% if preloadImg != '' %}
             <link rel="preload" as="image" href="{{ preloadImg }}" />
         {% endif %}
 
-        <!-- Sitewide Stylesheets and Scripts -->
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="/assets/css/root.css">
-
         <link rel="stylesheet" href="/assets/aos/aos.css" />
-   
-
 
         {% block head %}{% endblock %}
 
-        <!--For home page, use service keywords for the title, including location for SEO.
-        Other pages should just include the page name.
-        
-        EXAMPLE:
-        Home page - House Painting Contractors | Painters and Co. | TestCity, WA
-        About Page - About us | Painters and Co.
-        -->
-        <title>
-            {% if page.url == '/'%}
-                {{ title }}
-                |
-                {{ client.name }}
-                |
-                {{ client.address.city }},
-                {{ client.address.state }}
-            {% else %}
-                {{ title }}
-                |
-                {{ client.name }}
-            {% endif %}
-        </title>
+        <!-- LocalBusiness structured data (global, on every page) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            "description": "Detroit Metro junk removal, moving help, property cleanouts, snow removal, painting and yard work. Same day service available.",
+            "url": "{{ client.domain }}",
+            "telephone": "{{ client.phoneForTel }}",
+            "email": "{{ client.email }}",
+            "priceRange": "$$",
+            "image": "{{ client.domain }}/assets/images/home1.jpeg",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "{{ client.address.city }}",
+                "addressRegion": "{{ client.address.state }}",
+                "addressCountry": "US"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 42.3314,
+                "longitude": -83.0458
+            },
+            "areaServed": [
+                "Detroit", "Warren", "Sterling Heights", "Southfield", "Eastpointe",
+                "Highland Park", "Hamtramck", "Livonia", "Dearborn", "Troy", "Royal Oak"
+            ],
+            "openingHours": "Mo-Su 07:00-20:00",
+            "paymentAccepted": "Cash, Venmo, CashApp, Apple Pay",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "General Labor Services",
+                "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Junk Removal"}, "price": "75", "priceCurrency": "USD"},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Moving Help"}, "price": "90", "priceCurrency": "USD"},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Snow Removal"}, "price": "45", "priceCurrency": "USD"},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior Painting"}, "price": "125", "priceCurrency": "USD"},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Yard Cleanup and Landscaping"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Property Cleanouts"}}
+                ]
+            },
+            "sameAs": [
+                "https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author"
+            ]
+        }
+        </script>
 
-        
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2K3DYR0ZRX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2K3DYR0ZRX');
-</script>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2K3DYR0ZRX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2K3DYR0ZRX');
+        </script>
 
     </head>
     <body>
-        <!--Screen reader skip main nav-->
         <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
         {% include "components/header.html" %}
@@ -87,17 +124,9 @@
         </main>
         {% include "components/footer.html" %}
 
-
-
-            
         <script src="/assets/js/aos.js"></script>
-
         <script>
-          AOS.init({
-            easing: 'ease-in-out-sine',
-          });
+            AOS.init({ easing: 'ease-in-out-sine' });
         </script>
-
-
     </body>
 </html>
