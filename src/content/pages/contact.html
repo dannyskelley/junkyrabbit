@@ -227,48 +227,65 @@ eleventyNavigation:
         </div>
 
         <div class="contact-form-wrap">
-            <h3>Request a Free Quote</h3>
-            <p class="form-sub">We'll respond within a few hours. Usually much sooner. No spam, no pressure.</p>
-            <form name="quote-request" method="POST" action="/contact/?success=true">
-                <input type="hidden" name="form-name" value="quote-request">
-                <div class="form-group">
-                    <label for="contact-name">Your Name *</label>
-                    <input type="text" id="contact-name" name="name" required placeholder="John Smith">
-                </div>
-                <div class="form-group">
-                    <label for="contact-phone">Phone Number *</label>
-                    <input type="tel" id="contact-phone" name="phone" required placeholder="(248) 555-0000">
-                </div>
-                <div class="form-group">
-                    <label for="contact-email">Email Address</label>
-                    <input type="email" id="contact-email" name="email" placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="contact-service">Service Needed *</label>
-                    <select id="contact-service" name="service" required>
-                        <option value="">-- Select a service --</option>
-                        <option value="junk-removal">Junk Removal / Curb Pickup</option>
-                        <option value="moving">Moving Help (2 Movers + Truck)</option>
-                        <option value="cleanout">Property / Estate Cleanout</option>
-                        <option value="snow-removal">Snow Removal</option>
-                        <option value="painting">Painting (Touch-Up or Full Room)</option>
-                        <option value="yard-cleanup">Yard Cleanup / Landscaping</option>
-                        <option value="hauling">Hauling / Demolition</option>
-                        <option value="other">Other / Multiple Services</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="contact-city">Your City / Neighborhood *</label>
-                    <input type="text" id="contact-city" name="city" required placeholder="e.g. Warren, Sterling Heights, Detroit...">
-                </div>
-                <div class="form-group">
-                    <label for="contact-message">Describe Your Job</label>
-                    <textarea id="contact-message" name="message" placeholder="Tell us what you need done. A photo via text helps us give you the most accurate quote!"></textarea>
-                </div>
-                <button type="submit" class="form-submit">📋 Submit Free Quote Request</button>
-                <p class="form-disclaimer">Fastest response: text 248.818.1130 with a photo of your job.</p>
-            </form>
+            <div id="form-success" style="display:none;text-align:center;padding:2rem 0;">
+                <div style="font-size:3rem;margin-bottom:0.75rem;">✅</div>
+                <h3 style="color:#2D7A1A;margin-bottom:0.5rem;">Quote Request Sent!</h3>
+                <p style="color:#555;font-size:0.95rem;line-height:1.6;">We got your message and will reach out shortly. For the fastest response, text us at <strong><a href="sms:+12488181130" style="color:var(--secondary);text-decoration:none;">248.818.1130</a></strong>.</p>
+            </div>
+            <div id="form-body">
+                <h3>Request a Free Quote</h3>
+                <p class="form-sub">We'll respond within a few hours. Usually much sooner. No spam, no pressure.</p>
+                <form name="quote-request" method="POST" action="/contact/?success=true" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="quote-request">
+                    <p style="display:none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+                    <div class="form-group">
+                        <label for="contact-name">Your Name *</label>
+                        <input type="text" id="contact-name" name="name" required placeholder="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number *</label>
+                        <input type="tel" id="contact-phone" name="phone" required placeholder="(248) 555-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" name="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-service">Service Needed *</label>
+                        <select id="contact-service" name="service" required>
+                            <option value="">-- Select a service --</option>
+                            <option value="junk-removal">Junk Removal / Curb Pickup</option>
+                            <option value="moving">Moving Help (2 Movers + Truck)</option>
+                            <option value="cleanout">Property / Estate Cleanout</option>
+                            <option value="snow-removal">Snow Removal</option>
+                            <option value="painting">Painting (Touch-Up or Full Room)</option>
+                            <option value="yard-cleanup">Yard Cleanup / Landscaping</option>
+                            <option value="hauling">Hauling / Demolition</option>
+                            <option value="other">Other / Multiple Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-city">Your City / Neighborhood *</label>
+                        <input type="text" id="contact-city" name="city" required placeholder="e.g. Warren, Sterling Heights, Detroit...">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Describe Your Job</label>
+                        <textarea id="contact-message" name="message" placeholder="Tell us what you need done. A photo via text helps us give you the most accurate quote!"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">📋 Submit Free Quote Request</button>
+                    <p class="form-disclaimer">Fastest response: text 248.818.1130 with a photo of your job.</p>
+                </form>
+            </div>
         </div>
+        <script>
+        if (window.location.search.indexOf('success=true') !== -1) {
+            document.getElementById('form-success').style.display = 'block';
+            document.getElementById('form-body').style.display = 'none';
+            window.history.replaceState({}, '', '/contact/');
+        }
+        </script>
     </div>
 </section>
 
