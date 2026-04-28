@@ -39,6 +39,17 @@ Phone: 248.818.1130 (display) / +12488181130 (tel:). NO dashes in visible copy.
 - Build command: `npm run build`
 - Public directory: `public`
 
+## Programmatic SEO Pages (added)
+
+- **6 dedicated service pages** auto-generated from `src/_data/services.json` via Eleventy pagination
+  - `/services/moving-help/`, `/services/junk-removal/`, `/services/snow-removal/`, `/services/painting/`, `/services/yard-cleanup/`, `/services/demolition-hauling/`
+  - Each page: unique h1, service description, what's included list, pricing box, service-specific FAQ, cross-links to other services, service area section, JSON-LD Service schema
+- **20 location pages** auto-generated from `src/_data/locations.json` via Eleventy pagination
+  - `/locations/detroit/`, `/locations/warren/`, `/locations/sterling-heights/`, etc. (all 20 Metro Detroit cities)
+  - Each page: city-specific h1 + blurb, county/trust bar, all 6 service cards with "Learn More" links, stats block, service area, JSON-LD LocalBusiness schema
+- **Service area component** updated — city `<span>` pills are now `<a>` links pointing to `/locations/[slug]/`
+- **Main services page** updated — each service block now has a "Full Details →" link to its dedicated sub-page
+
 ## PageSpeed / Performance Optimizations (completed)
 
 - All large images converted to WebP (hero-movers.png 2.5MB→233KB, all portfolio/service/about images)

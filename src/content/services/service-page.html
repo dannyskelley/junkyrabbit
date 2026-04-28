@@ -1,0 +1,473 @@
+---
+pagination:
+  data: services
+  size: 1
+  alias: service
+permalink: "services/{{ service.slug }}/"
+eleventyComputed:
+  title: "{{ service.name }} in Metro Detroit | Junky Rabbit Labor"
+  description: "{{ service.tagline }} Serving Detroit, Warren, Sterling Heights, Southfield and all of Metro Detroit. Call or text 248.818.1130 for a free quote."
+  preloadImg: "/assets/images/hero-movers.webp"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ service.name }}",
+  "description": "{{ service.tagline }}",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Junky Rabbit Labor",
+    "telephone": "+12488181130",
+    "areaServed": "Metro Detroit, MI"
+  },
+  "areaServed": "Metro Detroit, MI",
+  "url": "https://junkyrabbitlabor.com/services/{{ service.slug }}/"
+}
+</script>
+<style>
+/* ── Service Hero ── */
+#svc-hero {
+    background: #0d1a08;
+    position: relative;
+    overflow: hidden;
+    padding: 9rem 1.5rem 4.5rem;
+    text-align: center;
+}
+#svc-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/assets/images/hero-movers.webp') center/cover no-repeat;
+    opacity: 0.07;
+    z-index: 0;
+}
+#svc-hero .sh-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 52rem;
+    margin: 0 auto;
+}
+#svc-hero .sh-topper {
+    display: inline-block;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 0.3rem 0.85rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+#svc-hero h1 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin: 0 0 1rem;
+}
+#svc-hero h1 span { color: var(--primary); }
+#svc-hero .sh-sub {
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    color: rgba(255,255,255,0.9);
+    line-height: 1.65;
+    max-width: 36rem;
+    margin: 0 auto 2rem;
+}
+#svc-hero .sh-price {
+    display: inline-block;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+.sh-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.sh-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--secondary);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s;
+}
+.sh-btn-primary:hover { background: #1a5e10; }
+.sh-btn-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.25);
+    transition: border-color 0.2s, color 0.2s;
+}
+.sh-btn-phone:hover { border-color: var(--primary); color: var(--primary); }
+
+/* ── Service Details ── */
+#svc-details {
+    padding: var(--sectionPadding);
+    background: #f5f5f5;
+}
+#svc-details .sd-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+@media (min-width: 56rem) {
+    #svc-details .sd-container { grid-template-columns: 1fr 1fr; }
+}
+#svc-details img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    height: 320px;
+    display: block;
+}
+#svc-details .sd-body h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+#svc-details .sd-body p {
+    font-size: 0.97rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+#svc-details .sd-includes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+#svc-details .sd-includes li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.94rem;
+    color: #222;
+    font-weight: 600;
+}
+#svc-details .sd-includes li::before {
+    content: '✓';
+    background: var(--primary);
+    color: #0d1a08;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.68rem;
+    font-weight: 900;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+.sd-price-box {
+    background: #0d1a08;
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+.sd-price-box .sdp-amount {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    line-height: 1;
+}
+.sd-price-box .sdp-note {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+}
+.sd-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--secondary);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 900;
+    padding: 0.9rem 1.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 1.5rem;
+    transition: background 0.2s;
+}
+.sd-cta:hover { background: #1a5e10; }
+
+/* ── FAQ ── */
+#svc-faq {
+    padding: var(--sectionPadding);
+    background: #0d1a08;
+}
+#svc-faq .sf-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+}
+@media (min-width: 60rem) {
+    #svc-faq .sf-container { grid-template-columns: 1fr 1.5fr; align-items: start; }
+}
+#svc-faq .sf-header .cs-topper { color: var(--primary); }
+#svc-faq .sf-header h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0.5rem 0 1rem;
+}
+#svc-faq .sf-header p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.65;
+}
+#svc-faq .sf-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.sf-item {
+    background: rgba(184,240,0,0.04);
+    border: 1px solid rgba(184,240,0,0.12);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.sf-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.97rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+}
+.sf-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1.5px solid rgba(184,240,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--primary);
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s;
+}
+.sf-item.open .sf-icon {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #0d1a08;
+}
+.sf-a {
+    display: none;
+    padding: 0 1.25rem 1.1rem;
+    font-size: 0.93rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.7;
+}
+.sf-item.open .sf-a { display: block; }
+
+/* ── Other Services ── */
+#svc-others {
+    padding: var(--sectionPadding);
+    background: #f5f5f5;
+}
+#svc-others .so-container {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+#svc-others .so-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+#svc-others .so-header .cs-topper { color: var(--secondary); }
+#svc-others .so-header h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: #111;
+    text-transform: uppercase;
+}
+#svc-others .so-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.so-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1.5rem 1.25rem;
+    text-decoration: none;
+    border-left: 3px solid var(--primary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.so-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.12); transform: translateY(-2px); }
+.so-card .soc-emoji { font-size: 1.5rem; }
+.so-card .soc-name {
+    font-size: 0.97rem;
+    font-weight: 800;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.so-card .soc-price {
+    font-size: 0.82rem;
+    color: var(--secondary);
+    font-weight: 700;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+
+<!-- Hero -->
+<section id="svc-hero">
+    <div class="sh-inner">
+        <span class="sh-topper">Metro Detroit · Same Day Available</span>
+        <h1>{{ service.emoji }} <span>{{ service.name }}</span><br>Metro Detroit</h1>
+        <p class="sh-sub">{{ service.tagline }}</p>
+        <div class="sh-price">{{ service.price }} &nbsp;·&nbsp; {{ service.priceNote }}</div>
+        <div class="sh-cta-row">
+            <a class="sh-btn-primary" href="/contact/">Get a Free Quote →</a>
+            <a class="sh-btn-phone" href="tel:+12488181130">📞 248.818.1130</a>
+        </div>
+    </div>
+</section>
+
+<!-- Service Details -->
+<section id="svc-details">
+    <div class="sd-container">
+        <img src="{{ service.img }}" alt="{{ service.imgAlt }}" width="700" height="320" loading="lazy" decoding="async">
+        <div class="sd-body">
+            <h2>What's Included</h2>
+            <p>{{ service.description }}</p>
+            <ul class="sd-includes">
+                {% for item in service.includes %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            <div class="sd-price-box">
+                <div class="sdp-amount">{{ service.price }}</div>
+                <div class="sdp-note">{{ service.priceNote }}<br>Free estimates · No hidden fees</div>
+            </div>
+            <a class="sd-cta" href="sms:+12488181130">📱 Text for a Free Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="svc-faq">
+    <div class="sf-container">
+        <div class="sf-header">
+            <span class="cs-topper">Quick Answers</span>
+            <h2>{{ service.nameShort }} FAQ</h2>
+            <p>Common questions about our {{ service.name }} service in Metro Detroit. Still have one? Text us — we reply fast.</p>
+        </div>
+        <div class="sf-list">
+            {% for item in service.faq %}
+            <div class="sf-item">
+                <button class="sf-q" aria-expanded="false">
+                    <span>{{ item.q }}</span>
+                    <span class="sf-icon">+</span>
+                </button>
+                <div class="sf-a">{{ item.a }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Other Services Cross-Links -->
+<section id="svc-others">
+    <div class="so-container">
+        <div class="so-header">
+            <span class="cs-topper">Full Service Crew</span>
+            <h2>Other Services We Offer</h2>
+        </div>
+        <div class="so-grid">
+            {% for s in services %}
+                {% if s.slug != service.slug %}
+                <a class="so-card" href="/services/{{ s.slug }}/">
+                    <span class="soc-emoji">{{ s.emoji }}</span>
+                    <span class="soc-name">{{ s.name }}</span>
+                    <span class="soc-price">{{ s.price }}</span>
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Service Area -->
+{% include "components/service-area.html" %}
+
+<!-- CTA Banner -->
+{% include "components/cta-banner.html" %}
+
+<script>
+(function(){
+    document.querySelectorAll('.sf-q').forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var item = btn.closest('.sf-item');
+            var isOpen = item.classList.contains('open');
+            document.querySelectorAll('.sf-item').forEach(function(el){ el.classList.remove('open'); el.querySelector('.sf-q').setAttribute('aria-expanded','false'); el.querySelector('.sf-icon').textContent='+'; });
+            if(!isOpen){
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded','true');
+                btn.querySelector('.sf-icon').textContent='−';
+            }
+        });
+    });
+})();
+</script>
+
+{% endblock %}

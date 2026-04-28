@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "detroit",
+    "name": "Detroit",
+    "state": "MI",
+    "county": "Wayne County",
+    "blurb": "Detroit's own same-day labor crew — from Midtown to East English Village, we cover every neighborhood."
+  },
+  {
+    "slug": "warren",
+    "name": "Warren",
+    "state": "MI",
+    "county": "Macomb County",
+    "blurb": "Warren's go-to crew for junk removal, moving help, and yard work. Fast response, honest pricing."
+  },
+  {
+    "slug": "sterling-heights",
+    "name": "Sterling Heights",
+    "state": "MI",
+    "county": "Macomb County",
+    "blurb": "Sterling Heights residents trust Junky Rabbit Labor for same-day junk removal, moving, and cleanouts."
+  },
+  {
+    "slug": "southfield",
+    "name": "Southfield",
+    "state": "MI",
+    "county": "Oakland County",
+    "blurb": "Serving Southfield homeowners and property managers with fast, professional labor services."
+  },
+  {
+    "slug": "eastpointe",
+    "name": "Eastpointe",
+    "state": "MI",
+    "county": "Macomb County",
+    "blurb": "Eastpointe's trusted same-day crew for junk hauling, moving labor, and yard cleanup."
+  },
+  {
+    "slug": "highland-park",
+    "name": "Highland Park",
+    "state": "MI",
+    "county": "Wayne County",
+    "blurb": "Highland Park residents and landlords count on us for cleanouts, hauling, and move-out labor."
+  },
+  {
+    "slug": "livonia",
+    "name": "Livonia",
+    "state": "MI",
+    "county": "Wayne County",
+    "blurb": "Livonia homeowners call Junky Rabbit Labor for stress-free moves, junk removal, and yard work."
+  },
+  {
+    "slug": "dearborn",
+    "name": "Dearborn",
+    "state": "MI",
+    "county": "Wayne County",
+    "blurb": "Serving Dearborn with dependable moving crews, junk removal, and same-day cleanout services."
+  },
+  {
+    "slug": "troy",
+    "name": "Troy",
+    "state": "MI",
+    "county": "Oakland County",
+    "blurb": "Troy homeowners and businesses rely on Junky Rabbit Labor for fast, professional hauling and moving."
+  },
+  {
+    "slug": "royal-oak",
+    "name": "Royal Oak",
+    "state": "MI",
+    "county": "Oakland County",
+    "blurb": "Royal Oak's favorite labor crew for apartment moves, junk removal, and outdoor cleanup."
+  },
+  {
+    "slug": "hamtramck",
+    "name": "Hamtramck",
+    "state": "MI",
+    "county": "Wayne County",
+    "blurb": "Hamtramck residents rely on Junky Rabbit for quick cleanouts, furniture removal, and moving help."
+  },
+  {
+    "slug": "roseville",
+    "name": "Roseville",
+    "state": "MI",
+    "county": "Macomb County",
+    "blurb": "Roseville homeowners trust our crew for same-day junk pickup, moving help, and yard services."
+  },
+  {
+    "slug": "st-clair-shores",
+    "name": "St. Clair Shores",
+    "state": "MI",
+    "county": "Macomb County",
+    "blurb": "St. Clair Shores residents call us for reliable junk hauling, moving labor, and seasonal cleanups."
+  },
+  {
+    "slug": "pontiac",
+    "name": "Pontiac",
+    "state": "MI",
+    "county": "Oakland County",
+    "blurb": "Pontiac homeowners and landlords use Junky Rabbit Labor for cleanouts, moves, and hauling jobs."
+  },
+  {
+    "slug": "ferndale",
+    "name": "Ferndale",
+    "state": "MI",
+    "county": "Oakland County",
+    "blurb": "Ferndale's favorite affordable labor crew — fast moving help, junk removal, and yard work."
+  },
+  {
+    "slug": "hazel-park",
+    "name": "Hazel Park",
+    "state": "MI",
+    "county": "Oakland County",
+    "blurb": "Hazel Park residents and landlords count on Junky Rabbit for quick cleanouts and hauling."
+  },
+  {
+    "slug": "oak-park",
+    "name": "Oak Park",
+    "state": "MI",
+    "county": "Oakland County",
+    "blurb": "Oak Park homeowners trust our same-day crew for furniture removal, cleanouts, and moving labor."
+  },
+  {
+    "slug": "inkster",
+    "name": "Inkster",
+    "state": "MI",
+    "county": "Wayne County",
+    "blurb": "Inkster residents call Junky Rabbit for affordable junk removal, moving help, and yard work."
+  },
+  {
+    "slug": "river-rouge",
+    "name": "River Rouge",
+    "state": "MI",
+    "county": "Wayne County",
+    "blurb": "River Rouge homeowners and landlords rely on us for same-day hauling and cleanout services."
+  },
+  {
+    "slug": "ecorse",
+    "name": "Ecorse",
+    "state": "MI",
+    "county": "Wayne County",
+    "blurb": "Ecorse residents trust Junky Rabbit Labor for fast, affordable junk removal and moving help."
+  }
+]

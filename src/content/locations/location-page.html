@@ -1,0 +1,396 @@
+---
+pagination:
+  data: locations
+  size: 1
+  alias: location
+permalink: "locations/{{ location.slug }}/"
+eleventyComputed:
+  title: "Junk Removal, Moving & Labor in {{ location.name }}, MI | Junky Rabbit Labor"
+  description: "Same-day junk removal, moving help, snow removal, painting, and yard cleanup in {{ location.name }}, MI. Locally owned. Call or text 248.818.1130 for a free quote."
+  preloadImg: "/assets/images/hero-movers.webp"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Junky Rabbit Labor",
+  "description": "Same-day labor services in {{ location.name }}, MI — junk removal, moving help, snow removal, painting, and yard cleanup.",
+  "telephone": "+12488181130",
+  "url": "https://junkyrabbitlabor.com/locations/{{ location.slug }}/",
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ location.name }}",
+    "addressRegion": "MI"
+  }
+}
+</script>
+<style>
+/* ── Location Hero ── */
+#loc-hero {
+    background: #0d1a08;
+    position: relative;
+    overflow: hidden;
+    padding: 9rem 1.5rem 4.5rem;
+    text-align: center;
+}
+#loc-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/assets/images/hero-movers.webp') center/cover no-repeat;
+    opacity: 0.07;
+    z-index: 0;
+}
+#loc-hero .lh-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 52rem;
+    margin: 0 auto;
+}
+#loc-hero .lh-topper {
+    display: inline-block;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 0.3rem 0.85rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+#loc-hero h1 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin: 0 0 1rem;
+}
+#loc-hero h1 span { color: var(--primary); }
+#loc-hero .lh-sub {
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    color: rgba(255,255,255,0.9);
+    line-height: 1.65;
+    max-width: 38rem;
+    margin: 0 auto 2rem;
+}
+.lh-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.lh-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--secondary);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.2s;
+}
+.lh-btn-primary:hover { background: #1a5e10; }
+.lh-btn-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.25);
+    transition: border-color 0.2s, color 0.2s;
+}
+.lh-btn-phone:hover { border-color: var(--primary); color: var(--primary); }
+
+/* ── Trust Bar ── */
+#loc-trust {
+    background: #111;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+#loc-trust .lt-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+#loc-trust .lt-item span { color: var(--primary); font-size: 1rem; }
+
+/* ── Services Grid ── */
+#loc-services {
+    padding: var(--sectionPadding);
+    background: #f5f5f5;
+}
+#loc-services .ls-container {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+#loc-services .ls-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+#loc-services .ls-header .cs-topper { color: var(--secondary); }
+#loc-services .ls-header h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+#loc-services .ls-header p {
+    font-size: 0.97rem;
+    color: #555;
+    max-width: 36rem;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+#loc-services .ls-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+@media (min-width: 36rem) { #loc-services .ls-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { #loc-services .ls-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.ls-card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    border-left: 4px solid var(--primary);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.ls-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.11); transform: translateY(-2px); }
+.ls-card .lsc-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.ls-card .lsc-emoji { font-size: 1.75rem; }
+.ls-card .lsc-price {
+    display: inline-block;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.65rem;
+    border-radius: 3px;
+    width: fit-content;
+}
+.ls-card h3 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #111;
+    text-transform: uppercase;
+    margin: 0;
+}
+.ls-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+}
+.ls-card .lsc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.75rem;
+    transition: color 0.2s;
+}
+.ls-card .lsc-link:hover { color: #0d1a08; }
+
+/* ── About City Section ── */
+#loc-about {
+    padding: var(--sectionPadding);
+    background: #0d1a08;
+}
+#loc-about .la-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+}
+@media (min-width: 56rem) {
+    #loc-about .la-container { grid-template-columns: 1fr 1fr; align-items: center; }
+}
+#loc-about .la-body .cs-topper { color: var(--primary); }
+#loc-about .la-body h2 {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.1;
+}
+#loc-about .la-body p {
+    font-size: 0.96rem;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+#loc-about .la-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: #0d1a08;
+    font-size: 0.95rem;
+    font-weight: 900;
+    padding: 0.9rem 1.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+#loc-about .la-cta:hover { background: #fff; }
+#loc-about .la-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.la-stat {
+    background: rgba(184,240,0,0.05);
+    border: 1px solid rgba(184,240,0,0.12);
+    border-radius: 6px;
+    padding: 1.5rem;
+    text-align: center;
+}
+.la-stat .las-num {
+    font-family: "Darumadrop One", Arial, sans-serif;
+    font-size: 2.4rem;
+    color: var(--primary);
+    line-height: 1;
+}
+.la-stat .las-label {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.78);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 0.35rem;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+
+<!-- Location Hero -->
+<section id="loc-hero">
+    <div class="lh-inner">
+        <span class="lh-topper">{{ location.county }} · Same Day Available</span>
+        <h1>Labor Services in<br><span>{{ location.name }}, MI</span></h1>
+        <p class="lh-sub">{{ location.blurb }} Call or text for a same-day free quote.</p>
+        <div class="lh-cta-row">
+            <a class="lh-btn-primary" href="/contact/">Get a Free Quote →</a>
+            <a class="lh-btn-phone" href="tel:+12488181130">📞 248.818.1130</a>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Bar -->
+<div id="loc-trust">
+    <div class="lt-item"><span>✓</span> Locally Owned</div>
+    <div class="lt-item"><span>✓</span> Licensed &amp; Insured</div>
+    <div class="lt-item"><span>✓</span> Same Day Available</div>
+    <div class="lt-item"><span>✓</span> Free Estimates</div>
+    <div class="lt-item"><span>✓</span> 7 Days a Week</div>
+</div>
+
+<!-- Services Grid -->
+<section id="loc-services">
+    <div class="ls-container">
+        <div class="ls-header">
+            <span class="cs-topper">{{ location.name }}, {{ location.state }}</span>
+            <h2>Services in {{ location.name }}</h2>
+            <p>We offer the full range of labor services to {{ location.name }} residents, landlords, and businesses. Same-day availability. No hidden fees.</p>
+        </div>
+        <div class="ls-grid">
+            {% for s in services %}
+            <div class="ls-card">
+                <div class="lsc-body">
+                    <span class="lsc-emoji">{{ s.emoji }}</span>
+                    <span class="lsc-price">{{ s.price }}</span>
+                    <h3>{{ s.name }}</h3>
+                    <p>{{ s.tagline }}</p>
+                    <a class="lsc-link" href="/services/{{ s.slug }}/">Learn More →</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- About City -->
+<section id="loc-about">
+    <div class="la-container">
+        <div class="la-body">
+            <span class="cs-topper">Why {{ location.name }} Trusts Us</span>
+            <h2>Detroit's Crew.<br>Your City. Your Job.</h2>
+            <p>Junky Rabbit Labor is a locally owned business based in Metro Detroit. We're not a national franchise — we're your neighbors. When you call us for a job in {{ location.name }}, the same crew that's earned five-star reviews across Wayne, Macomb, and Oakland counties shows up for you.</p>
+            <p>We respond fast, quote honestly, and do the work ourselves. No subcontracting. No hidden fees. Just hard work at a fair price.</p>
+            <a class="la-cta" href="sms:+12488181130">📱 Text Us for a Free Quote</a>
+        </div>
+        <div class="la-stats">
+            <div class="la-stat">
+                <div class="las-num">5★</div>
+                <div class="las-label">Average Rating</div>
+            </div>
+            <div class="la-stat">
+                <div class="las-num">$0</div>
+                <div class="las-label">Trip Fee</div>
+            </div>
+            <div class="la-stat">
+                <div class="las-num">7</div>
+                <div class="las-label">Days a Week</div>
+            </div>
+            <div class="la-stat">
+                <div class="las-num">Same</div>
+                <div class="las-label">Day Available</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Area -->
+{% include "components/service-area.html" %}
+
+<!-- CTA Banner -->
+{% include "components/cta-banner.html" %}
+
+{% endblock %}

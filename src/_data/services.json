@@ -1,0 +1,238 @@
+[
+  {
+    "slug": "moving-help",
+    "name": "Moving Help",
+    "nameShort": "Moving",
+    "emoji": "🚛",
+    "price": "$90/hr",
+    "priceNote": "2-hr minimum · 2 movers + 20ft truck",
+    "tagline": "Professional loading, transport, and unloading — same day available.",
+    "description": "Junky Rabbit Labor provides two-man moving crews with a 20-foot truck so you can relocate without the stress. We handle apartment moves, house-to-house moves, single-item transport, and furniture delivery across Metro Detroit. Our crew arrives on time, works efficiently, and treats your belongings with care. No hidden fees — just hourly labor you can count on.",
+    "includes": [
+      "2-man crew + 20ft truck included",
+      "Loading and unloading at both locations",
+      "Furniture wrapping and blanket protection",
+      "Transport within all of Metro Detroit",
+      "Same-day and next-day availability",
+      "No surprise fees — flat hourly rate"
+    ],
+    "img": "/assets/images/hero-movers.webp",
+    "imgAlt": "Junky Rabbit moving crew loading furniture into truck Detroit Metro",
+    "faq": [
+      {
+        "q": "How far in advance do I need to book?",
+        "a": "Same-day is often available. Text 248.818.1130 and we'll tell you our earliest opening. Booking 24–48 hours ahead guarantees your preferred time."
+      },
+      {
+        "q": "Is there a minimum charge?",
+        "a": "Yes — we have a 2-hour minimum at $90/hr, so the minimum charge is $180 for a standard move. Clock starts when we arrive, ends when the last piece is placed."
+      },
+      {
+        "q": "Do you move large appliances and pianos?",
+        "a": "We handle furniture, appliances, and heavy items. Text us a quick description of your items for a heads-up before we arrive — appliances like fridges and washers are no problem."
+      },
+      {
+        "q": "Do you travel outside of Metro Detroit?",
+        "a": "Our primary coverage is Metro Detroit. For longer-distance moves, text us — we can quote a flat rate for travel beyond the standard service area."
+      },
+      {
+        "q": "What payment methods do you accept?",
+        "a": "Cash, Venmo, CashApp, and Apple Pay. Payment is due at the end of the job."
+      }
+    ]
+  },
+  {
+    "slug": "junk-removal",
+    "name": "Junk Removal & Cleanouts",
+    "nameShort": "Junk Removal",
+    "emoji": "🗑️",
+    "price": "From $75",
+    "priceNote": "Curb pickup up to 5 items · full cleanouts quoted by volume",
+    "tagline": "Same-day junk hauling and full property cleanouts in Metro Detroit.",
+    "description": "Whether it's a single couch on the curb or an entire basement cleanout, Junky Rabbit Labor gets it done fast. We haul away furniture, appliances, mattresses, yard waste, construction debris, and just about anything else you need gone. Our crew loads everything and leaves the space spotless. Pricing is upfront — no surprises after the job.",
+    "includes": [
+      "Furniture, appliances, and mattress removal",
+      "Garage, basement, and attic cleanouts",
+      "Estate and foreclosure cleanouts",
+      "Yard waste and debris hauling",
+      "Full loading — we do all the heavy lifting",
+      "Space left broom-clean after removal"
+    ],
+    "img": "/assets/images/before-cleanout.webp",
+    "imgAlt": "Before and after junk removal cleanout Detroit property",
+    "faq": [
+      {
+        "q": "What items can't you take?",
+        "a": "We can't take hazardous waste, chemicals, paint, or tires. Everything else — furniture, appliances, mattresses, debris, electronics — is fair game."
+      },
+      {
+        "q": "How is pricing determined for a full cleanout?",
+        "a": "Curb pickups (up to 5 items) start at $75. Larger cleanouts are priced by volume — text us a few photos and we'll send a quote within minutes."
+      },
+      {
+        "q": "Do you offer same-day junk removal?",
+        "a": "Yes. Same-day pickups are available most days. Text 248.818.1130 with your location and what needs to go and we'll confirm a same-day window."
+      },
+      {
+        "q": "Will you clean up after removal?",
+        "a": "Absolutely. We leave the space broom-clean. If it's a full room cleanout, we sweep and make sure nothing is left behind."
+      },
+      {
+        "q": "Can you remove items from inside the house?",
+        "a": "Yes — full-service removal means we carry items out from any room, basement, or upper floor. You don't need to move anything to the curb."
+      }
+    ]
+  },
+  {
+    "slug": "snow-removal",
+    "name": "Snow Removal",
+    "nameShort": "Snow Removal",
+    "emoji": "❄️",
+    "price": "From $45",
+    "priceNote": "Residential driveways · commercial lots quoted separately",
+    "tagline": "Fast residential snow clearing — driveways and sidewalks done right.",
+    "description": "When Detroit's winter hits, Junky Rabbit Labor is ready. We clear residential driveways, sidewalks, and walkways quickly and thoroughly. Salt and ice treatment available on request. Commercial properties and multi-unit buildings can receive a custom seasonal quote. Don't get stuck — text us and we'll be out the same day.",
+    "includes": [
+      "Full driveway snow clearing",
+      "Sidewalks and walkways",
+      "Ice treatment and salting available",
+      "Same-day response during snowfall",
+      "Residential and light commercial",
+      "One-time or seasonal service available"
+    ],
+    "img": "/assets/images/snow-removal.webp",
+    "imgAlt": "Snow removal service driveway clearing Detroit Metro Michigan",
+    "faq": [
+      {
+        "q": "How quickly can you respond during a snowstorm?",
+        "a": "We aim for same-day response. Text us as soon as you know you need service and we'll give you an ETA based on current demand."
+      },
+      {
+        "q": "Do you offer seasonal snow removal contracts?",
+        "a": "Yes — we can set up a seasonal arrangement for repeat customers. Text 248.818.1130 to discuss pricing for ongoing service."
+      },
+      {
+        "q": "Do you salt and treat for ice?",
+        "a": "Yes, salting and ice treatment are available as an add-on to any snow removal job."
+      },
+      {
+        "q": "What size driveways do you clear?",
+        "a": "We handle single and double driveways, as well as commercial parking areas. Text us details and we'll quote accordingly."
+      }
+    ]
+  },
+  {
+    "slug": "painting",
+    "name": "Painting",
+    "nameShort": "Painting",
+    "emoji": "🎨",
+    "price": "Touch-ups from $125",
+    "priceNote": "Full rooms from $250 · includes wall prep and priming",
+    "tagline": "Clean, precise interior painting with full wall prep included.",
+    "description": "Junky Rabbit Labor provides interior residential painting that's clean, fast, and affordable. Every job includes wall prep — filling holes, sanding rough spots, and priming when needed — before a single drop of paint goes on the wall. We offer touch-up painting, full-room refreshes, and multi-room packages. No cutting corners, no mess left behind.",
+    "includes": [
+      "Hole patching and wall prep",
+      "Priming before finish coats",
+      "Clean edge cutting and trim work",
+      "Single room or full-home packages",
+      "Touch-up and spot painting",
+      "Cleanup — tarps, tape, and drop cloths removed"
+    ],
+    "img": "/assets/images/cleaning.webp",
+    "imgAlt": "Interior painting service Detroit Metro residential",
+    "faq": [
+      {
+        "q": "Do I need to supply paint?",
+        "a": "You can supply your own paint or we can source it. If you supply paint we deduct that cost from the estimate — just have it ready before we arrive."
+      },
+      {
+        "q": "Does pricing include wall prep?",
+        "a": "Yes. Every painting job includes filling nail holes, light sanding, and taping. Extensive repairs (large holes, water damage) may be quoted separately."
+      },
+      {
+        "q": "How long does a room take?",
+        "a": "A standard bedroom takes 3–5 hours depending on prep. Large rooms or rooms requiring two coats take longer. We'll give you a time estimate upfront."
+      },
+      {
+        "q": "Do you do exterior painting?",
+        "a": "Currently we focus on interior residential painting. For exterior painting requests, text us — we may be able to accommodate on a project basis."
+      }
+    ]
+  },
+  {
+    "slug": "yard-cleanup",
+    "name": "Yard Cleanup & Landscaping",
+    "nameShort": "Yard Cleanup",
+    "emoji": "🌿",
+    "price": "Free estimate",
+    "priceNote": "Priced by scope · bush trimming · debris removal · lot cleanup",
+    "tagline": "Bush trimming, leaf removal, and overgrown lot cleanup in Metro Detroit.",
+    "description": "Overgrown yard? Piles of leaves? Bushes that got out of hand? Junky Rabbit Labor handles yard cleanup and light landscaping throughout Metro Detroit. We trim bushes, remove leaf and debris piles, haul away yard waste, and clean up vacant or overgrown lots. All debris is hauled away — no piles left on the curb. Free estimates on all yard work.",
+    "includes": [
+      "Bush trimming and shrub removal",
+      "Leaf removal and bagging",
+      "Overgrown lot and yard cleanup",
+      "Debris hauling and disposal",
+      "Light grading and surface clearing",
+      "All yard waste hauled away — not left at curb"
+    ],
+    "img": "/assets/images/after-landscaping.webp",
+    "imgAlt": "Clean yard after Junky Rabbit landscaping and yard cleanup Detroit",
+    "faq": [
+      {
+        "q": "Do you haul away the debris after yard cleanup?",
+        "a": "Yes — full haul-away is included. We don't leave piles at the curb. Everything is loaded and taken with us."
+      },
+      {
+        "q": "Can you clean up a vacant or foreclosed property?",
+        "a": "Absolutely. Property managers, landlords, and investors frequently use us for vacant lot cleanups before listing or after tenant move-out."
+      },
+      {
+        "q": "Do you mow lawns?",
+        "a": "We handle mowing on a case-by-case basis. Text us details about your lawn and we'll let you know if it falls within our current scope."
+      },
+      {
+        "q": "How do you quote yard cleanup jobs?",
+        "a": "Text us a few photos of the yard and your address. We'll send a written quote within minutes — no obligation."
+      }
+    ]
+  },
+  {
+    "slug": "demolition-hauling",
+    "name": "Demolition & Hauling",
+    "nameShort": "Demo & Hauling",
+    "emoji": "🔨",
+    "price": "Free estimate",
+    "priceNote": "Shed removal · deck demolition · debris and dirt hauling",
+    "tagline": "Shed removal, structural demo, and heavy hauling across Metro Detroit.",
+    "description": "Need a shed torn down? A deck removed? Dirt or gravel hauled away? Junky Rabbit Labor handles small-scale demolition and heavy hauling projects across Metro Detroit. Our crew brings the tools, does the work, and hauls everything away. We don't sub out — your job is done by our own hands, on schedule and on budget.",
+    "includes": [
+      "Shed and outbuilding demolition and removal",
+      "Deck and fence removal",
+      "Concrete, brick, and masonry debris hauling",
+      "Dirt, gravel, and fill material hauling",
+      "Interior demo (walls, flooring) on request",
+      "All debris hauled away — site left clear"
+    ],
+    "img": "/assets/images/after-cleanout.webp",
+    "imgAlt": "Demolition and hauling service Metro Detroit shed removal",
+    "faq": [
+      {
+        "q": "Do you need permits for demolition work?",
+        "a": "For most small structures (sheds, fences, decks), permits are not required. For larger or attached structures, we recommend you check with your municipality. We can advise on what we've encountered."
+      },
+      {
+        "q": "Can you haul away concrete and masonry?",
+        "a": "Yes — concrete slabs, brick, block, and similar heavy materials are hauled away as part of demo jobs. Quantity affects pricing so text us details."
+      },
+      {
+        "q": "How quickly can you start a demo job?",
+        "a": "Smaller jobs (sheds, fences) can often be scheduled within 1–3 days. Text us for current availability."
+      },
+      {
+        "q": "Do you handle interior demolition?",
+        "a": "Yes, on a project basis. We've done wall removal, flooring tear-out, and bathroom demolition. Text details and we'll quote it."
+      }
+    ]
+  }
+]
