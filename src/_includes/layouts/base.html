@@ -117,6 +117,32 @@
             },
             "sameAs": [
                 "https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author"
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "{{ client.rating.ratingValue }}",
+                "reviewCount": "{{ client.rating.reviewCount }}",
+                "bestRating": "{{ client.rating.bestRating }}"
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Nikhil Bhat"},
+                    "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                    "reviewBody": "Had these guys clean out a nasty tenant turnover that had a bunch of broken furniture in it, cat urine, cat feces, rotting food, etc. They cleared it all out very quickly, and deep cleaned it and practically made it look brand new for a really amazing price. They saved me from a very difficult tenant situation and I can't thank them enough. Had them out in less than 48 hours from first contact. They were on time, and communication was extremely professional. Can't thank you enough! Would highly recommend and use again!"
+                },
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Denetra Mason"},
+                    "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                    "reviewBody": "I needed last-minute help moving and clearing out junk, and Junky Rabbit Labor came through big time. They were quick, respectful, and made the whole process stress-free. You can tell they really care about their customers. I'll definitely be using them again."
+                },
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Danny"},
+                    "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                    "reviewBody": "Junky Rabbit responded to me right away on Nextdoor with a great price to mow my overgrown lawn. Lunden was prompt, courteous and professional. He showed up on time and got the job done even in the rain. Thank you!"
+                }
             ]
         }
         </script>

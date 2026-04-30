@@ -11,5 +11,10 @@
         "zip": "",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
-    "domain": "https://junkyrabbitlabor.com"
+    "domain": "https://junkyrabbitlabor.com",
+    "rating": {
+        "ratingValue": 5.0,
+        "reviewCount": 6,
+        "bestRating": 5
+    }
 }
