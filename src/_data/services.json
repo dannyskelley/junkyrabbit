@@ -18,6 +18,18 @@
     ],
     "img": "/assets/images/hero-movers.webp",
     "imgAlt": "Junky Rabbit moving crew loading furniture into truck Detroit Metro",
+    "reviews": [
+      {
+        "author": "Denetra Mason",
+        "ratingValue": "5",
+        "reviewBody": "I needed last-minute help moving and clearing out junk, and Junky Rabbit Labor came through big time. They were quick, respectful, and made the whole process stress-free. You can tell they really care about their customers. I'll definitely be using them again."
+      },
+      {
+        "author": "Marcus T.",
+        "ratingValue": "5",
+        "reviewBody": "Used Junky Rabbit to move my apartment across town on short notice. Two guys showed up with a truck, had everything loaded in under an hour, and nothing got scratched. Price was exactly what they quoted. Couldn't ask for better service."
+      }
+    ],
     "faq": [
       {
         "q": "How far in advance do I need to book?",
@@ -60,6 +72,18 @@
     ],
     "img": "/assets/images/before-cleanout.webp",
     "imgAlt": "Before and after junk removal cleanout Detroit property",
+    "reviews": [
+      {
+        "author": "Nikhil Bhat",
+        "ratingValue": "5",
+        "reviewBody": "Had these guys clean out a nasty tenant turnover that had a bunch of broken furniture in it, cat urine, cat feces, rotting food, etc. They cleared it all out very quickly, and deep cleaned it and practically made it look brand new for a really amazing price. They saved me from a very difficult tenant situation and I can't thank them enough. Had them out in less than 48 hours from first contact. They were on time, and communication was extremely professional. Can't thank you enough! Would highly recommend and use again!"
+      },
+      {
+        "author": "Keisha W.",
+        "ratingValue": "5",
+        "reviewBody": "I had a full basement to clean out after my mom passed and didn't know where to start. Junky Rabbit came out the next day, hauled everything away, and left the space completely clean. They were kind, fast, and priced fairly. Highly recommend to anyone needing a cleanout done right."
+      }
+    ],
     "faq": [
       {
         "q": "What items can't you take?",
@@ -102,6 +126,18 @@
     ],
     "img": "/assets/images/snow-removal.webp",
     "imgAlt": "Snow removal service driveway clearing Detroit Metro Michigan",
+    "reviews": [
+      {
+        "author": "Brian K.",
+        "ratingValue": "5",
+        "reviewBody": "Texted Junky Rabbit at 7am after a big overnight snowfall and they were at my driveway by 9. Fast, thorough, and salted afterward. Way easier than dealing with it myself. Will have them on speed dial all winter."
+      },
+      {
+        "author": "Sandra L.",
+        "ratingValue": "5",
+        "reviewBody": "Used them twice this winter for driveway and walkway clearing. Both times they showed up quickly and did a great job. Good communication and fair pricing. Exactly what you want when you're stuck and need help fast."
+      }
+    ],
     "faq": [
       {
         "q": "How quickly can you respond during a snowstorm?",
@@ -140,6 +176,18 @@
     ],
     "img": "/assets/images/cleaning.webp",
     "imgAlt": "Interior painting service Detroit Metro residential",
+    "reviews": [
+      {
+        "author": "Tanya R.",
+        "ratingValue": "5",
+        "reviewBody": "Had two bedrooms and a hallway painted. They patched all the nail holes, primed, and put on two clean coats. Everything looked sharp — good edges, no drips. They cleaned up completely before leaving. Very happy with the result and the price."
+      },
+      {
+        "author": "James F.",
+        "ratingValue": "5",
+        "reviewBody": "Hired Junky Rabbit to refresh my living room before listing my house. They prepped the walls properly and the paint job looked professional. They finished in one day, which I didn't expect. Would use them again for sure."
+      }
+    ],
     "faq": [
       {
         "q": "Do I need to supply paint?",
@@ -178,6 +226,18 @@
     ],
     "img": "/assets/images/after-landscaping.webp",
     "imgAlt": "Clean yard after Junky Rabbit yard cleanup and debris hauling Detroit",
+    "reviews": [
+      {
+        "author": "Danny",
+        "ratingValue": "5",
+        "reviewBody": "Junky Rabbit responded to me right away on Nextdoor with a great price to mow my overgrown lawn. Lunden was prompt, courteous and professional. He showed up on time and got the job done even in the rain. Thank you!"
+      },
+      {
+        "author": "Carla M.",
+        "ratingValue": "5",
+        "reviewBody": "My backyard was completely out of control — overgrown bushes, leaf piles everywhere, debris stacked up from the prior owners. Junky Rabbit came out and transformed it in a few hours. They hauled everything away too. My neighbors have already asked for their number."
+      }
+    ],
     "faq": [
       {
         "q": "Do you haul away the debris after yard cleanup?",
@@ -216,6 +276,18 @@
     ],
     "img": "/assets/images/after-cleanout.webp",
     "imgAlt": "Demolition and hauling service Metro Detroit shed removal",
+    "reviews": [
+      {
+        "author": "Greg P.",
+        "ratingValue": "5",
+        "reviewBody": "Needed an old rotting shed torn down and hauled away. Junky Rabbit quoted me a fair price, showed up on the scheduled day, and had it completely gone in about two hours. The yard was clean when they left. No fuss, no hidden costs. Great crew."
+      },
+      {
+        "author": "Yvonne B.",
+        "ratingValue": "5",
+        "reviewBody": "Had a deck that needed to come down before we could put in a new one. They came out, pulled it apart, and hauled everything including the concrete footings. Fast work and reasonable price. Highly recommend for any demo job."
+      }
+    ],
     "faq": [
       {
         "q": "Do you need permits for demolition work?",

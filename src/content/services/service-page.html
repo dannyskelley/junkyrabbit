@@ -36,7 +36,17 @@ sitemap:
     "reviewCount": "{{ client.rating.reviewCount }}",
     "bestRating": "{{ client.rating.bestRating }}",
     "worstRating": "1"
-  }
+  }{% if service.reviews and service.reviews.length %},
+  "review": [
+    {% for r in service.reviews %}
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": {{ r.author | dump | safe }}},
+      "reviewRating": {"@type": "Rating", "ratingValue": {{ r.ratingValue | dump | safe }}, "bestRating": "5"},
+      "reviewBody": {{ r.reviewBody | dump | safe }}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]{% endif %}
 }
 </script>
 <script type="application/ld+json">
