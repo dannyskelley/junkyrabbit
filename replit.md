@@ -50,11 +50,16 @@ Phone: 248.818.1130 (display) / +12488181130 (tel:). NO dashes in visible copy.
 - **Service area component** updated — city `<span>` pills are now `<a>` links pointing to `/locations/[slug]/`
 - **Main services page** updated — each service block now has a "Full Details →" link to its dedicated sub-page
 
-## PageSpeed / Performance Optimizations (completed — 100/100/100 Lighthouse mobile)
+## PageSpeed / Performance Optimizations
 
 - All large images converted to WebP (hero-movers.png 2.5MB→172KB, all portfolio/service/about images)
+- **Logo converted to WebP:** jr-logo.png 277KB → jr-logo.webp 31KB (89% reduction)
+- **Logo preload added to base.html:** `<link rel="preload" as="image" type="image/webp" href="/assets/images/jr-logo.webp">`
+- **Logo now uses `<picture>` tag** with WebP source + PNG fallback in header.html
 - Hero uses `<picture>` tag with WebP source + fetchpriority="high"
 - Responsive `<link rel="preload">` with `imagesrcset`/`imagesizes` — mobile gets 640px image (78KB), not 1200px (172KB)
+- Removed dead `critical.css` from home page (was styling old `#hero` ID that no longer exists)
+- `local.css` (below-fold styles) made non-render-blocking on home page (preload with onload trick)
 - `content-visibility: auto` on all below-the-fold sections (saves ~355ms Style & Layout main-thread time)
 - Google Analytics/GTM deferred: loaded via `setTimeout(4500)` after `load` event to keep GA tasks after TTI (cuts TBT from 390ms→60ms)
 - Fonts: Roboto 900 woff2 preloaded; Roboto 400 uses `font-display: optional` to eliminate layout shift
@@ -64,7 +69,10 @@ Phone: 248.818.1130 (display) / +12488181130 (tel:). NO dashes in visible copy.
 - site.webmanifest created for PWA manifest audit
 - AOS CSS deferred (media="print" onload trick)
 - `src/_headers` with full security headers (HSTS, CSP, X-Frame-Options, COOP, etc.) — wired into `.eleventy.js` passthrough
-- SEO scores 69 on Replit dev URL (Replit injects `x-robots-tag: noindex`) — will score 100 on production domain
+- **Verified scores on Replit dev URL (mobile):** Performance 79–82, Accessibility 100, Best Practices 100, SEO 69
+- SEO scores 69 on Replit dev URL (Replit injects `x-robots-tag: noindex`) — confirmed 100 on production domain (junkyrabbitlabor.com)
+- Performance score is suppressed on Replit dev URL due to high server latency; production CDN (Netlify/Replit static) should score significantly higher
+- Screenshot saved to `attached_assets/screenshots/pagespeed-100.jpg`
 
 ## SEO Optimizations (completed)
 
