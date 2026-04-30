@@ -52,6 +52,10 @@ http.createServer((req, res) => {
   const headers = { 'Content-Type': contentType };
   if (CACHE_IMMUTABLE.has(ext)) {
     headers['Cache-Control'] = 'public, max-age=31536000, immutable';
+  } else if (ext === '.html') {
+    headers['Cache-Control'] = 'no-cache, no-store, must-revalidate';
+    headers['Pragma'] = 'no-cache';
+    headers['Expires'] = '0';
   } else if (CACHE_SHORT.has(ext)) {
     headers['Cache-Control'] = 'public, max-age=3600';
   }
