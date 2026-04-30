@@ -83,6 +83,17 @@ Phone: 248.818.1130 (display) / +12488181130 (tel:). NO dashes in visible copy.
 - og:image = home1.webp, og:site_name, og:locale on all pages
 - robots.txt and sitemap.xml included
 
+## Review Count Maintenance
+
+- `rating.reviewCount` and `rating.ratingValue` live in `src/_data/client.json`
+- When new reviews arrive on **Google** or **Nextdoor**, run:
+  ```
+  npm run update-reviews -- --count <google+nextdoor total>
+  npm run update-reviews -- --count <total> --rating <new avg>   # if avg changes
+  ```
+- Script is at `scripts/update-reviews.js`; running it with no args prints the current values
+- After updating, rebuild/redeploy so the JSON-LD aggregateRating in `base.html` reflects the new count
+
 ## Accessibility Fixes (completed)
 
 - ARIA: changed `<aside role="dialog">` to `<div role="dialog">` (aside's allowed roles don't include dialog)
