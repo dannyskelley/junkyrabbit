@@ -31,20 +31,12 @@
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(
-            to bottom,
-            transparent 30%,
-            rgba(13,26,8,0.72) 70%,
-            rgba(13,26,8,0.97) 100%
-        ),
-        linear-gradient(
-            90deg,
-            rgba(13,26,8,0.88) 0%,
-            rgba(13,26,8,0.55) 30%,
-            rgba(13,26,8,0.22) 55%,
-            rgba(13,26,8,0.08) 80%,
-            rgba(13,26,8,0.03) 100%
-        );
+        /* Bottom: fade to dark so badges/CTAs stay readable */
+        linear-gradient(to bottom, transparent 45%, rgba(13,26,8,0.88) 78%, rgba(13,26,8,0.97) 100%),
+        /* Left panel: dark strip for text legibility */
+        linear-gradient(90deg, rgba(13,26,8,0.92) 0%, rgba(13,26,8,0.65) 26%, transparent 50%),
+        /* Radial spotlight: transparent center reveals both faces, dark vignette at edges */
+        radial-gradient(ellipse 82% 88% at 60% 48%, transparent 18%, rgba(13,26,8,0.58) 62%, rgba(13,26,8,0.94) 100%);
 }
 
 #hero-jr .hero-container {
