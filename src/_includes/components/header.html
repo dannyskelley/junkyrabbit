@@ -80,7 +80,7 @@
     align-items: center;
     gap: 0.25rem;
 }
-.jr-nav-list li a {
+#jrHeader .jr-nav-list li a {
     display: block;
     padding: 0.6rem 0.85rem;
     font-size: 0.82rem;
@@ -94,11 +94,11 @@
     position: relative;
     white-space: nowrap;
 }
-.jr-nav-list li a:hover { color: #fff; }
-.jr-nav-list li a.active {
+#jrHeader .jr-nav-list li a:hover { color: #fff; }
+#jrHeader .jr-nav-list li a.active {
     color: var(--primary);
 }
-.jr-nav-list li a.active::after {
+#jrHeader .jr-nav-list li a.active::after {
     content: '';
     position: absolute;
     bottom: 0.2rem;
@@ -302,7 +302,7 @@ body { padding-top: 0; }
                 {% set navPages = collections.all | eleventyNavigation %}
                 {% for entry in navPages %}
                     <li>
-                        <a href="{{ entry.url }}" class="{{ 'active' if entry.url == page.url }}">{{ entry.key }}</a>
+                        <a href="{{ entry.url }}"{% if entry.url == page.url %} class="active"{% endif %}>{{ entry.key }}</a>
                     </li>
                 {% endfor %}
             </ul>
