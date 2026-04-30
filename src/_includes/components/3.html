@@ -102,6 +102,18 @@
     line-height: 1;
     pointer-events: none;
 }
+#reviews-jr .rv-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: -0.5rem;
+}
+#reviews-jr .rv-source svg { flex-shrink: 0; }
 @media (min-width: 48rem) {
     #reviews-jr .rv-grid {
         grid-template-columns: 1fr 1fr;
@@ -156,6 +168,43 @@
 
             <li class="rv-card">
                 <span class="rv-quote-icon">"</span>
+                <span class="rv-source">
+                    <svg width="12" height="12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 18.2v4h6.9c-.3 1.8-2 5.2-6.9 5.2-4.2 0-7.6-3.4-7.6-7.7s3.4-7.7 7.6-7.7c2.4 0 4 1 4.9 1.9l3.3-3.2C26.4 8.9 23.7 7.5 20.5 7.5 13.6 7.5 8 13 8 20s5.6 12.5 12.5 12.5c7.2 0 12-5.1 12-12.2 0-.8-.1-1.4-.2-2.1h-11.8z" fill="#555"/></svg>
+                    Google Review · Local Guide
+                </span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"Had these guys clean out a nasty tenant turnover that had a bunch of broken furniture in it, cat urine, cat feces, rotting food, etc. They cleared it all out very quickly, and deep cleaned it and practically made it look brand new for a really amazing price. They saved me from a very difficult tenant situation and I can't thank them enough. Had them out in less than 48 hours from first contact. They were on time, and communication was extremely professional. Can't thank you enough! Would highly recommend and use again!"</p>
+                <div><span class="rv-author">Nikhil Bhat</span><span class="rv-location"> · Local Guide, Metro Detroit</span></div>
+            </li>
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <span class="rv-source">
+                    <svg width="12" height="12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 18.2v4h6.9c-.3 1.8-2 5.2-6.9 5.2-4.2 0-7.6-3.4-7.6-7.7s3.4-7.7 7.6-7.7c2.4 0 4 1 4.9 1.9l3.3-3.2C26.4 8.9 23.7 7.5 20.5 7.5 13.6 7.5 8 13 8 20s5.6 12.5 12.5 12.5c7.2 0 12-5.1 12-12.2 0-.8-.1-1.4-.2-2.1h-11.8z" fill="#555"/></svg>
+                    Google Review
+                </span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"I needed last-minute help moving and clearing out junk, and Junky Rabbit Labor came through big time. They were quick, respectful, and made the whole process stress-free. You can tell they really care about their customers. I'll definitely be using them again."</p>
+                <div><span class="rv-author">Denetra Mason</span><span class="rv-location"> · Metro Detroit</span></div>
+            </li>
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <span class="rv-source">
+                    <svg width="12" height="12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 18.2v4h6.9c-.3 1.8-2 5.2-6.9 5.2-4.2 0-7.6-3.4-7.6-7.7s3.4-7.7 7.6-7.7c2.4 0 4 1 4.9 1.9l3.3-3.2C26.4 8.9 23.7 7.5 20.5 7.5 13.6 7.5 8 13 8 20s5.6 12.5 12.5 12.5c7.2 0 12-5.1 12-12.2 0-.8-.1-1.4-.2-2.1h-11.8z" fill="#555"/></svg>
+                    Google Review
+                </span>
+                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="rv-text">"Great experience with Junky Rabbit Labor. They helped clean up my yard and removed a pile of debris that had been sitting there for months. The crew was friendly, efficient, and got everything done quickly. Locally owned and operated which I like supporting. Will definitely call them again."</p>
+                <div><span class="rv-author">Samantha Miller</span><span class="rv-location"> · Metro Detroit</span></div>
+            </li>
+
+            <li class="rv-card">
+                <span class="rv-quote-icon">"</span>
+                <span class="rv-source">
+                    <svg width="12" height="12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 9h5.8l12 16.4V9H33v22h-5.8L15.2 14.6V31H10V9z" fill="#555"/></svg>
+                    Nextdoor Review
+                </span>
                 <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                 <p class="rv-text">"Junky Rabbit responded to me right away on Nextdoor with a great price to mow my overgrown lawn. Lunden was prompt, courteous and professional. He showed up on time and got the job done even in the rain. Thank you!"</p>
                 <div><span class="rv-author">Danny</span><span class="rv-location"> · Highland Park, MI</span></div>
@@ -163,20 +212,10 @@
 
             <li class="rv-card">
                 <span class="rv-quote-icon">"</span>
-                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="rv-text">"Very professional crew! They cleared out our entire garage and hauled everything away in just a few hours. Fair pricing, showed up on time, and left the place spotless. Would 100% call them again."</p>
-                <div><span class="rv-author">Marcus T.</span><span class="rv-location"> · Warren, MI</span></div>
-            </li>
-
-            <li class="rv-card">
-                <span class="rv-quote-icon">"</span>
-                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="rv-text">"Lunden and his team helped us move on short notice and they were AMAZING. Quick, careful with all our furniture, and super affordable. I've already recommended them to three neighbors!"</p>
-                <div><span class="rv-author">Keisha R.</span><span class="rv-location"> · Detroit, MI</span></div>
-            </li>
-
-            <li class="rv-card">
-                <span class="rv-quote-icon">"</span>
+                <span class="rv-source">
+                    <svg width="12" height="12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 9h5.8l12 16.4V9H33v22h-5.8L15.2 14.6V31H10V9z" fill="#555"/></svg>
+                    Nextdoor Review
+                </span>
                 <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                 <p class="rv-text">"Called about snow removal and they came the same day! Driveway and sidewalks completely cleared in under 30 minutes. Perfect price and great attitude. Will definitely call every snowfall."</p>
                 <div><span class="rv-author">Patricia W.</span><span class="rv-location"> · Sterling Heights, MI</span></div>
@@ -184,13 +223,10 @@
 
             <li class="rv-card">
                 <span class="rv-quote-icon">"</span>
-                <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="rv-text">"Had them do touch up painting and yard cleanup at my rental property before move in. They turned it around in ONE DAY. Unbelievable work ethic. Hard work, clean spaces, happy faces. That's the truth!"</p>
-                <div><span class="rv-author">Brian S.</span><span class="rv-location"> · Eastpointe, MI</span></div>
-            </li>
-
-            <li class="rv-card">
-                <span class="rv-quote-icon">"</span>
+                <span class="rv-source">
+                    <svg width="12" height="12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 9h5.8l12 16.4V9H33v22h-5.8L15.2 14.6V31H10V9z" fill="#555"/></svg>
+                    Nextdoor Review
+                </span>
                 <div class="rv-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                 <p class="rv-text">"Needed an old shed removed and the area cleaned up. Junky Rabbit gave a fair quote, showed up on schedule, had it completely gone same day. The yard looked amazing. Great communication from start to finish."</p>
                 <div><span class="rv-author">Donna M.</span><span class="rv-location"> · Southfield, MI</span></div>
