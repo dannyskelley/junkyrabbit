@@ -12,6 +12,10 @@
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
     "domain": "https://junkyrabbitlabor.com",
+    "socialProfiles": [
+        "https://www.google.com/maps/place/Junky+Rabbit+Labor",
+        "https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author"
+    ],
     "rating": {
         "ratingValue": 5.0,
         "reviewCount": 6,

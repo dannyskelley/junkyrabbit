@@ -115,9 +115,7 @@
                     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Property Cleanouts"}}
                 ]
             },
-            "sameAs": [
-                "https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author"
-            ],
+            "sameAs": {{ client.socialProfiles | dump | safe }},
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "{{ client.rating.ratingValue }}",
