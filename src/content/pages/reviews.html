@@ -1,6 +1,6 @@
 ---
 title: 'Customer Reviews | Detroit Metro Labor Crew'
-description: 'Real reviews from Detroit Metro residents. 5 stars on Nextdoor. Junk removal, moving, cleanouts, snow removal and yard work done right. Call 248.818.1130.'
+description: 'Real 5-star reviews on Google and Nextdoor from Detroit Metro residents. Junk removal, moving, cleanouts, snow removal and yard work done right. Call 248.818.1130.'
 preloadImg: '/assets/images/hero-movers.webp'
 permalink: 'reviews/'
 eleventyNavigation:
@@ -19,13 +19,24 @@ eleventyNavigation:
 <style>
 .page-hero-bg { position:absolute;inset:0;background:url('/assets/images/hero-movers.webp') center top/cover no-repeat;opacity:0.08;z-index:0; }
 @media (max-width:640px) { .page-hero-bg { background-image:url('/assets/images/hero-movers-640.webp'); } }
+.rv-hero-badges { display:flex;align-items:center;justify-content:center;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.25rem; }
+.rv-hero-badge { display:inline-block;background:var(--primary);color:#0d1a08;font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:0.14em;padding:0.3rem 0.85rem;border-radius:3px; }
+.rv-hero-google-btn { display:inline-flex;align-items:center;gap:0.45rem;margin-top:1.75rem;padding:0.75rem 1.75rem;background:#fff;color:#1a1a1a;border-radius:2rem;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.2s ease,color 0.2s ease;box-shadow:0 2px 10px rgba(0,0,0,0.18); }
+.rv-hero-google-btn:hover { background:var(--primary);color:#0d1a08; }
 </style>
 <section style="background:#0d1a08;position:relative;overflow:hidden;">
     <div class="page-hero-bg"></div>
     <div style="position:relative;z-index:1;max-width:50rem;margin:0 auto;padding:9rem 1.5rem 4rem;text-align:center;">
-        <span style="display:inline-block;background:var(--primary);color:#0d1a08;font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:0.14em;padding:0.3rem 0.85rem;border-radius:3px;margin-bottom:1rem;">5★ on Nextdoor</span>
+        <div class="rv-hero-badges">
+            <span class="rv-hero-badge">5★ on Google</span>
+            <span class="rv-hero-badge">5★ on Nextdoor</span>
+        </div>
         <h1 style="font-family:'Darumadrop One',Arial,sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;text-transform:uppercase;line-height:1;margin:0 0 1rem;">What Detroit Says</h1>
         <p style="font-size:clamp(1.05rem,1.6vw,1.2rem);color:rgba(255,255,255,0.92);line-height:1.6;max-width:38rem;margin:0 auto;">Real reviews from real Metro Detroit customers. Moving help, junk removal, cleanouts, snow and more.</p>
+        <a class="rv-hero-google-btn" href="https://share.google/6CIHarOvWi8D0rKOs" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 18.2v4h6.9c-.3 1.8-2 5.2-6.9 5.2-4.2 0-7.6-3.4-7.6-7.7s3.4-7.7 7.6-7.7c2.4 0 4 1 4.9 1.9l3.3-3.2C26.4 8.9 23.7 7.5 20.5 7.5 13.6 7.5 8 13 8 20s5.6 12.5 12.5 12.5c7.2 0 12-5.1 12-12.2 0-.8-.1-1.4-.2-2.1h-11.8z" fill="currentColor"/></svg>
+            Leave us a Google Review
+        </a>
     </div>
 </section>
 
