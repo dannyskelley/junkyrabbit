@@ -136,9 +136,9 @@
             "sameAs": {{ client.socialProfiles | dump | safe }},
             "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "{{ client.rating.ratingValue }}",
-                "reviewCount": "{{ client.rating.reviewCount }}",
-                "bestRating": "{{ client.rating.bestRating }}"
+                "ratingValue": "{{ googleRating.ratingValue }}",
+                "reviewCount": "{{ googleRating.reviewCount }}",
+                "bestRating": "{{ googleRating.bestRating }}"
             },
             "review": [
                 {

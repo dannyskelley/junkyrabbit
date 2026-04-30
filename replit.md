@@ -85,8 +85,23 @@ Phone: 248.818.1130 (display) / +12488181130 (tel:). NO dashes in visible copy.
 
 ## Review Count Maintenance
 
+### Automatic (preferred — requires Google secrets)
+
+`src/_data/googleRating.js` fetches live `rating` and `user_ratings_total` from the Google Places API at every build and injects them into the `aggregateRating` JSON-LD block in `base.html`.
+
+Two **Replit secrets** must be set for this to activate:
+
+| Secret | Where to get it |
+|---|---|
+| `GOOGLE_PLACES_API_KEY` | Google Cloud Console → APIs & Services → Credentials (enable "Places API") |
+| `GOOGLE_PLACE_ID` | https://developers.google.com/maps/documentation/places/web-service/place-id — search "Junky Rabbit Labor" |
+
+If either secret is absent or the API call fails, the build automatically falls back to the static values in `client.json` (build never breaks).
+
+### Manual fallback
+
 - `rating.reviewCount` and `rating.ratingValue` live in `src/_data/client.json`
-- When new reviews arrive on **Google** or **Nextdoor**, run:
+- When new reviews arrive on **Google** or **Nextdoor** and auto-sync isn't active, run:
   ```
   npm run update-reviews -- --count <google+nextdoor total>
   npm run update-reviews -- --count <total> --rating <new avg>   # if avg changes
