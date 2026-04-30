@@ -31,12 +31,16 @@
     position: absolute;
     inset: 0;
     background:
-        /* Base: solid dark green tint over whole photo */
-        linear-gradient(rgba(20,52,10,0.55), rgba(20,52,10,0.55)),
-        /* Top: dark green band for nav */
-        linear-gradient(to bottom, rgba(20,52,10,0.95) 0%, rgba(20,52,10,0.60) 22%, transparent 44%),
-        /* Bottom: dark green band for CTAs/badges */
-        linear-gradient(to top, rgba(20,52,10,0.97) 0%, rgba(20,52,10,0.75) 20%, transparent 52%);
+        /* Base: uniform dark tint for the moody branded look */
+        linear-gradient(rgba(13,26,8,0.52), rgba(13,26,8,0.52)),
+        /* Top: heavier dark band for nav */
+        linear-gradient(to bottom, rgba(13,26,8,0.60) 0%, transparent 36%),
+        /* Bottom: dark originates from bottom-right, bottom-left stays lighter */
+        linear-gradient(to top left, rgba(13,26,8,0.97) 0%, rgba(13,26,8,0.75) 22%, transparent 55%),
+        /* Left panel: very light touch — just enough for text, not face */
+        linear-gradient(90deg, rgba(13,26,8,0.30) 0%, rgba(13,26,8,0.15) 28%, transparent 52%),
+        /* Subtle center radial for depth */
+        radial-gradient(ellipse 55% 40% at 55% 52%, rgba(13,26,8,0.20) 0%, transparent 100%);
 }
 
 #hero-jr .hero-container {
