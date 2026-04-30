@@ -80,7 +80,7 @@
     align-items: center;
     gap: 0.25rem;
 }
-.jr-nav-list a {
+.jr-nav-list li a {
     display: block;
     padding: 0.6rem 0.85rem;
     font-size: 0.82rem;
@@ -94,11 +94,11 @@
     position: relative;
     white-space: nowrap;
 }
-.jr-nav-list a:hover { color: #fff; }
-.jr-nav-list a.active {
+.jr-nav-list li a:hover { color: #fff; }
+.jr-nav-list li a.active {
     color: var(--primary);
 }
-.jr-nav-list a.active::after {
+.jr-nav-list li a.active::after {
     content: '';
     position: absolute;
     bottom: 0.2rem;
