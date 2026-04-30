@@ -28,6 +28,10 @@
 @media (min-width: 48rem) {
     .jr-header.scrolled .jr-logo-img { height: 70px; width: 80px; }
 }
+.jr-header.menu-open .jr-logo-img {
+    height: 50px;
+    width: 57px;
+}
 
 /* ---- HEADER SHELL ---- */
 .jr-header {
@@ -372,6 +376,7 @@ body { padding-top: 0; }
         burger.classList.toggle('open', open);
         panel.classList.toggle('open', open);
         backdrop.classList.toggle('open', open);
+        header.classList.toggle('menu-open', open);
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
         panel.setAttribute('aria-hidden', open ? 'false' : 'true');
         document.body.style.overflow = open ? 'hidden' : '';
