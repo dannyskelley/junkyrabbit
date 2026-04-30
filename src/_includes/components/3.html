@@ -112,6 +112,29 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+#reviews-jr .rv-cta {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+#reviews-jr .rv-google-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background: #fff;
+    color: #1a1a1a;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+#reviews-jr .rv-google-btn:hover {
+    background: var(--primary);
+    color: #0d1a08;
+    box-shadow: 0 4px 16px rgba(184,240,0,0.25);
+}
 </style>
 
 <section id="reviews-jr">
@@ -126,7 +149,7 @@
             <div class="rv-stars">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-            <span class="rv-rating-text">5.0 · 5-Star Rated on Nextdoor</span>
+            <span class="rv-rating-text">5.0 · 5-Star Rated on Google &amp; Nextdoor</span>
         </div>
 
         <ul class="rv-grid">
@@ -174,6 +197,15 @@
             </li>
 
         </ul>
+
+        <div class="rv-cta">
+            <a class="rv-google-btn" href="https://share.google/6CIHarOvWi8D0rKOs" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20.5 18.2v4h6.9c-.3 1.8-2 5.2-6.9 5.2-4.2 0-7.6-3.4-7.6-7.7s3.4-7.7 7.6-7.7c2.4 0 4 1 4.9 1.9l3.3-3.2C26.4 8.9 23.7 7.5 20.5 7.5 13.6 7.5 8 13 8 20s5.6 12.5 12.5 12.5c7.2 0 12-5.1 12-12.2 0-.8-.1-1.4-.2-2.1h-11.8z" fill="currentColor"/>
+                </svg>
+                Leave us a Google Review
+            </a>
+        </div>
 
     </div>
 </section>
