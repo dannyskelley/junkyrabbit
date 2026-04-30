@@ -5,30 +5,35 @@
 <style>
 /* ---- LOGO ---- */
 .jr-logo {
-    display: flex;
-    align-items: center;
+    display: block;
     text-decoration: none;
     flex-shrink: 0;
     z-index: 1001;
-}
-.jr-logo-img {
+    /* height of the wrapper controls header height; img uses transform:scale inside */
     height: 140px;
     width: 160px;
-    display: block;
-    object-fit: contain;
+    overflow: visible;
     transition: height 0.5s ease, width 0.5s ease;
 }
-@media (min-width: 48rem) {
-    .jr-logo-img { height: 200px; width: 229px; }
+.jr-logo-img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: contain;
 }
-.jr-header.scrolled .jr-logo-img {
+@media (min-width: 48rem) {
+    .jr-logo { height: 200px; width: 229px; }
+}
+/* Scrolled: shrink wrapper + scale img */
+.jr-header.scrolled .jr-logo {
     height: 50px;
     width: 57px;
 }
 @media (min-width: 48rem) {
-    .jr-header.scrolled .jr-logo-img { height: 70px; width: 80px; }
+    .jr-header.scrolled .jr-logo { height: 70px; width: 80px; }
 }
-.jr-header.menu-open .jr-logo-img {
+/* Menu open: mild shrink */
+.jr-header.menu-open .jr-logo {
     height: 80px;
     width: 91px;
 }
