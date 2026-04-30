@@ -31,12 +31,12 @@
     position: absolute;
     inset: 0;
     background:
-        /* Bottom: fade to dark so badges/CTAs stay readable */
-        linear-gradient(to bottom, transparent 45%, rgba(13,26,8,0.88) 78%, rgba(13,26,8,0.97) 100%),
-        /* Left panel: dark strip for text legibility */
-        linear-gradient(90deg, rgba(13,26,8,0.92) 0%, rgba(13,26,8,0.65) 26%, transparent 50%),
-        /* Radial inverted: dark center pulled down, faces visible above */
-        radial-gradient(ellipse 90% 70% at 55% 80%, rgba(13,26,8,0.94) 0%, rgba(13,26,8,0.55) 45%, transparent 78%);
+        /* Top: dark from top so nav stays readable, fades out */
+        linear-gradient(to bottom, rgba(13,26,8,0.88) 0%, rgba(13,26,8,0.45) 22%, transparent 42%),
+        /* Bottom: dark from bottom so CTAs/badges stay readable */
+        linear-gradient(to top, rgba(13,26,8,0.97) 0%, rgba(13,26,8,0.80) 18%, transparent 50%),
+        /* Middle: subtle radial for depth, barely visible */
+        radial-gradient(ellipse 55% 40% at 55% 52%, rgba(13,26,8,0.28) 0%, transparent 100%);
 }
 
 #hero-jr .hero-container {
