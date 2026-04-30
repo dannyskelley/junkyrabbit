@@ -71,8 +71,23 @@
         <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
         <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="/assets/css/root.css">
+        <!-- Critical CSS: variables + global resets inlined for zero-latency first paint -->
+        <style>
+        :root{--primary:#B8F000;--primaryLight:#D4F74E;--secondary:#2D7A1A;--secondaryLight:#1a3d0e;--headerColor:#0d1a08;--bodyTextColor:#1f2a25;--bodyTextColorMuted:#4a5a52;--bodyTextColorWhite:#fafbfc;--bodyTextColorWhiteMuted:rgba(255,255,255,0.92);--dark:#0d1a08;--darkSection:#111111;--cta:#FF4500;--ctaHover:#e63e00;--nav:#0d1a08;--topperFontSize:clamp(0.875rem,1.6vw,1.0625rem);--headerFontSize:clamp(2.0625rem,4.1vw,3.25rem);--bodyFontSize:clamp(1.125rem,1.5vw,1.25rem);--sectionPadding:clamp(3.75rem,7.82vw,6.25rem) 2rem}
+        *,*:before,*:after{margin:0;box-sizing:border-box;padding:0}
+        body,html{margin:0;overflow-x:hidden;padding:0;font-family:"Roboto",Arial,sans-serif;font-size:100%;color:var(--bodyTextColor);scroll-behavior:smooth}
+        body{font-size:var(--bodyFontSize);line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+        .container{position:relative;margin:auto;width:92%}
+        h1,h2,h3,h4,h5,h6{margin:0;color:var(--headerColor)}
+        p,li,a{margin:0;font-size:var(--bodyFontSize);line-height:1.65}
+        p,li{color:var(--bodyTextColor)}
+        p a:not([class]),li a:not([class]),.cs-text a:not([class]){color:var(--secondary);text-decoration-thickness:2px;text-underline-offset:3px}
+        p a:not([class]):hover,li a:not([class]):hover,.cs-text a:not([class]):hover{color:var(--cta)}
+        </style>
+
+        <!-- Root stylesheet: non-render-blocking (helpers, reduced motion, focus styles) -->
+        <link rel="preload" href="/assets/css/root.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/assets/css/root.css"></noscript>
 
         {% block head %}{% endblock %}
 

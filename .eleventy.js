@@ -76,6 +76,28 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
     // END SHORTCODES
 
+    // TRANSFORM - Hoist all <style> blocks from the body into <head>
+    // This converts 14+ separate style recalculations into a single parse pass,
+    // eliminating the main source of long main-thread tasks / high TBT.
+    eleventyConfig.addTransform("hoist-styles", function(content, outputPath) {
+        if (!outputPath || !outputPath.endsWith(".html")) return content;
+        const headEnd = content.indexOf("</head>");
+        if (headEnd === -1) return content;
+        const head = content.slice(0, headEnd);
+        const afterHead = content.slice(headEnd);
+        const styleBlocks = [];
+        const bodyWithoutStyles = afterHead.replace(/<style\b[^>]*>([\s\S]*?)<\/style>/gi, function(match) {
+            styleBlocks.push(match);
+            return "";
+        });
+        if (styleBlocks.length === 0) return content;
+        const allCSS = styleBlocks
+            .map(function(s){ return s.replace(/^<style[^>]*>/i,"").replace(/<\/style>$/i,""); })
+            .join("\n");
+        return head + "<style>" + allCSS + "</style>" + bodyWithoutStyles;
+    });
+    // END TRANSFORM
+
     return {
         dir: {
             input: "src",
