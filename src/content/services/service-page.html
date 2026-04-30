@@ -29,7 +29,14 @@ sitemap:
     "areaServed": "Metro Detroit, MI"
   },
   "areaServed": "Metro Detroit, MI",
-  "url": "https://junkyrabbitlabor.com/services/{{ service.slug }}/"
+  "url": "https://junkyrabbitlabor.com/services/{{ service.slug }}/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ client.rating.ratingValue }}",
+    "reviewCount": "{{ client.rating.reviewCount }}",
+    "bestRating": "{{ client.rating.bestRating }}",
+    "worstRating": "1"
+  }
 }
 </script>
 <style>
