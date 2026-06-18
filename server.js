@@ -57,7 +57,7 @@ http.createServer((req, res) => {
     headers['Pragma'] = 'no-cache';
     headers['Expires'] = '0';
     headers['X-Frame-Options'] = 'ALLOWALL';
-    headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors *; base-uri 'self'; form-action 'self' https:;";
+    headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://mywebsitevisits.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://mywebsitevisits.com; frame-ancestors *; base-uri 'self'; form-action 'self' https:;";
   } else if (CACHE_SHORT.has(ext)) {
     headers['Cache-Control'] = 'public, max-age=3600';
   }
